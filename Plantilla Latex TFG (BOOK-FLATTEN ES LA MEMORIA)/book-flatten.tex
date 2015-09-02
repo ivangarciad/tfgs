@@ -1,0 +1,4615 @@
+
+
+
+
+
+\documentclass[spanish,openright]{book}
+
+\makeatletter{}
+
+\usepackage[x11names,table]{xcolor}
+
+\usepackage{ifthen}
+
+\newcommand{\colorspaceused}{rgb}
+
+\ifthenelse{\equal{\colorspaceused}{rgb}}
+{
+  \PassOptionsToPackage{rgb}{xcolor}}
+{
+  \PassOptionsToPackage{cmyk}{xcolor}}
+
+\usepackage[latin1]{inputenc} \usepackage[T1]{fontenc}                            
+\usepackage{ae}              
+\usepackage{lmodern}                                        
+\usepackage[spanish, english]{babel}
+
+\usepackage[final]{pdfpages}
+
+\usepackage{emptypage}
+
+\usepackage{multicol}
+
+\usepackage{tocbibind}
+
+\usepackage{animate}
+
+\usepackage{eurosym}
+
+\usepackage[hypcap]{caption}
+
+\usepackage{wrapfig} %Figuras al lado de texto
+
+\usepackage[rflt]{floatflt}
+
+\usepackage{graphicx}
+
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{afterpage}
+
+\usepackage{titlesec} \titleformat{\part}[frame]{\normalfont} %
+{\filright\footnotesize\enspace CAPITULO \thepart\enspace}%
+{8pt}{\Large\bfseries\filcenter} % %-
+
+\usepackage{xspace}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{eurosym}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+\usepackage{rotating}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{array}
+\usepackage[noadjust]{cite}      
+
+\usepackage[center]{caption}
+             \usepackage{subcaption}
+
+\usepackage{xcolor}
+
+
+\definecolor{pantone293}{RGB}{35,91,168}
+
+\definecolor{headingPortadaTFG}{RGB}{152,118,52}
+\definecolor{headingPortadaTFM}{RGB}{0,90,170}
+\definecolor{textoHeadingPortadaTFM}{RGB}{208,205,102}
+\definecolor{textoHeadingPortadaTFG}{RGB}{208,205,102}
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}	
+
+
+
+
+
+\usepackage{tikz}
+
+
+
+\usepackage{geometry}
+\geometry{verbose,a4paper,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+
+
+\usepackage[
+bookmarks=true,bookmarksnumbered=true,            hypertexnames=false,               breaklinks=true,                   linktoc=all,
+colorlinks=true,
+linkcolor=blue,    
+citecolor=green,
+urlcolor=blue,                     pdfborder={0 0 112.0},              hyperfootnotes=false,
+]{hyperref}                        
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\setcounter{table}{1}
+\setcounter{figure}{1}
+\setcounter{secnumdepth}{4}
+
+
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+
+\usepackage{multirow}
+
+\usepackage{setspace}
+\newcommand{\mycaptiontable}[1]{
+  \begin{spacing}{0.6}
+        \begin{quote}
+            {{Table} \thechapter.\arabic{table}: #1}
+          \end{quote}
+      \end{spacing}
+  \stepcounter{table}
+}
+
+\newcommand{\mycaptionfigure}[1]{
+    \begin{spacing}{0.6}
+    \begin{quote}
+            {{Figure} \thechapter.\arabic{figure}: #1}
+          \end{quote}
+      \end{spacing}
+  \stepcounter{figure}
+}
+
+\usepackage{amsmath}
+
+\usepackage{courier}
+
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{setspace, amssymb, amsmath, epsfig, multirow, colortbl, tabularx}
+\usepackage[acronym,shortcuts,nomain,hyperfirst=false]{glossaries}
+
+
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+\pagestyle{fancy}
+
+\providecommand\phantomsection{}
+\onehalfspacing
+\sloppy  
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
+
+\fancyhf{}
+
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+
+\makeatletter
+\renewcommand{\chaptermark}[1]{\markboth{\@chapapp \ \thechapter . \ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection \ \ #1}}
+\makeatother
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{3.5pt}
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\fancypagestyle{myplain}
+{
+  \fancyhf{}
+  \renewcommand\headrulewidth{0pt}
+  \renewcommand\footrulewidth{0pt}
+  \fancyfoot[C]{\thepage}
+}
+
+
+
+
+
+
+
+
+
+\usepackage[pages=some]{sty/background}
+
+\ifthenelse{\equal{\colorspaceused}{rgb}}
+{
+  \backgroundsetup{ scale=1, angle=0, opacity=.1, color=pink,
+    contents={\includegraphics[width=.7\paperwidth]{logos/logoEPS-UAH.jpg}}, vshift=-50pt,  hshift=0pt }
+}
+{
+  \backgroundsetup{ scale=1, angle=0, opacity=.1, color=pink,
+    contents={\includegraphics[width=.7\paperwidth]{logos/logoEPS-UAH-cmyk.jpg}}, vshift=-50pt,  hshift=0pt }
+}
+
+
+\makeatletter
+\newcommand*{\cleartoleftpage}{  \clearpage
+  \if@twoside
+  \ifodd\c@page
+  \hbox{}\newpage
+  \if@twocolumn
+  \hbox{}\newpage
+  \fi
+  \fi
+  \fi
+}
+\makeatother
+
+\usepackage{float}
+\floatstyle{plaintop} \newfloat{codefloat}{H}{cod}[chapter]
+
+\lstdefinestyle{console}
+{
+  basicstyle=\scriptsize\bf\ttfamily,
+  backgroundcolor=\color{gray75},
+}
+
+\lstdefinestyle{Cbluebox}
+{
+  language=C,
+  frame=shadowbox, 
+  rulesepcolor=\color{blue}
+}
+
+\lstdefinestyle{Cnice}
+{
+  language=C,
+  frame=Ltb,
+  framerule=0pt,
+  tabsize=2,
+  aboveskip=0.5cm,
+  framextopmargin=3pt,
+  framexbottommargin=3pt,
+  framexleftmargin=0.4cm,
+  framesep=0pt,
+  rulesep=.4pt,
+  backgroundcolor=\color{gray97},
+  rulesepcolor=\color{black},
+    stringstyle=\ttfamily,
+  showstringspaces = false,
+    basicstyle=\footnotesize\ttfamily,
+  commentstyle=\color{gray45},
+  keywordstyle=\bfseries,
+    numbers=left,
+  numbersep=15pt,
+  numberstyle=\tiny,
+  numberfirstline = false,
+  breaklines=true,
+}	
+
+\lstdefinestyle{CppExample}
+{
+  language=C++,
+  frame=trbl,
+  tabsize=2,
+  commentstyle=\textit,
+  stringstyle=\ttfamily, 
+  basicstyle=\small,
+}	
+
+\lstdefinestyle{Ccolor}
+{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstdefinestyle{BashInputStyle}{
+  language=bash,
+  basicstyle=\small\sffamily,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=3pt,
+  frame=tb, 
+  showspaces=false, 
+  showtabs=false,
+  showstringspaces=false,
+  columns=fullflexible,
+  backgroundcolor=\color{gray97},
+    linewidth=0.9\linewidth,
+  xleftmargin=0.05\linewidth
+}
+
+
+\usepackage{sidecap}
+
+\def\texis{\TeX \raise.15em\hbox{\textsc{i}}S}
+\newenvironment{FraseCelebre}{\begin{list}{}{      \setlength{\leftmargin}{0.5\textwidth}                              \setlength{\parsep}{0cm}                  \addtolength{\topsep}{0.5cm}                }
+  }
+  {\unskip \end{list}}
+
+\newenvironment{Frase}{\item \begin{flushright}\small\em}  {\end{flushright}}
+
+\newenvironment{Fuente}{\item \begin{flushright}\small}  {\end{flushright}}
+
+
+\newenvironment{bottomparagraph}{\par\vspace*{\fill}}{\clearpage}
+
+\usepackage[vlined,algochapter]{algorithm2e}
+\providecommand{\DontPrintSemicolon}{\dontprintsemicolon}
+\providecommand{\SetAlgoLined}{\SetLine}
+
+
+
+\usepackage{fix-cm}
+
+\usepackage{graphicx}                                                                      
+
+
+\newcommand{\myreferencespath}{}
+
+
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\textbf{#1}}}
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                     
+
+
+\renewcommand{\lstlistingname}{Code}
+     
+                                                                  
+\makeatletter{}
+
+
+\newcommand{\mybooklanguage}{spanish}
+
+\newcommand{\mydegree}{GIEAI}
+
+\newcommand{\mybooktitle}{Análisis de unidades inerciales de medida (IMU) y diseño de controlador de ángulo de ataque aplicado a cuadricóptero}
+\newcommand{\mybookauthor}{Sergio Martín Gómez}
+\newcommand{\mybookdepartment}{Departamento de automática}
+\newcommand{\mybookdepartmentEnglish}{Departament of Automatic}
+
+\newcommand{\mybookschool}{Escuela Politécnica Superior}
+\newcommand{\mybookuniversity}{Universidad de Alcalá}
+\newcommand{\mybookuniversityacronym}{UAH}
+ \newcommand{\mybookemail}{sergio.martingomez@edu.uah.es}
+\newcommand{\mybookNameFirstAdvisor}{D. Iván García Daza}
+\newcommand{\mybookNameSecondAdvisor}{}
+\newcommand{\mybookpresident}{D. David Fernández Llorca}
+\newcommand{\mybookfirstvocal}{D. Ignacio Parra Alonso}
+\newcommand{\mybooksecondvocal}{D. Iván García Daza}
+\newcommand{\mybooksecretary}{Name of the secretary (if needed)}
+\newcommand{\mybookyear}{2015}
+\newcommand{\myanteproyectodate}{6 de enero de 2014}
+\newcommand{\mydefensedate}{6 de enero de 2014}
+\newcommand{\mydefensedateEnglish}{January 6\textsuperscript{th}, 2014}
+\newcommand{\mybookkeywords}{IMU, ESC, Arduino, Gyroscope, Accelerometer} \newcommand{\mybookpalabrasclave}{IMU, ESC, Arduino, Giróscopo, Acelerómetro } 
+\newcommand{\mybookdepartmentsecretary}{José Luis Martín Sánchez}
+\newcommand{\mybookdateforpaperwork}{30 de septiembre de 2014}
+\newcommand{\mybookDNIOpenPublishing}{12345678-L}                                 \newcommand{\mybookDNIFirstAdvisor}{11111111-A}
+\newcommand{\mybookDNISecondAdvisor}{}
+\newcommand{\mybookFigure}{alumno}                                                                                                 
+\newcommand{\mybookresearchreportID}{RR-2014-01}
+
+\newcommand{\mytoclinkcolor}{black}
+\newcommand{\myloflinkcolor}{black}
+\newcommand{\mylotlinkcolor}{black}
+
+\newcommand{\myothertoclinkcolor}{black}
+
+\newcommand{\mylinkcolor}{black}
+
+\newcommand{\myurlcolor}{black}
+\newcommand{\mycitecolor}{black}
+
+
+
+\newcommand{\myreferences}{biblio/biblio}
+
+
+
+\DeclareRobustCommand{\texten}[1]{\textit{#1}}
+
+\def\ci{\perp\!\!\!\perp}
+
+\newcommand{\circulo}{\large $\circ$}
+\newcommand{\asterisco}{$\ast$}
+\newcommand{\cuadrado}{\tiny $\square$}
+\newcommand{\triangulo}{\scriptsize $\vartriangle$}
+\newcommand{\triangv}{\scriptsize $\triangledown$}
+\newcommand{\diamante}{\large $\diamond$}
+
+\newcommand{\new}[1]{\textcolor{magenta}{#1 }}
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{argmax}}}
+
+\newcommand{\verticalSpacingSRPMaps}{-0.3cm}
+
+
+
+
+     
+                                                                                                                                                                                                                                                        
+\makeatletter{}
+
+\newglossary[slg]{symbols}{sym}{sbl}{List of Symbols}
+
+\makeglossaries               
+
+
+
+   
+
+\makeatletter{}
+
+\ifthenelse{\equal{\mybooklanguage}{spanish}}
+{
+\newcommand{\mybookFullAffiliation}{Grupo de investigación \mybookresearchgroup \\ \mybookdepartment \\ \mybookuniversity} 
+} 
+{
+\newcommand{\mybookFullAffiliation}{\mybookresearchgroup Research Group \\ \mybookdepartmentEnglish \\ \mybookuniversity} 
+}
+
+\ifthenelse{\equal{\mybookNameSecondAdvisor}{}}
+{
+\newcommand{\mybookadvisors}{\mybookNameFirstAdvisor{}}
+\newcommand{\mybookDirectorOrDirectores}{director}
+\newcommand{\mybookAdvisorOrAdvisors}{advisor}
+\newcommand{\mybookDaOrDan}{da}
+\newcommand{\mybookTutorOrTutores}{tutor}
+\newcommand{\mybookElOrLos}{El}
+\newcommand{\mybookSuOrSus}{su}
+\newcommand{\mybookDelOrDeLos}{del}
+}
+{
+\newcommand{\mybookadvisors}{\mybookNameFirstAdvisor{} y \mybookNameSecondAdvisor{}}
+\newcommand{\mybookDirectorOrDirectores}{directores}
+\newcommand{\mybookAdvisorOrAdvisors}{advisors}
+\newcommand{\mybookDaOrDan}{dan}
+\newcommand{\mybookTutorOrTutores}{tutores}
+\newcommand{\mybookElOrLos}{Los}
+\newcommand{\mybookSuOrSus}{Su}
+\newcommand{\mybookDelOrDeLos}{de los}
+}
+
+\ifthenelse{\equal{\mydegree}{IT}}
+{
+  \newcommand{\mydegreefull}{Ingeniería de Telecomunicación}
+  \newcommand{\mybookworktype}{TFC}
+  \ifthenelse{\equal{\mybooklanguage}{spanish}}
+  {
+    \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+  }
+  {
+            \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+  }
+}
+{
+  \ifthenelse{\equal{\mydegree}{IE}}
+  {
+    \newcommand{\mydegreefull}{Ingeniería Electrónica}
+    \newcommand{\mybookworktype}{TFC}
+    \ifthenelse{\equal{\mybooklanguage}{spanish}}
+    {
+      \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+    }
+    {
+                  \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+    }
+  }
+  {
+    \ifthenelse{\equal{\mydegree}{ITTSE}}
+    {
+      \newcommand{\mydegreefull}{Ingeniería Técnica de Telecomunicación, especialidad en Sistemas Electrónicos}
+      \newcommand{\mybookworktype}{TFC}
+      \ifthenelse{\equal{\mybooklanguage}{spanish}}
+      {
+        \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+      }
+      {
+                        \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+      }
+    }
+    {
+      \ifthenelse{\equal{\mydegree}{ITTST}}
+      {
+        \newcommand{\mydegreefull}{Ingeniería Técnica de Telecomunicación, especialidad en Sistemas de Telecomunicación}
+      \newcommand{\mybookworktype}{TFC}
+        \ifthenelse{\equal{\mybooklanguage}{spanish}}
+        {
+          \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+        }
+        {
+                              \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+        }
+      }
+      {
+        \ifthenelse{\equal{\mydegree}{ITI}}
+        {
+          \newcommand{\mydegreefull}{Ingeniería Técnica Industrial, especialidad en Electrónica Industrial}
+          \newcommand{\mybookworktype}{TFC}
+          \ifthenelse{\equal{\mybooklanguage}{spanish}}
+          {
+            \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+          }
+          {
+                                    \newcommand{\mybookworktypefull}{Trabajo Fin de Carrera}
+          }
+        }
+        {
+          \ifthenelse{\equal{\mydegree}{GIEC}}
+          {
+            \newcommand{\mydegreefull}{Grado en Ingeniería Electrónica de Comunicaciones}
+            \newcommand{\mybookworktype}{TFG}
+            \ifthenelse{\equal{\mybooklanguage}{spanish}}
+            {
+              \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+            }
+            {
+                                          \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+            }
+          }
+          {
+            \ifthenelse{\equal{\mydegree}{GIEAI}}
+            {
+              \newcommand{\mydegreefull}{Grado en Ingeniería en Electrónica y Automática Industrial}
+              \newcommand{\mybookworktype}{TFG}
+              \ifthenelse{\equal{\mybooklanguage}{spanish}}
+              {
+                \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+              }
+              {
+                                                \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+              }
+            }
+            {
+              \ifthenelse{\equal{\mydegree}{GIST}}
+              {
+                \newcommand{\mydegreefull}{Grado en Ingeniería en Sistemas de Telecomunicación}
+                \newcommand{\mybookworktype}{TFG}
+                \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                {
+                  \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                }
+                {
+                                                      \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                }
+              }
+              {
+                \ifthenelse{\equal{\mydegree}{GITT}}
+                {
+                  \newcommand{\mydegreefull}{Grado en Ingeniería en Tecnologías de la Telecomunicación}
+                  \newcommand{\mybookworktype}{TFG}
+                  \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                  {
+                    \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                  }
+                  {
+                                                            \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                  }
+                }
+                {
+                  \ifthenelse{\equal{\mydegree}{GIT}}
+                  {
+                    \newcommand{\mydegreefull}{Grado en Ingeniería Telemática}
+                    \newcommand{\mybookworktype}{TFG}
+                    \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                    {
+                      \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                    }
+                    {
+                                                                  \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                    }
+                  }
+                  {
+                    \ifthenelse{\equal{\mydegree}{GIC}}
+                    {
+                      \newcommand{\mydegreefull}{Grado en Ingeniería de Computadores}
+                      \newcommand{\mybookworktype}{TFG}
+                      \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                      {
+                        \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                      }
+                      {
+                                                                        \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                      }
+                    }
+                    {
+                      \ifthenelse{\equal{\mydegree}{GII}}
+                      {
+                        \newcommand{\mydegreefull}{Grado en Ingeniería Informática}
+                        \newcommand{\mybookworktype}{TFG}
+                        \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                        {
+                          \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                        }
+                        {
+                                                                              \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                        }
+                      }
+                      {
+                        \ifthenelse{\equal{\mydegree}{GSI}}
+                        {
+                          \newcommand{\mydegreefull}{Grado en Sistemas de Información}
+                          \newcommand{\mybookworktype}{TFG}
+                          \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                          {
+                            \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                          }
+                          {
+                                                                                    \newcommand{\mybookworktypefull}{Trabajo Fin de Grado}
+                          }
+                        }
+                        {
+                          \ifthenelse{\equal{\mydegree}{MUSEA}}
+                          {
+                            \newcommand{\mydegreefull}{Máster Universitario en Sistemas Electrónicos Avanzados. Sistemas Inteligentes}
+                            \newcommand{\mydegreefullwrapped}{Máster Universitario en Sistemas Electrónicos Avanzados\\Sistemas Inteligentes}
+                            \newcommand{\mybookworktype}{TFM}
+                            \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                            {
+                              \newcommand{\mybookworktypefull}{Trabajo Fin de Máster}
+                            }
+                            {
+                                                                                          \newcommand{\mybookworktypefull}{Trabajo Fin de Máster}
+                            }
+                          }
+                          {
+                            \ifthenelse{\equal{\mydegree}{PHDUAH}}
+                            {
+                              \newcommand{\mydegreefull}{Estudios de Doctorado}
+                              \newcommand{\mybookworktype}{PHDUAH}
+                              \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                              {
+                                \newcommand{\mybookworktypefull}{Tesis Doctoral}
+                              }
+                              {
+                                \newcommand{\mybookworktypefull}{Doctoral Thesis}
+                              }
+                            }
+                            {
+                              \ifthenelse{\equal{\mydegree}{PHDUPM}}
+                              {
+                                \newcommand{\mydegreefull}{Doctor Ingeniero de Telecomunicación}
+                                \newcommand{\mybookworktype}{PHDUPM}
+                                \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                                {
+                                  \newcommand{\mybookworktypefull}{Tesis Doctoral}
+                                }
+                                {
+                                  \newcommand{\mybookworktypefull}{Doctoral Thesis}
+                                }
+                              }
+                              {
+                                \ifthenelse{\equal{\mydegree}{GEINTRARR}}
+                                {
+                                  \newcommand{\mydegreefull}{GEINTRA Research Report}
+                                  \newcommand{\mybookworktype}{GEINTRARR}
+                                  \ifthenelse{\equal{\mybooklanguage}{spanish}}
+                                  {
+                                    \newcommand{\mybookworktypefull}{Informe técnico del Grupo de investigación \mybookresearchgroup{}}
+                                  }
+                                  {
+                                    \newcommand{\mybookworktypefull}{\mybookresearchgroup{} Research Report}
+                                  }
+                                }
+                                {
+                                  \newcommand{\mybookworktype}{TFG}
+                                  \newcommand{\mydegreefull}{ERROR: Defined degree (\mydegree) unknown, check \texttt{config/myconfig.tex}} 
+                                  \newcommand{\mybookworktypefull}{ERROR: Defined degree (\mydegree) unknown, check \texttt{config/myconfig.tex}}
+                                }                          
+                              }                          
+                            }                          
+                          }                          
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+\newcommand{\contactauthor}{\mybookauthor~\textless\href{mailto:\mybookemail}{\mybookemail}\textgreater}
+
+\ifthenelse{\equal{\mybooklanguage}{english}}
+{
+  \newcommand{\keywordsforpdf}{\mybookkeywords}
+}
+{
+  \newcommand{\keywordsforpdf}{\mybookpalabrasclave}
+}
+
+\hypersetup
+{
+  pdfauthor={\mybookauthor~\textless\href{mailto:\mybookemail}{\mybookemail}\textgreater},
+  pdftitle={\mybooktitle},
+  pdfsubject={\mydegreefull, \mybookworktypefull},
+  pdfkeywords={\keywordsforpdf},
+  pdfcreator={\LaTeX with hyperref package},
+  pdfproducer={rubber},
+  pdffitwindow={true},
+  urlcolor=\myurlcolor,
+  linkcolor=\mylinkcolor,
+  citecolor=\mycitecolor
+}
+
+
+
+
+    
+                               
+\graphicspath{{./logos/}{./figures/}{./diagrams/}}                                                                 
+\begin{document}
+
+\frontmatter                                  
+
+\makeatletter{}
+
+\ifthenelse{\equal{\mybooklanguage}{english}}
+{
+  \selectlanguage{english}
+
+  \floatname{codefloat}{Listing}
+  \renewcommand{\lstlistingname}{Code}
+
+                }
+{
+  \selectlanguage{spanish}
+  
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\listtablename}{Índice de tablas}
+
+  \floatname{codefloat}{Listado}
+  \renewcommand{\lstlistingname}{Codigo}
+
+
+                }
+
+
+
+  
+                                              
+\makeatletter{}
+
+\ifthenelse{\equal{\mybookworktype}{TFG}}
+{
+  \makeatletter{}
+\thispagestyle{empty}
+
+\BgThispage
+
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[yshift=-5cm] at (current page.north west)
+      {
+        \begin{tikzpicture}[remember picture, overlay]
+          \draw[fill=headingPortadaTFG,headingPortadaTFG] (0,0) rectangle (\paperwidth,5cm);
+          \node [yshift=3cm, xshift=0.5\paperwidth, font=\Huge, text centered, midway] {\color{textoHeadingPortadaTFM}\textbf{\mybookuniversity}};
+          \node [yshift=2cm, xshift=0.5\paperwidth, font=\Huge, text centered, midway] {\color{textoHeadingPortadaTFM}\textbf{\mybookschool}};
+
+        \end{tikzpicture}
+      };
+   \end{tikzpicture}
+
+
+\large
+\vspace{5cm}
+\begin{center}
+
+    \LARGE\textbf{\mydegreefull}
+
+  \vspace{25mm}
+
+  \LARGE\textbf{\mybookworktypefull}
+
+  \LARGE{\mybooktitle}
+
+\vspace{5cm}
+
+  \textbf{Autor:}  \mybookauthor 
+
+\vspace{0.5cm}
+
+  \textbf{\expandafter\makefirstuc\expandafter{\mybookTutorOrTutores}:}  \mybookadvisors
+
+\end{center}
+
+\begin{bottomparagraph}
+  \begin{center}
+    \huge{\mybookyear}
+  \end{center}
+\end{bottomparagraph}
+
+\clearemptydoublepage
+
+
+ 
+  \makeatletter{}
+\thispagestyle{empty}
+\large
+\begin{center}
+
+  \Huge\MakeUppercase{\mybookuniversity}
+
+
+  \Large{\MakeUppercase{\mybookschool}}
+
+  \vspace{7mm}
+
+    \Large\textbf{\mydegreefull}
+
+  \vspace{1cm}
+
+  \Large\textbf{\mybookworktypefull}
+        
+  \vspace{1cm}   
+
+  \Large\textbf{\mybooktitle}
+
+  \vspace{1cm}
+  
+  Autor: \mybookauthor
+  
+  \vspace{1mm}
+  
+
+  \expandafter\makefirstuc\expandafter{\mybookDirectorOrDirectores}: \mybookadvisors
+  
+  \vspace{1cm}
+
+  \begin{tabular}{rll}
+    \textbf{Tribunal:} & &\\ 
+    &&\\
+    & \textbf{Presidente:} & \mybookpresident\\ \\ \\
+    & \textbf{Vocal 1º:}   & \mybookfirstvocal\\ \\ \\
+    & \textbf{Vocal 2º:}   & \mybooksecondvocal\\ \\
+  \end{tabular}
+\end{center}
+
+
+\begin{bottomparagraph}
+  \begin{flushleft}
+  
+  
+    \begin{tabular}{p{1cm}c}
+      &Calificación: ..................................................................................\\ \\
+      &Fecha: ...........................................................................................
+    \end{tabular}
+  \end{flushleft}
+\end{bottomparagraph}
+
+
+\normalsize
+
+\clearemptydoublepage
+
+
+
+ 
+}
+{
+  \ifthenelse{\equal{\mybookworktype}{TFC}}
+  {
+    \makeatletter{}
+\thispagestyle{empty}
+\large
+\vspace{3cm}
+\begin{center}
+
+  \Huge\textbf{\MakeUppercase{\mybookuniversity}}
+
+
+  \textbf{\mybookschool}
+
+  \vspace{1cm}
+
+  \huge\textbf{\mydegreefull}
+  
+  \vspace{1cm}
+
+  \centerline{\includegraphics[height=6cm]{uah/logoUAHazul.jpg}}
+
+  \vspace{1cm}
+
+  \Large\textbf{\mybookworktypefull}
+
+  \vspace{0.5cm}   
+
+  \LARGE\textbf{\mybooktitle}
+
+  \vspace{2cm}
+
+  \mybookauthor
+
+\end{center}
+
+\begin{bottomparagraph}
+  \begin{center}
+    \huge{\mybookyear}
+  \end{center}
+\end{bottomparagraph}
+
+\clearemptydoublepage
+
+ 
+    \makeatletter{}
+\thispagestyle{empty}
+\large
+\begin{center}
+
+  \Huge\MakeUppercase{\mybookuniversity}
+
+
+  \Large{\MakeUppercase{\mybookschool}}
+
+  \vspace{7mm}
+
+    \Large\textbf{\mydegreefull}
+
+  \vspace{1cm}
+
+  \Large\textbf{\mybookworktypefull}
+        
+  \vspace{1cm}   
+
+  \Large\textbf{\mybooktitle}
+
+  \vspace{1cm}
+  
+  Autor: \mybookauthor
+  
+  \vspace{1mm}
+  
+
+  \expandafter\makefirstuc\expandafter{\mybookDirectorOrDirectores}: \mybookadvisors
+  
+  \vspace{1cm}
+
+  \begin{tabular}{rll}
+    \textbf{Tribunal:} & &\\ 
+    &&\\
+    & \textbf{Presidente:} & \mybookpresident\\ \\ \\
+    & \textbf{Vocal 1º:}   & \mybookfirstvocal\\ \\ \\
+    & \textbf{Vocal 2º:}   & \mybooksecondvocal\\ \\
+  \end{tabular}
+\end{center}
+
+
+\begin{bottomparagraph}
+  \begin{center}
+    \begin{tabular}{p{3cm}c}
+      &Calificación: ..........................................................................\\ \\
+      &Fecha: ...................................................................................
+    \end{tabular}
+  \end{center}
+\end{bottomparagraph}
+
+
+\normalsize
+
+\clearemptydoublepage
+
+
+
+ 
+  }
+  {
+    \ifthenelse{\equal{\mybookworktype}{TFM}}
+    {
+      \makeatletter{}
+\thispagestyle{empty}
+
+
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-14cm] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[fill=headingPortadaTFM,headingPortadaTFM] (0,0) rectangle (6cm,14cm);
+      \node [yshift=7cm, xshift=3cm, text centered, midway, rotate=+90] {\color{white}\fontsize{110}{132}\selectfont\mybookuniversityacronym};
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \node [xshift=7cm] at (current page.north west)
+  {     \begin{tikzpicture}[remember picture, overlay]
+    
+       \node [yshift=-3.5cm, xshift=0.5\paperwidth, align=center, text width=14cm, text centered, midway] {\begin{minipage}[c][13cm][c]{13cm}\centering\color{black}\fontsize{26}{31}\selectfont\textbf{\mybooktitle}\par\end{minipage}};
+      
+   
+     \end{tikzpicture}
+    
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-\paperheight] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[fill=headingPortadaTFM,headingPortadaTFM] (0,0) rectangle (\paperwidth,2cm);
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-17cm] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[fill=headingPortadaTFM,headingPortadaTFM] (0,0) rectangle (\paperwidth,2.8cm);
+      \node [yshift=1.8cm, xshift=0.5\paperwidth, align=center, text width=0.95*\paperwidth, text centered, midway] {\color{white}\fontsize{20}{15}\selectfont\textbf{\mydegreefullwrapped}\par};
+      \node [yshift=0.5cm, xshift=0.5\paperwidth, align=center, text width=0.95*\paperwidth, text centered, midway] {\color{white}\fontsize{20}{26}\selectfont\textbf{\mybookdepartment}};
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-19cm] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \node [yshift=0,    xshift=0.5\paperwidth, text width=0.95\paperwidth, align=flush left] {\color{black}\fontsize{18}{15}\selectfont\textbf{Presentado por:\\\mybookauthor}\par};
+      \node [yshift=-3cm, xshift=0.5\paperwidth, text width=0.95\paperwidth, align=flush left] {\color{black}\fontsize{18}{15}\selectfont\textbf{Dirigido por:\\\mybookadvisors}\par};
+      \node [yshift=-6cm, xshift=0.5\paperwidth, text width=0.95\paperwidth, align=flush left] {\color{black}\fontsize{18}{15}\selectfont\textbf{Alcalá de Henares, a \mydefensedate}\par};
+
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-\paperheight] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[fill=headingPortadaTFM,headingPortadaTFM] (0,0) rectangle (\paperwidth,2cm);
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+
+
+
+\clearemptydoublepage
+
+
+ 
+    }
+    {
+      \ifthenelse{\equal{\mybookworktype}{PHDUAH}}
+      {
+        \makeatletter{}
+\thispagestyle{empty}
+\large
+\vspace{3cm}
+\begin{center}
+
+\color{pantone293}
+
+  \centerline{\includegraphics[height=3cm]{uah/01_logo-vA_pant293.pdf}}
+
+  \ifthenelse{\equal{\mybooklanguage}{english}}
+  {
+    \huge{{\mybookphdprogramEnglish}}
+  }
+  {
+    \huge{{\mybookphdprogram}}
+  }
+  
+
+  
+
+
+
+  \vspace{2cm}   
+  
+  \Huge\textbf{\mybooktitle}
+
+  \vspace{15mm}
+  
+  \ifthenelse{\equal{\mybooklanguage}{english}}
+  {
+    \huge{{PhD. Thesis Presented by}}
+  }
+  {
+    \huge{{Tesis Doctoral presentada por}}
+  }
+
+
+  \huge{\textbf{\mybookauthor}}
+
+
+  
+
+\end{center}
+
+\begin{bottomparagraph}
+  \begin{center}
+    \huge{\mybookyear}
+  \end{center}
+\end{bottomparagraph}
+
+\color{black}
+
+\clearemptydoublepage
+
+ 
+        \makeatletter{}
+\thispagestyle{empty}
+\large
+\begin{center}
+
+  \color{pantone293}
+
+  \centerline{\includegraphics[height=3cm]{uah/01_logo-vA_pant293.pdf}}
+
+  \ifthenelse{\equal{\mybooklanguage}{english}}
+  {
+    \huge{{\mybookphdprogramEnglish}}
+  }
+  {
+    \huge{{\mybookphdprogram}}
+  }
+
+  \vspace{2cm}   
+  
+  \Huge\textbf{\mybooktitle}
+
+  \vspace{10mm}
+  
+  \ifthenelse{\equal{\mybooklanguage}{english}}
+  {
+    \huge{{PhD. Thesis Presented by}}
+  }
+  {
+    \huge{{Tesis Doctoral presentada por}}
+  }
+
+  \huge{\textbf{\mybookauthor}}
+
+
+  \vspace{10mm}
+
+  \ifthenelse{\equal{\mybooklanguage}{english}}
+  {
+    \huge {\expandafter\makefirstuc\expandafter{\mybookAdvisorOrAdvisors}}
+  }
+  {
+    \huge {\expandafter\makefirstuc\expandafter{\mybookDirectorOrDirectores}}
+  }  
+
+  \textbf{\mybookadvisors}
+
+  
+  \color{black}
+  
+
+\end{center}
+
+\begin{bottomparagraph}
+  \begin{center}
+
+    \color{pantone293}
+
+    \ifthenelse{\equal{\mybooklanguage}{english}}
+    {
+      \huge {Alcalá de Henares, \mydefensedateEnglish}
+    }
+    { 
+      \huge {Alcalá de Henares, \mydefensedate}
+    }  
+    \color{black}
+
+  \end{center}
+\end{bottomparagraph}
+
+
+\clearemptydoublepage
+
+
+
+
+
+
+ 
+      }
+      {
+        \ifthenelse{\equal{\mybookworktype}{PHDUPM}}
+        {
+          \makeatletter{}
+\thispagestyle{empty}
+\large
+\vspace{3cm}
+\begin{center}
+
+  \Huge\textbf{UNIVERSIDAD POLITÉCNICA DE MADRID}
+
+  \vspace{1cm}
+
+  \huge{Escuela Técnica Superior\\de Ingenieros de Telecomunicación} 
+
+  \vspace{1cm}
+
+\ifthenelse{\equal{\colorspaceused}{rgb}}
+{
+  \includegraphics[width=80mm]{logos/logoetsit_tamano.jpg}
+}
+{
+  \includegraphics[width=80mm]{logos/logoetsit_tamano-cmyk.jpg}
+}
+
+
+  
+  
+  \LARGE\textbf{\mybooktitle}
+  
+  
+  \mybookauthor
+
+  \vspace{5mm}
+
+  \mybookauthordegree
+
+  \vspace{1cm}
+
+\end{center}
+
+\begin{bottomparagraph}
+  \begin{center}
+    \huge{\mybookyear}
+  \end{center}
+\end{bottomparagraph}
+
+
+\clearemptydoublepage
+
+ 
+          \makeatletter{}
+\thispagestyle{empty}
+\large
+\begin{center}
+
+  \Huge\textbf{UNIVERSIDAD POLITÉCNICA DE MADRID}
+
+  \vspace{7mm}
+
+  \huge{Escuela Técnica Superior\\de Ingenieros de Telecomunicación}
+
+  \vspace{1cm}
+  
+  \centerline{\includegraphics[width=80mm]{logos/logoetsit_tamano.jpg}}
+
+
+  \Large\textbf{\mybooktitle}
+
+  
+  \ifthenelse{\equal{\mybooklanguage}{english}}
+  {
+    \textbf {Author}
+  }
+  {
+    \textbf {Autor}
+  }
+  
+  
+  \mybookauthor
+  
+  \vspace{1cm}
+  
+  \ifthenelse{\equal{\mybooklanguage}{english}}
+  {
+    \textbf {\expandafter\makefirstuc\expandafter{\mybookAdvisorOrAdvisors}}
+  }
+  {
+    \textbf {\expandafter\makefirstuc\expandafter{\mybookDirectorOrDirectores}}
+  }  
+  
+  \mybookadvisors
+  
+\end{center}
+
+\begin{bottomparagraph}
+  \begin{center}
+    \textbf{\mybookyear}\\
+    \vspace{5mm}
+    \textbf{\mybookworktypefull}
+  \end{center}
+\end{bottomparagraph}
+
+
+\normalsize
+
+\clearemptydoublepage
+
+
+
+ 
+        }
+        {
+          \ifthenelse{\equal{\mybookworktype}{GEINTRARR}}
+          {
+            \makeatletter{}
+\thispagestyle{empty}
+
+
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-14cm] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[fill=headingPortadaTFM,headingPortadaTFM] (0,0) rectangle (6cm,14cm);
+      \node [yshift=7cm, xshift=3cm, text centered, midway, rotate=+90] {\color{white}\fontsize{110}{132}\selectfont\mybookuniversityacronym};
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \node [xshift=7cm] at (current page.north west)
+  {     \begin{tikzpicture}[remember picture, overlay]
+    
+       \node [yshift=-3.5cm, xshift=0.5\paperwidth, align=center, text width=14cm, text centered, midway] {\begin{minipage}[c][13cm][c]{13cm}\centering\color{black}\fontsize{26}{31}\selectfont\textbf{\mybooktitle{}\\}\par\fontsize{18}{26}\selectfont\textbf{[\mybookresearchreportID{}]}\par\end{minipage}};
+      
+   
+     \end{tikzpicture}
+    
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-\paperheight] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[fill=headingPortadaTFM,headingPortadaTFM] (0,0) rectangle (\paperwidth,2cm);
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-17cm] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[fill=headingPortadaTFM,headingPortadaTFM] (0,0) rectangle (\paperwidth,2.8cm);
+      \node [yshift=1.8cm, xshift=0.5\paperwidth, align=center, text width=0.95*\paperwidth, text centered, midway] {\color{white}\fontsize{20}{15}\selectfont\textbf{\mybookworktypefull}\par};
+      \node [yshift=0.5cm, xshift=0.5\paperwidth, align=center, text width=0.95*\paperwidth, text centered, midway] {\color{white}\fontsize{20}{26}\selectfont\textbf{\mybookdepartment}};
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-19cm] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \node [yshift=0,    xshift=0.5\paperwidth, text width=0.95\paperwidth, align=flush left] {\color{black}\fontsize{18}{15}\selectfont\textbf{\mybookauthor}\par};
+      \node [yshift=-6cm, xshift=0.5\paperwidth, text width=0.95\paperwidth, align=flush left] {\color{black}\fontsize{18}{15}\selectfont\textbf{Alcalá de Henares, \mydefensedate}\par};
+
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-\paperheight] at (current page.north west)
+  {
+    \begin{tikzpicture}[remember picture, overlay]
+      \draw[fill=headingPortadaTFM,headingPortadaTFM] (0,0) rectangle (\paperwidth,2cm);
+    \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+
+
+
+\clearemptydoublepage
+
+
+ 
+          }
+          {
+            ERROR: in \texttt{cover/cover.tex} Defined book type (\mybookworktype) unknown so that work type is
+            undefined or wrong (\mybookworktype), check also \texttt{config/myconfig.tex}
+          }
+        }
+      }
+      
+    }
+
+  }
+
+}
+
+
+                        
+                                                                                                                                                                                                                                                                                  
+             
+\makeatletter{}
+
+\ifthenelse{\equal{\mybooklanguage}{english}}
+{
+  \chapter*{Acknowledgements}
+  \label{cha:acknowledgements}
+  \markboth{Acknowledgements}{Acknowledgements}
+}
+{
+  \chapter*{Agradecimientos}
+  \label{cha:agradecimientos}
+  \markboth{Agradecimientos}{Agradecimientos}
+}
+
+\thispagestyle{myplain}
+
+Este trabajo es el fruto de muchas horas de estudio y de trabajo que no habría sido posible sin la ayuda de mis compañeros Alejandro y Marcial y de mi director de proyecto Iván García.\\
+
+Agradezco también a mi padre y a mi hermano su apoyo incondicional a lo largo de toda la carrera, que ha sido fundamental para superarla.
+
+
+
+
+
+   
+                                              
+\makeatletter{}
+
+\newacronym{HMI}{HMI}{Human-Machine Interfaces}
+\newacronym{ETTS}{ETTS}{Emotional Text To Speech}
+\newacronym{TTS}{TTS}{Text To Speech}
+\newacronym{PSOLA}{PSOLA}{Pitch Synchronous OverLap Add}
+\newacronym{TDPSOLA}{TD-PSOLA}{Time Domain Pitch Synchronous OverLap Add}
+\newacronym{AI}{AI}{Artificial Intelligenge}
+
+\newacronym{SPSS}{SPSS}{Statistical Parametric Speech Synthesis}
+\newacronym{VC}{VC}{Voice Conversion}
+\newacronym{US}{US}{Unit Selection}
+\newacronym{HMM}{HMM}{Hidden Markov Model}
+\newacronym{LSP}{LSP}{Line Spectral Pairs}
+\newacronym{LPC}{LPC}{Linear Prediction Coefficiens}
+\newacronym{LSF}{LSF}{Line Spectral Frequencies}
+\newacronym{F0}{F0}{Fundamental Frequency}
+\newacronym{MCEP}{MCEP}{Mel Cepstral Coefficients}
+\newacronym{MGCEP}{MGCEP}{Mel Generalized Cepstral Coefficients}
+\newacronym{MFCC}{MFCC}{Mel Frequency Cepstrum Coefficients}
+\newacronym{ASR}{ASR}{Automatic Speech Recognition}
+\newacronym{MDL}{MDL}{Minimum Description Length Criterion}
+\newacronym{MSD}{MSD}{Multi Space Probability Distributions}
+\newacronym{HSMM}{HSMM}{Hidden Semi-Markov Models}
+\newacronym{ML}{ML}{Maximum Likelihood}
+\newacronym{MLSA}{MLSA}{Mel Log Spectrum Approximation}
+\newacronym{MAP}{MAP}{Maximum A Posteriori} 
+\newacronym{MLLR}{MLLR}{Maximum Likelihood Linear Regression}
+\newacronym{CSMAPLR}{CSMAPLR}{Constrain Structural MAP Linear Regression}
+\newacronym{AV}{AV}{Average Voice}
+
+\newacronym{ANN}{ANN}{Artificial Neural Network}
+
+\newacronym{NIST}{NIST}{National Institute of Technology}
+\newacronym{SES}{SES}{Spanish Expressive Speech}
+\newacronym{EMODB}{EMODB}{Berlin Database of Emotional Speech}
+
+\newacronym{FAUAIBO}{FAU-AIBO}{FAU AIBO Emotion Corpus}
+
+\newacronym{SEV}{SEV}{Spanish Expressive Voices}
+\newacronym{AER}{AER}{Automatic Emotion Recognition}
+\newacronym{UBEC}{UBEC}{Universal Background Emotion Codebook}
+
+\newacronym{STRAIGHT}{STRAIGHT}{Speech Transformation and Representation using Adaptive Interpolation of weiGHTed spectrum}
+
+
+\newacronym{DBN}{DBN}{Dynamic Bayesian Network}
+\newacronym{SQ}{SQ}{Speech Quality}
+\newacronym{EIR}{EIR}{Emotion Identification Rate}
+\newacronym{SIR}{SIR}{Speaker Identification Rate}
+\newacronym{ES}{ES}{Emotional Strength}
+
+\newacronym{ACCCHARS}{ÁÉÍÓÚÜÑáéíóúüñ}{Long ÁÉÍÓÚÜÑáéíóúüñ}
+
+
+
+
+
+             
+                                                                                            
+\makeatletter{}
+
+\newglossaryentry{ohm}{type=symbols,
+        name={\ensuremath{\Omega}},
+        symbol={\ensuremath{\Omega}}, 
+        sort=ohm,
+        description=unit of electrical resistance}
+
+\newglossaryentry{angstrom}{type=symbols,
+        name={\AA},
+        symbol={\AA},
+        sort=angstrom,
+        description={non-SI unit of length}}
+
+\newglossaryentry{xdet}{type=symbols,
+        name={\ensuremath{x(t)}},
+        symbol={\ensuremath{x(t)}},
+        sort=xdet,
+        description={Audio signal}}
+
+\newglossaryentry{xidet}{type=symbols,
+        name={\ensuremath{x_i(t)}},
+        symbol={\ensuremath{x_i(t)}},
+        sort=xidet,
+        description={Audio signal captured at microphone $i$}}
+
+\newglossaryentry{condindep}{type=symbols,
+        name={\ensuremath{\ci}},
+        symbol={\ensuremath{\ci}}, 
+        sort=conditionalindependence,
+        description=conditional independence}
+
+
+               
+                                                                                            
+
+
+
+
+                  
+
+
+\makeatletter{}
+\hypersetup{linkcolor=\mytoclinkcolor}
+\tableofcontents
+
+\hypersetup{linkcolor=\myloflinkcolor}
+\listoffigures
+                          
+\hypersetup{linkcolor=\mylotlinkcolor}
+\listoftables
+
+\hypersetup{linkcolor=\mylinkcolor}
+
+
+\makeatletter{}
+\hypersetup{linkcolor=\myothertoclinkcolor}
+\ifthenelse{\equal{\mybooklanguage}{english}}
+{
+  \listof{codefloat}{List of source code listings}
+  \addcontentsline{toc}{chapter}{List of source code listings}
+}
+{
+  \listof{lstlisting}{Índice de listados de código fuente}    
+  \addcontentsline{toc}{chapter}{Índice de listados de código fuente}
+}
+
+
+
+
+
+\makeatletter{}
+\chapter*{Resumen}
+\label{cha:resumen}
+\markboth{Resumen}{Resumen}
+
+\addcontentsline{toc}{chapter}{Resumen}
+
+Este Trabajo de Fin de Grado ha consistido en estimar los ángulos de inclinación de una plataforma, sobre la que se han colocado dos motores, con el fin de estabilizarla en un ángulo de referencia indicado por el usuario. Para la estimación de los ángulos se ha utilizado un conjunto de sensores llamados giróscopos y acelerómetros, ambos de tres ejes, que están integrados en un sensor llamado IMU. Los motores se han controlado mediante un ESC (Electronic Speed Controller), que además cumple la función de inversor. 
+\\
+
+\textbf{Palabras clave:} \mybookpalabrasclave.
+
+
+
+                   
+\makeatletter{}
+\chapter*{Abstract}
+\label{cha:abstract}
+
+\addcontentsline{toc}{chapter}{Abstract}
+
+This Final Year Project's purpose is to estimate the tilt angle of a platform, which has two engines installed above, in order of stabilize it in the angle that the user desires. To estimate the angles a set of sensors called gyroscopes and accelerometers have been used, both of three axis, integrated into a sensor called IMU. The engines have been controlled using a electronic speed controller (ESC), that also serves as a DC/AC converter.
+\\
+
+
+\textbf{Keywords:} \mybookkeywords.
+                
+                                              
+\makeatletter{}
+
+
+\chapter*{Resumen Extendido}
+\label{cha:resumen-extendido}
+
+\addcontentsline{toc}{chapter}{Resumen Extendido}
+
+Este proyecto consiste en controlar los dos motores que se encuentran en un eje de un cuadridóptero para que se ajuste a un ángulo de referencia pasado como entrada al sistema. El proyecto consta de varias etapas que se explicarán brevemente en este resumen.\\
+
+
+La primera etapa de este proyecto será estudiar los componentes disponibles de los distintos fabricantes y decidir cuáles son los más adecuados para el proyecto en función de su precisión, de su facilidad de uso y del precio. Los componentes necesarios para llevar a cabo este proyecto son:
+
+\begin{itemize}
+
+	\item {\bf Sensor de posición}
+	\item {\bf Microcontrolador}
+	\item {\bf Controladores de los Motores (ESC)}
+	\item {\bf Motores}
+	\item {\bf Batería o fuente de alimentación}
+		
+\end{itemize}
+ 
+ Una vez elegidos los componentes que se van a utilizar se debe realizar un estudio del principio de medida de los sensores utilizados. Los sensores que se van a utilizar para estimar el ángulo de la plataforma, ambos integrados en una IMU (Inertial Measurement Unit), son:
+
+\begin{itemize}
+
+	\item {\bf Giróscopo}
+	\item {\bf Acelerómetro}
+		
+\end{itemize}
+
+El principio de medida de estos dos sensores no es el mismo y en ninguno de los dos casos proporcionan una medida directa del ángulo, pero con unas sencillas operaciones se puede obtener de ambos sensores una medida de la posición. Ambos sensores presentan errores que son intolerables para esta aplicación, sin embargo utilizando los dos en conjunto se obtiene una medida de alta precisión del ángulo. Se especificará en la memoria cómo se obtiene el ángulo a partir de sus medidas.
+\\
+
+El controlador que se va utilizar para el proyecto será un Arduino Uno, elegido por su bajo coste y la facilidad en la programación. La plataforma Arduino tiene una gran cantidad de librerías disponibles que hacen que sea muy fácil interactuar con sensores y con actuadores conectados al Arduino. La comunicación entre la IMU y el Arduino se realiza mediante el protocolo de comunicación serie $I^2C$, mediante el cual se pueden conectar distintos componentes al Arduino y controlarlos mediante el puerto serie. Por tanto el primer paso para la adquisición de datos será realizar un programa para la recepción de datos mediante el puerto serie desde la IMU. Teniendo el programa de recepción de datos hecho sólo queda realizar un programa para procesar esas medidas y obtener una medida del ángulo dar finalizada esta etapa..
+\\
+\\
+La siguiente etapa del proyecto consistirá en realizar un estudio del ESC (Electronic Speed Controller) y de los motores. Se debe determinar el funcionamiento de ambos componentes para poder realizar un controlador adecuado. Para el estudio se utilizarán las especificaciones del fabricante además de realizar pruebas experimentales con el fin de comprobar su funcionamiento real.\\
+\\
+La etapa final del proyecto es la estabilización del brazo. Llegado a este punto ya se ha implementado el programa para medir el ángulo del brazo con una precisión adecuada y ya se ha estudiado la forma de variar la velocidad de los motores, por lo tanto se realizará el control del brazo mediante distintos reguladores.
+
+%mainmatter y deactivatetilden desactivan los numeros romanos del indice y reinician la cuenta
+
+\mainmatter                                       \deactivatetilden     
+
+\makeatletter{}
+
+
+
+\part{Introducción}
+
+\chapter{Introducción}
+\label{cha:introduccion}
+
+
+\section{Presentación}
+\label{sec:presentacion}
+
+Para conocer el primer concepto de cuadricóptero construido hay que remontarse al año 1922. Ese año el norteamericano George de Bothezat fue el primero en hacer volar un aparato con cuatro rotores pero sin mucho éxito, pues el aparato no consiguió subir más de 5 metros. 
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{images/americano}\label{fig: americano} 
+			
+			\caption{Cuadricóptero de Bothezat}
+			
+		
+		\end{figure}
+		
+Un europeo, el francés  Étienne Oehmichen realizó experimentos durante los años 1923 y 1924 en los que consiguió un vuelo estacionario de cinco minutos de duración y un vuelo estacionario de siete minutos de duración elevando el aparato 10 metros sobre el suelo. 
+
+\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.4]{images/frances}\label{fig: frances} 
+			
+			\caption{Cuadricóptero de Oehmichen}
+			
+		
+		\end{figure}
+		
+		El trabajo de estos dos ingenieros se puede considerar el comienzo de los aparatos aéreos con cuatro rotores. 
+		\\
+		  
+
+Debido a la complejidad en el control de estos aparatos las investigaciones se centraron más en los helicópteros de una hélice que conocemos hoy en día. Sin embargo, a lo largo de la última década el uso de aparatos aéreos de reducidas dimensiones, como cuadricópteros y drones, se ha incrementado exponencialmente. En la actualidad es muy común su uso en diversos ámbitos, siendo los más destacables su uso militar, uso comercial y uso como método de grabación en la industria cinematográfica. En todos los casos el aparato más usado es un vehículo aéreo no tripulado (UAV) basado en un sistema de aterrizaje y despegue vertical (VTOL), categoría que engloba a los cuadricópteros. Las ventajas comunes a todos los ámbitos son su facilidad de uso, facilidad de transporte y su reducido coste. Los usos que se le dan en cada campo  son:
+
+						\begin{itemize}
+
+	\item {\bf Militar}: se utiliza como observador de la zona en la que van a operar los soldados sin poner en riesgo vidas humanas.
+	\item {\bf Comercial}: varias empresas, entre las que se incluye Amazon, están investigando su uso como medio para repartir paquetes en áreas urbanas. 
+	
+	\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.35]{images/Amazon}
+			\label{fig: Drone Amazon}
+			\\
+			\caption{Cuadricóptero de Amazon en pruebas}
+		
+\end{figure}
+	
+	\item {\bf Industria cinematográfica}: su uso permite reducir los costes de producción en tomas aéreas. Las tomas que hasta ahora se tenían que realizar mediante un helicóptero se pueden realizar con los cuadricópteros a un coste mucho menor.
+	
+	\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.25]{images/djiphantom}
+			\label{fig: Cine }
+			\\
+			\caption{Cuadricóptero con cámara acoplada}
+		
+\end{figure}
+		
+\end{itemize}
+
+Estas son las aplicaciones más conocidas de estos aparatos. No obstante, tienen otras muchas aplicaciones como revisión del estado de las líneas de alta y media tensión por parte de las compañías eléctricas, revisión del estado de los aerogeneradores mediante un modelo llamado Aracnocopter, análisis del ambiente en zonas de alto riesgo para los humanos como zonas volcánicas...
+
+
+
+\section{Estado del arte}
+\label{sec:arte}
+
+En este apartado se van a enumerar algunos trabajos de otros grupos de investigación el el campo de los cuadricópteros.
+
+\begin{itemize}
+
+	\item En el trabajo de Mark Johnson ***\cite{Johnson} se realiza el diseño y el control de un cuadricópetro con vuelo autónomo y con variador del ángulo de inclinación de las hélices. Los aspectos más destacables de este proyecto son los servos añadidos a las hélices para variar el ángulo de éstas; además ha implementado un software que permite el vuelo invertido del aparato.
+	
+	\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.5]{images/vueloinvertido}
+			\label{fig:vueloinvertido }
+			\\
+			\caption{Detalle del vuelo invertido del cuadricóptero}
+		
+\end{figure}
+	
+	
+	
+	***Añadir otro trabajo\item {\bf Instrumentación Electrónica}
+	*** Indexar citas a la bilbliografía
+	
+		
+\end{itemize}
+
+\section{Motivación y objetivos del proyecto}
+\label{sec:motivación}
+
+
+\subsection{Motivación}
+
+
+Debido a la mayor presencia de estos aparatos año tras año en múltiples aplicaciones este proyecto se va a centrar en estudiar el método de medida de la posición de un eje de un cuadricóptero y su posterior estabilización mediante distintos reguladores. Ya que la distribución de los motores en el cuadricóptero es simétrica, el algoritmo de control de estabilización del brazo con el que se va a trabajar se puede aplicar al otro brazo para estabilizar el vuelo del cuadricóptero; por lo tanto este proyecto no se va a centrar en aspectos mecánicos ni en la aerodinámica del aparato sino en la teoría de control y en la programación del controlador para procesar los datos de los sensores y usarlos para el algoritmo de estabilización.\\
+\\
+Mediante la realización de este proyecto se afianzan conocimientos estudiados durante la carrera en los campos de:
+
+	
+\begin{itemize}
+
+	\item {\bf Control}: se deben utilizar los conocimientos adquiridos en las distintas asignaturas de control para el control del brazo.
+
+	
+	
+	\item {\bf Programación}: se requieren conocimientos estudiados en asignaturas de programación y en sistemas digitales (para el manejo de registros de un microcontrolador) para programar el microcontrolador, que generalmente requieren el lenguaje C o C++. 
+	
+	\item {\bf Instrumentación Electrónica}: se utilizará el programa LabView aprendido en esta asignatura para realizar una interfaz gráfica que se comunique con el microcontrolador y permita controlar el brazo con más facilidad.
+	
+	
+		
+\end{itemize}
+
+\subsection{Objetivos}
+
+El proyecto se dará por concluido cuando se cumplan los siguientes objetivos:
+
+		\begin{enumerate}
+
+	\item  Análisis y estimación de de los 3 grados de libertad del cuadricóptero obtenidos de la IMU.	
+	
+	\item Diseño del PID y de otros reguladores para el control del ángulo del brazo.
+	
+	\item Programación de la interfaz gráfica en LabView para manejar el brazo.
+	
+		
+\end{enumerate}
+	
+
+\section{Medios y herramientas necesarios}
+\label{sec:Medios}
+
+En este apartado sólo se enumerarán los recursos necesarios para la realización del proyecto, más adelante, en otro apartado, se explicarán más en detalle las características de cada uno de los componentes y programas aquí enumerados. Para realizar este proyecto es necesario disponer de:
+
+	
+\begin{multicols}{2}
+
+\begin{itemize}
+
+
+
+	\item Microcontrolador
+	
+	\item  IMU
+	
+	\item  LabView
+	
+	\item  PC
+	
+	\item Batería o fuente de alimentación
+	
+	\item Motores Brushless
+	
+	\item Hélices
+	
+	\item Controladores de velocidad (ESC)
+	
+	\item Estructura de ensamblaje
+	
+	\item Matlab
+	
+
+\end{itemize}
+
+\end{multicols}
+
+
+
+\part{Elección de los componentes}
+
+\chapter{Elección de los componentes}
+
+
+En este apartado del trabajo se van a a estudiar los distintos componentes presentes en el mercado y se van a elegir los más adecuados. De cada componente se comentarán sus especificaciones y sus características detalladamente.
+
+\section{Controlador}
+\label{sec:controlador}
+Este componente es el cerebro del cuadricóptero, es el encargado de recoger todos los datos de los sensores para procesarlos y generar las señales necesarias que se enviarán a los motores para estabilizar el brazo. Para esta aplicación no se requiere un procesador con mucha capacidad de cómputo, los requisitos necesarios para que el controlador sea válido son:
+
+\begin{enumerate}
+
+
+
+	\item {\bf Puerto serie}: es necesario para la comunicación con el sensor y con el ordenador. Mediante la lectura del puerto serie se leerán los datos de los sensores y mediante la escritura en el puerto serie se enviarán órdenes desde el programa realizado en el ordenador al controlador.
+	
+	\item  {\bf Entradas/Salidas digitales con PWM}: la excitación de los motores se realiza mediante una señal PWM, la cual se envía a través de estos puertos.
+	
+\end{enumerate}
+
+Con estas características se puede buscar en Internet la oferta de controladores disponible que cumplan las características especificadas. Los dos controladores más completos y con mejor relación calidad/precio son el Arduino Uno y el A-Star 32U4 Prime SV, cuyas características se enumerarán a continuación.
+
+\subsection{Arduino Uno}
+\label{subsec:arduino}
+
+Esta placa está basada en un microcontrolador ATmega328 y dispone de 14 entradas/salidas digitales, de las cuales 6 pueden ser usadas como salidas PWM. Se conecta al ordenador mediante USB, que sustituye al antiguo puerto serie RS232 y dispone de puertos para la comunicación serie. Por lo tanto este microcontrolador cumple con los requisitos necesarios para poder realizar este trabajo.
+
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.9]{images/arduinouno}
+			\label{fig:arduino }
+			\\
+			\caption{Microcontrolador Arduino Uno}
+		
+\end{figure}
+	
+
+Una de las ventajas de usar la plataforma Arduino es la enorme cantidad de documentación disponible en Internet para cualquier proyecto relacionado con Arduino. Ya que es una plataforma de código abierto hay una comunidad de desarrolladores que ha generado toda esa información y resulta muy sencillo aprender a programar el micro. 
+
+\subsection{A-Star 32U4 Prime SV}
+\label{subsec:astar}
+
+Esta placa está basada en un microcontrolador ATmega32U4 y dispone de 14 entradas/salidas digitales, de las cuales 7 pueden ser usadas como salidas PWM. Se conecta al ordenador mediante micro-USB, que sustituye al antiguo puerto serie RS232 y dispone de puertos para la comunicación serie. Por lo tanto este microcontrolador cumple con los requisitos necesarios para poder realizar este trabajo.
+
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.5]{images/astar}
+			\label{fig:arduino }
+			\\
+			\caption{Microcontrolador A-Star 32U4 Prime SV}
+		
+\end{figure}
+	
+
+La ventaja de este microcontrolador respecto al Arduino es un mayor rango de voltaje de alimentación y mayor número de entrads/salidas disponibles para el usuario.
+
+\newpage
+
+\subsection{Comparativa y elección}
+\label{subsec:comparativamicros}
+
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Comparativa controladores programables.}
+  \label{table1}
+  \begin{center}
+            \begin{tabular}{|c|c|c|}
+      \hline
+      \rowcolor{LightBlue2}   & {\bf Arduino Uno} &  {\bf A-Star 32U4 Prime SV} \\
+      \hline
+      Microcontrolador & ATmega328P & ATmega32U4\\
+      \hline
+      Entradas/Salidas & 20 & 26\\
+      \hline
+       Salidas PWM & 6 & 7\\
+      \hline
+      Rango de tensión de entrada & 7 a 12 V & 5 a 36 V\\
+      \hline
+      Precio & 20 \euro & 28 \euro\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Las mayores diferencias entre ambos controladores están en el número de entradas y en el margen de tensiones de entrada. En este trabajo sólo se van a  necesitar 2 salidas PWM, por lo tanto cualquiera de los controladores son válidos. Las tensiones de entrada tampoco son relevantes a la hora de elegir una opción u otra ya que la oferta de baterías y fuentes de alimentación es muy amplia. La mayor disponibilidad de documentación disponible en la plataforma Arduino hace que el aprendizaje y el desarrollo sean más rápidos, por lo tanto es la mejor opción. El controlador usado será el {\bf Arduino Uno}.
+
+
+\section{Unidad inercial de medidas (IMU)}
+\label{sec:seleccionimu}
+
+La unidad inercial de medidas o IMU por sus siglas en inglés es un dispositivo que combina un conjunto de sensores capaces de medir la aceleración, la velocidad angular y el campo magnético. Los sensores capaces de medir esas 3 magnitudes son el acelerómetro, el giróscopo y el magnetómetro. En general, las IMUs disponibles en el mercado son capaces de medir estas magnitudes en las 3 direcciones del espacio pues integran 3 acelerómetros, 3 giróscopos y 3 magnetómetros. En capítulos posteriores se explicará detalladamente el funcionamiento del giróscopo y del acelerómetro, pues el magnetómetro no es usado en este trabajo. Esta apartado se centra  en comparar los modelos más apropiados para este trabajo. Las dos IMU que se van a comparar son la Alt-IMU-10 de Pololu y la MPU-6050 de Invensense.
+
+\subsection{AltIMU-10}
+\label{subsec:altimu}
+
+Esta IMU combina un barómetro digital, un giróscopo de 3 ejes, un acelerómetro de 3 ejes, un magnetómetro de 3 ejes y un altímetro. Por lo tanto es un dispositivo con 10 grados de libertad. La ventaja de elegir esta IMU es que el vendedor proporciona unas librerías mediante las que leer los valores de los sensores sin tener que recurrir a lecturas de registros; sólo hay que hacer llamadas a las funciones definidas en la librería y se leerán los datos de los sensores. 
+
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.2]{images/altimu1}
+			\label{fig:altimu}
+			\\
+			\caption{AltIMU-10}
+		
+\end{figure}
+	
+Esta IMU es compatible con el controlador elegido pues rango de tensiones de alimentación es 2.5 V a 5.5 V y la corriente necesaria 6 mA (cada pin del Arduino entrega hasta 40 mA de corriente). Además incluye un regulador de tensión de 3.3 V, cuando al pin de alimentación VIN se le alimenta a  3.3 V o más, el pin VDD actúa como una fuente de 3.3 V que puede suministrar hasta 150 mA a componentes externos. Los rangos de FS\footnote{FS hace referencia a fondo de escala} se especificarán más adelante en la tabla comparativa.\\
+\\
+La lectura se realiza mediante comunicación I$^2$C, que es un protocolo de comunicación serie. Tiene un conversor digital-analógico por canal, es decir uno para cada eje de cada sensor, característica que asegura medidas de mucha precisión.
+
+\subsection{MPU 6050}
+\label{subsec:mpu}
+
+Este dispositivo combina un giróscopo de 3 ejes y un acelerómetro de 3 ejes. Es un dispositivo con 6 grados de libertad. En este caso el fabricante no proporciona librerías y las operaciones para leer datos de los sensores son algo más complejas, necesitando acceder a registros y realizar operaciones de desplazamiento de bits para obtener los datos de los sensores.
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.4]{images/mpu1}
+			\label{fig:mpu}
+			\\
+			\caption{MPU 6050}
+		
+\end{figure}
+	
+También es compatible con Arduino pues su rengo de tensión de alimentación es 2.375 V a 3.46 V. La lectura se realiza mediante comunicación I$^2$C. Tiene un conversor digital-analógico por canal, es decir uno para cada eje de cada sensor, característica que asegura medidas de mucha precisión. 
+
+
+\subsection{Comparativa y elección}
+\label{subsec:comparativaimu}
+
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Comparativa IMU.}
+  \label{table2}
+  \begin{center}
+            \begin{tabular}{|c|c|c|}
+      \hline
+     \rowcolor{LightBlue2}  &   {\bf AltIMU-10} & {\bf MPU 6050} 				\\
+      \hline
+     
+     Rangos FS giróscopos & $\pm 245, {\pm 500} ,{\pm 2000} º/s  &  \pm 250, \pm 500, \pm 1000 , \pm 2000 º/s$\\
+      \hline
+      Rangos FS acelerómetros & $\pm 2, \pm 4, \pm 6 , \pm 8,\pm 16 g& \pm 2, \pm 4, \pm 6 , \pm 8,\pm 16 g$\\
+      \hline
+      Rango de tensión de entrada & 2.5 a 5.5 V & 2.375 a 3.46 V\\
+      \hline
+      Precio & 30 \euro & 6 \euro\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+La única diferencia significativa es el precio. No obstante la mayor facilidad a la hora de programar para leer los valores de los sensores va a reducir el error significativamente y merece la pena esa diferencia de costes. La IMU que se usará en este trabajo es la {\bf AltIMU-10}.
+
+
+
+
+
+\section{Motores}
+\label{sec:eleccionmotores}
+
+La elección de unos motores adecuados resulta imprescindible, pues de sus características dependerá la estabilización y el consumo de energía. Los dos tipos de motores entre los que hay que elegir son los motores con escobillas, que generalmente son motores de continua, o motores sin escobillas. Para analizar las diferencias entre los motores se ha utilizado información obtenida de ***\cite{Vila}.
+
+\subsection{Motores DC (Brushed Motors)}
+\label{subsec:motordc}
+
+Estos motores están compuestos de dos partes, un estator que sirve como soporte mecánico y en el que se encuentran los polos, y un rotor que recibe la corriente de las escobillas. La función de las escobillas es la de cambiar la dirección de la corriente que circula por sus bobinas, esta conmutación produce un par de rotación en el eje. Estos motores no necesitan ningún tipo de controlador para variar su velocidad debido a la conmutación mecánica mediante escobillas, por lo que el control es simple.
+
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.35]{images/motorcontinua}
+			\label{fig:motorcontinua}
+			\\
+			\caption{Motor de corriente continua}
+		
+\end{figure}
+
+El principal inconveniente de este tipo de motores es que debido al rozamiento del rotor con las escobillas se produce un desgaste debido al que hay sustituir las escobillas con mucha frecuencia. En consecuencia el coste de mantenimiento es elevado.
+
+
+
+\subsection{Motores sin escobillas (Brushless Motors)}
+\label{subsec:motorsinescobillas}
+
+Son similares a los motores de corriente continua en su estructura pues usan bobinas e imanes para mover el eje pero su funcionamiento es muy distinto. Con motores de alterna trifásicos y debido a que no hay ningún elemento mecánico como las escobillas que inviertan el sentido de la corriente es necesario para regular la velocidad de giro un controlador electrónico de velocidad (ESC). El ESC además funciona como inversor, convirtiendo la corriente continua suministrada por las baterías a corriente alterna necesaria para alimentar el motor.
+
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.3]{images/motorbrushless}
+			\label{fig:motorbrushless}
+			\\
+			\caption{Motor sin escobillas}
+		
+\end{figure}
+
+De este tipo de motores existen dos posibles configuraciones, de rotor externo o de rotor interno. Su nombre indica la posición de las bobinas del respecto a los imanes permanentes. 
+
+
+\subsection{Comparativa y elección}
+\label{subsec:comparativamotores}
+
+
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Comparativa Motores.}
+  \label{table3}
+  \begin{center}
+            \begin{tabular}{|c|c|c|}
+      \hline
+      \rowcolor{LightBlue2}   & {\bf Motor sin escobillas} &  {\bf Motor continua} \\
+      \hline
+      Mantenimiento & Bajo & Elevado\\
+      \hline
+      Eficiencia & Alta & Media\\
+      \hline
+      Conmutación & Electrónica & Mecánica\\
+      \hline
+      Ruido electrónico & Bajo & Alto \\
+      \hline
+      Precio & 15 \euro & 7 \euro\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Las ventajas de elegir un motor sin escobillas se observan en la tabla 1.3. Sin embargo esas no son todas las ventajas, al no haber escobillas no hay rozamiento y el rango de velocidad es más elevado al no tener limitación mecánica, también tienen mayor eficiencia pues la pérdida de calor es mucho menor y, como última consecuencia de no tener escobillas, el rendimiento es mayor, con la misma potencia eléctrica suministrada el motor sin escobillas adquiere mayor velocidad. Por todas estas ventajas, a pesar de la diferencia de coste, se va a utilizar el {\bf Motor Brushless}. Por lo tanto el siguiente paso será elegir un controlador electrónico de velocidad.\\
+\\
+Para estos tipos de motores el fabricante suele especificar, además de los parámetros comunes a los motores de continua, el factor Kv, que indica el número de revoluciones por minuto por cada voltio de tensión que se le aplica al motor. Ya que el peso que tienen que levantar los motores no es muy elevado, no se requiere de un gran factor Kv ni de un gran par en los motores para este trabajo. En la tabla \ref{table4} se indican las especificaciones del motor elegido.
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Especificaciones motor.}
+  \label{table4}
+  \begin{center}
+            \begin{tabular}{|c|c|}
+      \hline
+      \rowcolor{LightBlue2}   & {\bf Motor sin escobillas A2212} \\
+      \hline
+      Eficiencia Máxima & 80 \%\\
+      \hline
+      Kv & 1000 \\
+      \hline
+      Diámetro del eje & 3.17mm \\
+      \hline
+      Tensión alimentación & 7.4 a 14.8 V  \\
+      \hline
+      Corriente sin carga & 0.5 A \\
+      \hline
+      
+       Corriente Máxima & 12 A \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+
+
+\section{Controlador electrónico de velocidad}
+\label{sec:ESC}
+
+Los motores brushless, como se ha mencionado en la sección \ref{sec:eleccionmotores}, necesitan para regular su velocidad de giro mediante la conmutación de la sentido de la corriente un dispositivo llamado controlador electrónico de velocidad. Es un circuito electrónico utilizado para variar la dirección del motor, la velocidad e incluso para actuar como freno. 
+
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.3]{images/ESC}
+			\caption{ESC.}
+			\label{fig:ESC}
+		
+\end{figure}
+
+Los distintos cables que se ven en la figura \ref{fig:ESC} corresponden a:
+
+
+\begin{itemize}
+
+
+		\item {\bf 3 cables izquierda (Amarillo, rojo y negro)}: cables de conexión al motor, cada uno corresponde a una fase.
+		
+		\item {\bf 2 cables derecha (Rojo y negro)}: estos cables deben conectarse a la batería, son los cables de alimentación.
+		
+		\item {\bf Conector de 3 cables derecho}: estos 3 cables son los cables de señal, el rojo y negro corresponden a Vcc y a masa y el blanco es el cable de señal.
+
+
+
+\end{itemize}
+
+Los controladores están regulados por una señal PPM (modulación por posición de pulso), que son similares a las señales PWM.  En este tipo de señales la tensión aplicada en bornes del motor será el valor medio del tren que estará acotado entre 1 y 2 ms, es decir, con 1 ms el motor gira a la velocidad mínima y con 2 ms el motor gira a la velocidad máxima. La frecuencia a la que se trabaja en este proyecto es de 33.33 Hz.\\
+\\
+Un ejemplo de una señal de excitación para un ESC se muestra en la figura \ref{fig:senalesc1}.
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.5]{images/senalesc}
+			\caption{Señal ESC.}
+			\label{fig:senalesc1}
+\end{figure}
+
+En esta señal se puede observar el rango de velocidades y el funcionamiento del motor en cada caso. Si se excita el motor a una velocidad menor de la mínima no arrancará y si se excita a una velocidad mayor de la máxima existe el riesgo de romper el motor. La forma de mandar estas señales al ESC se explicará en detalle en el capítulo \ref{part:motoresyesc}.
+
+
+Las características de las distintas opciones disponibles en el mercado son muy similares, por lo tanto se ha elegido un ESC que tiene una buena relación calidad/precio. Sus especificaciones se muestran en la tabla \ref{table5}. 
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Especificaciones ESC.}
+  \label{table5}
+  \begin{center}
+            \begin{tabular}{|c|c|}
+      \hline
+      \rowcolor{LightBlue2}   & {\bf ESC} \\
+      \hline
+      Salida & 30 A continuo, 40A hasta 10 secs \\
+      \hline
+      Voltaje de entrada & 2-4 baterías LiPo \\
+      \hline
+    
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\section{Hélices}
+\label{sec:helices}
+
+\parbox{0.3\textwidth}{ \includegraphics[scale=0.04]{images/helices}} \parbox{0.7\textwidth}{ Como el brazo sólo va a realizar un movimiento de rotación en un solo eje no se necesitan unas hélices muy grandes pues no es necesaria mucha fuerza de empuje. Por ello se han elegido unas hélices de unas dimensiones estándar que darán la fuerza de empuje necesaria para mover el brazo. Las dimensiones de las hélices son 200 mm de un extremo a otro y 6 mm el diámetro del eje. } 
+
+\newpage
+
+\section{Batería o fuente de alimentación}
+\label{sec:ESC}
+
+Las corrientes que necesitan los motores son bastante elevadas debido a la oposición de las bobinas a cambios en la corriente que circulan a través de ellas. Las baterías que se suelen utilizar en los cuadricópteros se denominan baterías LiPo, que son baterías de polímero de Litio. Cada una de estas baterías está compuesta por celdas en paralelo, cada celda suele tener un voltaje de 3.7 V y las ventajas que tienen es que son muy ligeras (conveniente para el cuadricóptero) y proporcionan grandes descargas de corriente. 
+
+\begin{figure}[H]
+		\centering
+			\includegraphics[scale=0.1]{images/LiPo}
+			\label{fig:LiPo}
+			\\
+			\caption{Batería LiPo}
+		
+\end{figure}
+
+Uno de los problemas de estas baterías es que si se descargan demasiado, es decir, la tensión es inferior a un valor facilitado por el fabricante, la batería deja de funcionar. Además si se les suministra demasiada corriente en la recarga pueden llegar a explotar. Ya que este trabajo está centrado en estabilizar un brazo que va a tener una base de apoyo se va a utilizar una fuente de alimentación, que son más seguras y la tensión proporcionada es más estable.
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.4]{images/fuente}
+			\label{fig:fuente}
+			\\
+			\caption{Fuente de alimentación utilizada}
+		
+\end{figure}
+
+La fuente utilizada tiene dos fuentes independientes, una de 5 V y una de 12 V. En este trabajo se utilizará la fuente de 12 V. Las características de la fuente de alimentaciónse muestran en la tabla \ref{table6}.
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Especificaciones fuente de alimentación.}
+  \label{table6}
+  \begin{center}
+            \begin{tabular}{|c|c|c|}
+      \hline
+      \rowcolor{LightBlue2}   & {\bf 5 V} & {\bf 12 V}\\
+      \hline
+      Salida & 13 A (Pico)& 6 A (Pico) \\
+      \hline
+      Entrada & 180-240 V & 180-240 V \\
+      \hline
+    
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\section{Montaje final}
+
+Para montar el brazo se necesita un material que sea ligero y que sea fácil de trabajar, para que el montaje de la estructura no resulte excesivamente largo y complejo. El material usado en este trabajo es el aglomerado, que se obtiene a partir de virutas o serrín. pues su manipulación sólo requiere de una sierra de vaivén y se puede taladrar fácilmente para acoplar las distintas partes. El montaje del brazo debe tener suficiente peso y suficiente superficie en la base para que ante movimientos bruscos en la fase de pruebas del PID la estructura no se balancee, sólo debe moverse el brazo a estabilizar. \\
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.078]{images/estructuraensamblada}
+			\caption{Brazo montado.}
+			\label{fig:estructuraensamblada}
+\end{figure}
+
+La estructura de la figura \ref{fig:estructuraensamblada} tiene un eje central sobre el que puede girar libremente el brazo. Para que las hélices no pasen de un ángulo de aproximadamente 75º por cada lado, caso en el que chocarían contra las barras de soporte del brazo y sería peligroso, se ha colocado un tope de madera entre las barras para limitar el movimiento; además se limitará también por software para mayor seguridad. Para que el centro de gravedad del montaje descienda se ha colocado una pesa en la base y se disminuye el riesgo de volcar ante acelerones bruscos de los motores.
+
+
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/circuitofritzing}
+    \caption{Esquema del circuito.}
+  \end{subfigure}  
+      \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/circuito}
+    \caption{Foto del circuito real.}
+  \end{subfigure}
+  \caption{Imágenes del esquema y del circuito montado.}
+  \label{fig:esquemaycircuito}
+\end{figure}
+
+En la figura \ref{fig:esquemaycircuito} se muestran el esquema del circuito montado y una imagen real del circuito. En el esquema sólo se ha representado uno de los motores porque la conexión del otro es idéntica.
+
+
+\part{Sensores de posición}
+\label{part:sensoresdeposicion}
+
+\chapter{Sensores de posición}
+\label{chapter:sensores}
+
+\section{Introducción}
+\label{sec:introduccionsensores}
+
+Como ya se ha comentado previamente, en este trabajo se van a utilizar dos sensores para estimar el ángulo del brazo, el giróscopo y el acelerómetro. Ninguno de los dos sensores da una medida directa del ángulo, por lo tanto hay que realizar algunas cálculos para estimar el ángulo. En este capítulo se explicarán todos los pasos necesarios para llegar a obtener medidas precisas del ángulo del brazo, desde la conexión de los componentes hasta la realización de los programas. \\
+
+
+
+Ambos sensores están integrados integrados en un chip denominado IMU. La IMU utilizada es la AltIMU-10 de Pololu e integra en el mismo chip un giróscopo de 3 ejes, un acelerómetro de 3 ejes, un magnetómetro de 3 ejes y un altímetro dando un total de 10 medidas independientes, lo que forma un sensor de 10 DOF\footnote{Grados de libertad}.
+
+\section{Conexión de la IMU}
+\label{sec:conexionimu}
+
+Para poder tomar medidas de la IMU hay que conectar 4 pines, los de alimentación y los de la comunicación serie. Los pines de la IMU se muestran en la figura \ref{fig:pinesimu}. Los pines de alimentación son el pin Vin para el positivo y GND para masa. Se puede conectar a un rango de tensiones de entre 2.6 y 5.5 V. La corriente de suministro que necesita es 6 mA, cada pin de Arduino suministra 40 mA, por lo que ese requisito lo cumple holgadamente. Los pines de comunicación son SCL y SDA, que corresponden a la señal de reloj y a la línea de datos, respectivamente. El valor alto corresponde a una tensión Vin y el valor bajo corresponde a 0 V. 
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.2]{images/imutrasera}
+			\caption{IMU con los nombres de los pines.}
+			\label{fig:pinesimu}
+\end{figure}
+
+El pin Vdd corresponde a una fuente de tensión de 3.3 V para otros componentes conectados al circuito, por lo que en ete trabajo se dejarán al aire. El pin Vdd corresponde a una fuente de tensión de 3.3 V para otros componentes conectados al circuito, por lo que en ete trabajo se dejarán al aire. En la figura \ref{fig:arduino+imufritzing} se muestra el esquema del circuito conectado. 
+
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.6]{images/arduino+imufritzing}
+			\caption{Esquema del circuito.}
+			\label{fig:arduino+imufritzing}
+\end{figure}
+
+Uno de los aspectos a tener en cuenta para identificar correctamente el ángulo medido es el sentido de los ejes en la IMU y la dirección en que incrementan y decrementan cuando la IMU gira. Se explicará mediante la figura \ref{fig:ejesimu}, que representa la conexión realizada en el brazo.
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.6]{images/detalleimureal}
+			\caption{Conexión de la IMU.}
+			\label{fig:ejesimu}
+\end{figure}
+
+Teniendo una vista global de la conexión completa en la figura \ref{fig:esquemaycircuito}, en esta vista en detalle se sabe que el eje que se va a medir es el eje Y. La flecha significa que en la dirección hacia la que apunta la flecha los valores del sensor crecen y en el sentido contrario decrecen.
+
+\section{Giróscopo}
+\label{sec:explicaciongiroscopo}
+
+Es un sensor que sirve para medir la velocidad angular de un algún aparato o vehículo. En la figura \ref{fig:imagengiroscopo} se observa su estructura. Para medir la velocidad de giro utiliza los principios del momento angular. Como se indica en ***\cite{wikigrioscopo}, cuando el giróscopo se somete a un momento de fuerza que tiende a cambiar la orientación de su eje de rotación, éste cambia de orientación girando respecto a un tercer eje, perpendicular tanto a aquel respecto del cual se lo ha empujado a girar, como a su eje de rotación inicial. Si está montado sobre un soporte de Cardano\footnote{Es un mecanismo de suspensión consistente en dos aros concéntricos cuyos ejes forman un ángulo recto.} que minimiza cualquier momento angular externo, o simplemente gira libre en el espacio, el giroscópo conserva la orientación de su eje de rotación ante fuerzas externas que tiendan a desviarlo.
+
+
+ \begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.5]{images/giroscopo}
+			\caption{Giróscopo mecánico.}
+			\label{fig:imagengiroscopo}
+		
+\end{figure}
+
+Debido a los tamaños con los que se trabaja hoy en día en el campo de  la electrónica resulta imposible construir un giróscopo electrónico con la estructura de la figura \ref{fig:imagengiroscopo}, por lo que se suelen utilizar giróscopos denominados de estructura vibrante o de vibración de Coriolis. Como se indica en \cite{patentegiroscopo} funcionan como resultado de fuerzas de Coriolis desarrolladas que ocurren cuando una partícula experimenta movimiento lineal en un bastidor rotatorio de referencia.\\
+\\
+Conociendo los tipos de giróscopos y su funcionamiento ya se puede pasar a realizar el programa para tomar medidas con el giróscopo utilizado en este trabajo. El giróscopo integrado en la IMU utilizada es el L3GD20H de la marca STMicroelectronics, un giróscopo de 3 ejes con salida digital. Se comunica mediante el bus de comunicación serie $I^2$C. Como ya se ha comentado previamente el fabricante del giróscopo adquirido provee una librería para que la lectura de datos de los sensores de la IMU resulte más sencilla. A continuación se muestran los pasos a seguir para poder empezar a leer datos del sensor:
+
+\begin{enumerate}
+
+
+	
+	\item {\bf Incluir la librería}: para poder utilizar las funciones y clases de datos definidas en la librería hay que incluir en el proyecto mediante un include.
+	
+	\item {\bf Declarar una variable}: en la librería hay definida una clase de datos llamada L3G que será la que usaremos para leer datos del giróscopo, por lo tanto hay que declarar una variable de este tipo para llamar a las funciones de la librería.
+	
+	\item {\bf Inicializar}: el giróscopo por defecto está configurado en modo "sleep"; hay que inicializarlo para poder empezar a leer datos. Además para poder comunicarse con Arduino hay que inicializar la comunicación serie.
+	
+	\item {\bf Lectura datos}: con los pasos previos ya realizados se pueden empezar a leer datos con la función \textit{read} definida en la librería.
+	
+\end{enumerate}
+
+Un ejemplo de un programa mediante el que se podrían leer datos del giróscopo se muestra en el código \ref{cod:ejemplo1}. En él se han programado todos los pasos arriba mencionados para tomar medidas del giróscopo.
+
+
+
+\begin{lstlisting}[caption=Ejemplo de programa para tomar medidas del giróscopo., label=cod:ejemplo1,style=Cnice]
+#include <Wire.h>  							//Librería para la comunicación serie
+#include <L3G.h>	  							//Librería del giróscopo
+
+L3G gyro;		  							//Declaración variable del tipo L3G
+
+void setup()
+{
+  Serial.begin(115200); 						//Inicia el puerto serie
+  Wire.begin();		   						//Comunicación I2C entre IMU y Arduino
+  
+   if (!gyro.init())	   						//Inicialización del giróscopo
+  {
+    Serial.println("Failed to autodetect gyro type!");
+    while (1);
+  }
+
+  gyro.enableDefault();//Habilita varios registros a su valor por defecto
+  
+  }
+  
+void loop()
+{
+	gyro.read();
+}
+
+\end{lstlisting}
+
+Estos valores leídos del sensor y almacenados en la variable gyro son valores ``raw``, es decir, es un entero de 16 bits, no la velocidad angular. Para obtener la velocidad angular hay que realizar una serie de operaciones especificadas por el fabricante en la hoja de características del sensor. Para obtener valores de velocidad angular se debe multiplicar el valor ``raw`` obtenido  por un factor de conversión llamado sensibilidad, cuyas unidades son mdps\footnote{mdps hace referencia a milidegrees per second (miligrados por segundo)}/digit. Los valores de estas constantes para cada FS se encuentran en ***\cite{hojacarcaterísticasgiroscopo}. El objetivo final no es obtener la velocidad angular sino la posición, que es el ángulo. Como la velocidad es la derivada de la posición respecto del tiempo la solución es aplicar la ecuación \ref{ecuacion1} para obtener la posición.
+
+
+\begin{equation}
+  angulo = \int dps\_y\, dt
+  \label{ecuacion1}
+\end{equation}
+
+Para poder programar esa integral hay que controlar el tiempo que tarda en ejecutarse el bucle principal, que debe ser siempre el mismo. Se debe medir el tiempo al inicio del bucle y al final del bucle para asegurarse de que en ninguna iteración se sobrepasa el tiempo de ejecución y si está por debajo introducir un delay. Para medir el tiempo transcurrido se puede utilizar la función ``millis()``. 
+
+
+
+\begin{lstlisting}[caption=Ejemplo para obtener una medida de la posición., label=cod:ejemplo2,style=Cnice]
+#include <Wire.h>  							
+#include <L3G.h>	  							
+
+#define FACTOR_CONVERSION_245DPS 0.00875
+
+#define DT 0.03 							//Tiempo en segundos
+
+int16_t dps_y;
+unsigned long time_loop1, time_loop2;	//Variables para medir el tiempo de ejecución
+double angulo_giroscopio_y;
+
+...
+  
+void loop()
+{
+
+	time_loop1 = millis();
+	gyro.read();
+	
+	dps_y =  (gyro.g.y)*FACTOR_CONVERSION_245PS;
+	angulo_giroscopio_y += (double) dps_y*DT; 		//La integral se realiza mediante una multiplicación
+	
+	time_loop2 = millis();
+	
+	while(time_loop2-time_loop1 < DT) 
+  {
+    delay(1);
+  }
+}
+
+\end{lstlisting}
+
+Con el código \ref{cod:ejemplo2} ya se obtiene una estimación del ángulo del brazo, sin embargo esa medida tiene fuentes de error que hacen que la precisión de la medida sea muy baja. Hay métodos para minimizar estos errores pero no se pueden eliminar completamente. A continuación se comentan estos errores y cómo reducirlos.
+
+
+\subsection{Fuentes de error}
+\label{subsec:errores}
+
+\subsubsection{Offset}
+
+Este error se refiere al valor que dan los sensores si el brazo está parado, es decir, la velocidad angular es 0. Para corregirlo basta con estimarlo y restárselo a cada lectura. 
+
+
+\begin{lstlisting}[caption=Eliminación del error de offset del giróscopo., label=cod:ejemplo3,style=Cnice]
+#include <Wire.h>  							
+#include <L3G.h>	  							
+
+#define FACTOR_CONVERSION_245DPS 0.00875
+
+#define DT 0.03 							//Tiempo en segundos
+
+int16_t dps_y;
+int sampleNum = 500, offsetg_y = 0;;
+
+
+void setup()
+{
+
+for(int n=0;n<sampleNum;n++){
+  
+  gyro.read();
+  offsetg_y+=(int)gyro.g.y;
+}
+offsetg_y = offsetg_y/sampleNum;
+
+}
+
+  
+void loop()
+{
+	gyro.read();
+	dps_y =  (gyro.g.y-offsetg_y)*FACTOR_CONVERSION_245PS;
+	...
+}
+
+\end{lstlisting}
+
+Mediante el código \ref{cod:ejemplo3} se obtiene la media del offset en sampleNum muestras y se consigue hacer despreciable el error de offset.
+
+\subsubsection{Deriva (Drift)}
+
+Para obtener la estimación del ángulo hay que realizar una integral, esto significa que cada iteración se suma un nuevo valor a la variable en la que se almacena el ángulo. Esta característica de la medida del ángulo provoca que si en cada medida hay un error pequeño se va a ir acumulando y tras varios segundos de ejecución de programa las medidas no van a ser válidas. En el caso del programa \ref{cod:ejemplo2} se suma ese error cada 30 ms, lo que hace que tras 10 segundos de ejecución se haya sumado ese error 333 veces.\\
+\\
+La única manera de reducir este error usando solo el giróscopo son los filtros paso-alto que incluye el modelo de giróscopo utilizado. Mediante este filtro se eliminan de la medida las muestras que tengan un valor muy pequeño como es el error por deriva. A pesar de utilizar este filtro no se consigue una medida válida de la posición del brazo; es necesario utilizar el acelerómetro para que la medida del ángulo sea precisa. La manera en la que se combinan los valores de los dos sensores se explicará en la sección \ref{sec:filtros}. 
+
+\subsubsection{Precisión}
+
+Además de los dos errores ya comentados hay otra característica del giróscopo, que no se puede considerar error pero sí limita la estimación del ángulo, y es que como este sensor mide la velocidad angular y ésta se integra la precisión de la medida es muy mala para movimientos lentos del brazo. Si la velocidad angular es muy baja el término que se va a sumar al ángulo es muy pequeño comparado con la suma total y no se va a percibir.
+
+\subsection{Medidas}
+
+En este apartado se van a mostrar ejemplos de medidas tomadas con los programas escritos en la sección \ref{sec:explicaciongiroscopo}. Las pruebas realizadas consisten en medir el ángulo con estos programas para poder observar las fuentes de error descritas en la sección \ref{subsec:errores}. La primera prueba consiste en ejecutar el programa y dejar el brazo en reposo para comprobar si se produce error por deriva. La segunda prueba consiste en mover el brazo un ángulo conocido para comprobar la precisión de la medida.
+
+
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/angulogiroscoposinfiltro}
+    \caption{Angulo medido con el giróscopo sin filtro.}
+  \end{subfigure}  
+      \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/angulogiroscopoconfiltro}
+    \caption{Angulo medido con el giróscopo con filtro.}
+  \end{subfigure}
+  \caption{Resultados de la medida del ángulo con el giróscopo.}
+  \label{fig:resultadosmedidagiroscopo}
+\end{figure}
+
+\paragraph*{}
+
+Se puede observar perfectamente el error de deriva, en menos de un minuto el error en la medida es de 7º, que es un error intolerable si se pretende estabilizar el brazo. Además en el caso del filtro esos picos que se producen como el del segundo 20 son correcciones del filtro ante el pequeño incremento, pero la utilización del filtro no es suficiente para obtener una medida adecuada.
+
+ \begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.58]{images/angulogiroscopovariacion90grados}
+			\caption{Ángulo medido con el giróscopo variando el ángulo.}
+			\label{fig:angulovariable}
+		
+\end{figure}
+
+\paragraph*{}
+
+La variación máxima real del ángulo es de 110º y después se ha vuelto a la posición inicial. El ángulo medido por el giróscopo es de 140º. Este error se debe a la baja precisión del giróscopo y a su principio de medida, que no le permite medir ángulos absolutos sino variaciones del ángulo. 
+
+
+\section{Acelerómetro}
+\label{sec:explicacionacelerometro}
+
+Es cualquier instrumento destinado a medir las fuerzas de aceleración. Como se indica en ***\cite{analisisacelerometro}, hay muchas maneras diferentes de fabricar un acelerómetro. Algunos acelerómetros usan el efecto piezo-resistivo (contienen cristales microsópicos que se estiran debido a la aceleración y generan una tensión), otro tipo de tecnología es medir los cambios en la capacidad. Este último es el caso del acelerómetro utilizado , que utiliza la tecnología de fabricación MEMS\footnote{Sistemas Microelectromecánicos}. Estos acelerómetros están compuestos de una masa móvil con unas placas que están unidas mediante un sistema de suspensión mecánica a un marco de referencia, como se muestra en la figura \ref{fig:acelerometromems}. Las placas móviles y las placas exteriores fijas forman condensadores. La desviación de la masa se mide usando la diferencia de capacidades.
+
+
+\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.4]{images/acelerometromems}
+			\caption{Acelerómetro de estructura vibrante.}
+			\label{fig:acelerometromems}
+		
+\end{figure}
+
+Conociendo los tipos de acelerómetros y su funcionamiento ya se puede pasar a realizar el programa para tomar medidas con el modelo del acelerómetro utilizado en este trabajo. El modelo integrado en la IMU utilizada es el LSM303D de la marca STMicroelectronics, un acelerómetro de 3 ejes con salida digital. Se comunica mediante el bus de comunicación serie $I^2$C. Como ya se ha comentado previamente el fabricante del acelerómetro adquirido provee una librería para que la lectura de datos de los sensores de la IMU resulte más sencilla. A continuación se muestran los pasos a seguir para poder empezar a leer datos del sensor:
+ 
+\begin{enumerate}
+
+
+	
+	\item {\bf Incluir la librería}: para poder utilizar las funciones y clases de datos definidas en la librería hay que incluir en el proyecto mediante un include.
+	
+	\item {\bf Declarar una variable}: en la librería hay definida una clase de datos llamada LSM303 que será la que usaremos para leer datos del acelerómetro, por lo tanto hay que declarar una variable de este tipo para llamar a las funciones de la librería.
+	
+	\item {\bf Inicializar}: el acelrómetro por defecto está configurado en modo "sleep"; hay que inicializarlo para poder empezar a leer datos. Además para poder comunicarse con Arduino hay que inicializar la comunicación serie.
+	
+	\item {\bf Lectura datos}: con los pasos previos ya realizados se pueden empezar a leer datos con la función \textit{read} definida en la librería.
+	
+\end{enumerate}
+
+Un ejemplo de un programa mediante el que se podrían leer datos del acelrómetro se muestra en el código \ref{cod:ejemplo4}.
+
+
+
+\begin{lstlisting}[caption=Ejemplo de programa para tomar medidas del acelerómetro., label=cod:ejemplo4,style=Cnice]
+#include <Wire.h>  							//Librería para la comunicación serie
+#include <LSM303.h>	  							//Librería del acelerómetro
+
+LSM303 compass;		  							//Declaración variable del tipo LSM303
+
+void setup()
+{
+  Serial.begin(115200); 						//Inicia el puerto serie
+  Wire.begin();		   						//Comunicación I2C entre IMU y Arduino
+  
+  compass.init();								//Inicialización del giróscopo
+  compass.enableDefault();   					//Habilita varios registros a su valor por defecto
+  }
+  
+  
+void loop()
+{
+	compass.read();
+}
+
+\end{lstlisting} 
+ 
+ Estos valores leídos del sensor y almacenados en la variable \textit{compass} son valores ``raw``, es decir, es un entero de 16 bits, no las fuerzas debidas a la aceleración. Para obtener la fuerza debida a la aceleración hay que realizar una serie de operaciones especificadas por el fabricante en la hoja de características del sensor. Para obtener valores de fuerza, medidos en g, se debe multiplicar el valor ``raw`` obtenido  por un factor de conversión llamado sensibilidad de aceleración lineal, cuyas unidades son mg\footnote{mg hace referencia a miligauss}/LSB. Los valores de estas constantes para cada FS se encuentran en ***\cite{hojacarcaterísticasacelerometro}. El procedimiento para obtener las fuerzas de aceleración es idéntico al que se ha llevado a cabo para obtener la velocidad angular con el giróscopo. Sin embargo, el objetivo final no es obtener las fuerzas de aceleración sino la posición, que es el ángulo. El ángulo se obtiene mediante los ángulos de Euler, que consiste en resolver unas matrices de rotación cuya solución son los ángulos de inclinación de un sólido rígido. La resolución de estas matrices se ha consultado en el documento del fabricante Freescale Semiconductor ***\cite{calculoangulosacelerometrofreescale}. La ecuación usada para estimar el ángulo es la ecuación \ref{ecuacion2}, que en el documento equivale a la ecuación 37:
+ 
+****APARECE UNA INTERROGACION EN LA ECUACIÓN 
+ 
+ \begin{equation}
+  tan(angulo\_acelerometro\_y) = {\displaystyle {{{-fuerza\_x} \over {\sqrt{fuerza\_y^2+fuerza\_z^2}}}}}
+  \label{ecuacion2}
+??
+\end{equation}
+
+El resultado está en radianes, así que hay que pasarlo a grados con una constante que se llamará \textit{RAD\_TO\_DEG} y cuyo valor es ${180 \over 2\pi} = 57.2958$. Mediante este método sólo se obtienen ángulos entre -90º y +90º. Dado que el brazo sólo puede girar en un rango de entre -75º y +75º, el rango de medidas mediante este método es válido para este trabajo.\\
+
+El programa para implementar esa ecuación es más sencillo que el programa necesario para estimar los ángulos mediante el giróscopo, pues en el caso del acelerómetro sólo hay que implementar una multiplicación. El código \ref{cod:ejemplo5} implementa todos los pasos necesarios para estimar el ángulo mediante el acelerómetro.
+
+\begin{lstlisting}[caption=Estimación del ángulo mediante el acelerómetro., label=cod:ejemplo5,style=Cnice]
+#include <Wire.h>  							//Librería para la comunicación serie
+#include <LSM303.h>	  							//Librería del acelerómetro
+
+#define RAD_TO_DEG 57.2958
+#define FACTOR_CONVERSION_2G 0.000061
+
+
+LSM303 compass;		  							//Declaración variable del tipo LSM303
+double fuerza__x, fuerza_y, fuerza_z;
+double angulo_acelerometro_y;
+...
+  
+  
+void loop()
+{
+	compass.read();
+	
+	fuerza_x =  -((compass.a.x)*FACTOR_CONVERSION_2G);//El signo - es debido a que la IMU está invertida 
+  	fuerza_y =  -((compass.a.y)*FACTOR_CONVERSION_2G);
+  	fuerza_z =  -((compass.a.z)*FACTOR_CONVERSION_2G);
+  	
+  	raiz_y = sqrt((fuerza_y*fuerza_y)+(fuerza_z*fuerza_z)); 
+	
+	angulo_acelerometro_y = (atan2(-fuerza_x,raiz_y))*RAD_TO_DEG;
+}
+
+ \end{lstlisting} 
+ 
+Con el código \ref{cod:ejemplo5} ya se obtiene una estimación del ángulo del brazo, sin embargo esa medida tiene fuentes de error que hacen que la precisión de la medida sea muy baja. Hay métodos para minimizar estos errores pero no se pueden eliminar completamente. A continuación se comentan estos errores y cómo reducirlos. 
+ 
+
+\subsection{Fuentes de error}
+\label{subsec:erroresacelerometro}
+
+\subsubsection{Offset}
+
+Este error se refiere al valor que dan los sensores si la fuerza en un eje es 0. Para corregirlo basta con estimarlo y restárselo a cada lectura. 
+
+
+\begin{lstlisting}[caption=Eliminación del error de offset del acelerómetro., label=cod:ejemplo6,style=Cnice]
+#include <Wire.h>  							
+#include <LSM303.h>	  							
+
+#define FACTOR_CONVERSION_2G 0.000061
+
+double fuerza_y;
+int sampleNum = 500, offset_y = 0;;
+
+
+void setup()
+{
+
+for(int n=0;n<sampleNum;n++){
+  
+  compass.read();
+  offsetg_y+=(int)compass.a.y;
+}
+offset_y = offset_y/sampleNum;
+
+}
+
+  
+void loop()
+{
+	compass.read();
+	fuerza_y =  -((compass.a.y-offseta_y)*FACTOR_CONVERSION_2G);
+	...
+}
+
+\end{lstlisting}
+
+Mediante el código \ref{cod:ejemplo6} se obtiene la media del offset en sampleNum muestras y se consigue hacer despreciable el error de offset restando el valor de offset al valor de cada medida.
+ 
+ 
+
+\subsubsection{Ruido}
+ 
+ En el caso del giróscopo se necesitaba movimiento del aparato en el que está acoplado el sensor para poder medir el ángulo, sin embargo con el acelerómetro se puede medir el ángulo en cualquier momento. El problema es que las medidas del acelerómetro introducen un ruido de baja frecuencia que provoca que no se pueda medir el ángulo con precisión en un corto período de tiempo. Las medidas del acelerómetro son útiles sólo para medir ángulos en un largo periodo de tiempo y de variaciones lentas. No hay manera de eliminar este error si sólo se usa para medir el acelerómetro. Para ello se combinan las medidas del acelerómetro y del giróscopo utilizando filtros. 
+ 
+ 
+\subsection{Medidas}
+
+En este apartado se van a mostrar ejemplos de medidas tomadas con los programas escritos en la sección \ref{sec:explicacionacelerometro}. Las prueba realizada consiste en medir el ángulo con estos programas para poder observar las fuentes de error descritas en la sección \ref{subsec:erroresacelerometro}. 
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.5]{images/anguloacelerometro}
+  \caption{Resultados de la medida del ángulo con el acelerómetro.}
+  \label{fig:resultadosmedidaacelerometro}
+\end{figure}
+
+Esta prueba realizada es similar a la realizada al medir con el giróscopo y variar el ángulo. Como se ve en la gráfica\ref{fig:resultadosmedidaacelerometro}, al contrario de lo que sucedía con el giróscopo (cuyo punto de referencia estaba donde empezaba el brazo), los resultados ahora son de ángulos absolutos entre .90º y +90º, siendo 0º el ángulo en el que el brazo está paralelo al suelo. También se aprecia en la gráfica el error debido al ruido, cuando se produce un cambio brusco del ángulo de inclinación el ruido que aparece en las medidas es considerable. Ante cambios lentos del ángulo la precisión es elevada, pero es debido a las posibles variaciones rápidas del ángulo que se debe usar el giróscopo en conjunto. Para cuantificar mejor si ese ruido que aparece es importante se muestra en la figura \ref{fig:detalleruido} una ampliación de la anterior imagen.
+
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.5]{images/anguloacelerometrodetalle}
+  \caption{Ruido en la medida del ángulo con el acelerómetro.}
+  \label{fig:detalleruido}
+\end{figure}
+
+ Las variaciones del ángulo son de hasta 5º para un ángulo medido de 75º, si el ángulo fuese más pequeño, por ejemplo 10º, el error sería mucho mayor y correspondería a un 50 \% de su valor. Con este error resultaría muy complejo estabilizar el brazo, es necesario el uso de filtros que cobinen adecuadamente las medidas del acelerómetro y del giróscopo. Los distintos tipos de filtros se explicarán en la sección \ref{sec:filtros}.
+ 
+ 
+ 
+\section{Filtros}
+\label{sec:filtros}
+
+Para que la medida del ángulo tenga una precisión suficiente para poder estabilizar el brazo es necesario combinar las medidas de los dos sensores explicados hasta ahora, el acelrómetro y el giróscopo. Esa es la utilidad de los filtros, mediante un algoritmo combina las medidas de ambos sensores para reducir o eliminar los errores típicos de cada sensor y dar una medida de alta precisión del ángulo. Los dos filtros más comunes y que mejor funcionan son el filtro de Kalman y el filtro complementario.
+
+
+
+\subsection{Filtro de Kalman}
+\label{subsec:filtrokalman}
+
+Este es el filtro más eficaz pero también el más complejo de implementar. Es un filtro recursivo que predice el error y lo corrige teniendo únicamente como datos las mediciones de entrada actuales, el estado calculado previamente y su matriz de incertidumbre. Para implementarlo se utiliza el control en el espacio de estados.
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.8]{images/kalman}
+  \caption{Algoritmo recursivo del filtro de Kalman.}
+  \label{fig:kalman}
+\end{figure}
+
+\paragraph*{}
+
+Este filtro, debido a que trabaja con matrices, requiere mucha potencia de cálculo y el Arduino Uno no tiene un procesador muy potente. 
+
+
+\subsection{Filtro complementario}
+\label{subsec:filtrocomplementario}
+
+El concepto del filtro complementario consiste en tomar las variaciones lentas del acelerómetro y las variaciones bruscas del giróscopo y combinarlas. El acelerómetro da buenas medidas de la posición en condiciones estáticas y el giróscopo las da en condiciones dinámicas, es decir, cuando el brazo se mueve rápido. La implementación de este filtro se realiza pasando las medidas del acelerómetro por un filtro paso-bajo y las medidas del giróscopo por un filtro paso-bajo y combinar el resultado para obtener la posición final. La implementación se realiza con una línea de código en el bucle principal, mostrada en el código \ref{cod:ejemplo7}.
+
+
+\begin{lstlisting}[caption=Línea de código para implementar el filtro complementario., label=cod:ejemplo7,style=Cnice]
+angulo_y = 0.95*(angulo_y + dps_y*DT) + 0.05*angulo_acelerometro_y; 
+	
+\end{lstlisting}
+
+Teniendo los valores de los ángulos medidos con el giróscopo y el acelerómetro se introduce esa línea de código en el bucle principal y se obtiene una medida precisa del ángulo. Los valores de los filtros se pueden ajustar experimentalmente para obtener los mejores resultados. \\
+\\
+Dado que la implementación de este filtro es muy simple y los resultados son satisfactorias para la obtención del ángulo del brazo se va a utilizar el \textbf{filtro complementario}.
+\subsection{Medidas}
+
+En este apartado se va a mostrar cómo los errores mostrados en los apartados del acelerómetro y del giróscopo se eliminan mediante el uso del filtro complementario. Los distintos experimentos realizados mostrarán la efectividad del filtro y la precisión en las medidas del ángulo del brazo.\\
+\\
+El primer experimento consiste en dejar el brazo en reposo y registrar los ángulos del giróscopo y del acelerómetro y después obtener el del filtro complementario. El propósito de esta prueba es observar si el filtro corrige la deriva del giróscopo y si la medición del ángulo es correcta.\\
+
+
+
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}{0.57\textwidth}
+    \includegraphics[width=\textwidth]{images/filtroreposo}
+    \caption{Medidas del ángulo.}
+  \end{subfigure}  
+      \begin{subfigure}{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/reposoreal}
+    \caption{Inclinación del brazo.}
+  \end{subfigure}
+  \caption{Resultados de la medida del ángulo con el giróscopo.}
+  \label{fig:derivafiltrocomplementario}
+\end{figure}
+
+
+La figura \ref{fig:derivafiltrocomplementario} muestra cómo en la medida del filtro no hay deriva y además da una medida absoluta y precisa del ángulo. Cuando la variación del ángulo es pequeña el filtro paso-alto aplicado al giróscopo desprecia la medida del giróscopo , teniendo en cuenta únicamente la medida del acelerómetro. 
+
+El segundo experimento consiste en mover el brazo manualmente para comprobar los resultados de la medida del giróscopo, el acelerómetro y la combinación de ambos con el filtro complementario.
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.36]{images/filtromovil}
+  \caption{Medida del ángulo moviendo el brazo.}
+  \label{fig:brazomovil}
+\end{figure}
+
+\newpage
+
+En la figura \ref{fig:brazomovil} se observa cómo el resultado obtenido con el filtro complementario sigue a las medidas dadas por el acelerómetro pero filtrando el ruido. Además también se comprueba que el giróscopo mide correctamente cuando el brazo se está moviendo, aunque no sea en valores absolutos las variaciones las mide correctamente y no aparece deriva al no estar el brazo en reposo durante varios segundos.
+
+
+
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/filtromovilrojo}
+    \caption{Medidas del ángulo.}
+  \end{subfigure}  
+      \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/filtromovildetalleruido}
+    \caption{Inclinación del brazo.}
+  \end{subfigure}
+  \caption{Resultados de la medida del ángulo con el giróscopo.}
+  \label{fig:detalleruido}
+\end{figure}
+
+Para observar el ruido se ha aumentado la imagen \ref{fig:brazomovil}. Se comprueba cómo para un ángulo real del brazo de 78º el ruido que introduce el acelerómetro provoca que éste mida 86º, siendo un error considerable. \\
+\\
+En este apartado se ha mostrado el principio de funcionamiento de cada sensor y se han enumerado los errores que tiene cada uno  al estimar el ángulo del brazo. Se ha mostrado experimentalmente la eficacia del filtro complementario, que corrige los errores típicos de cada filtro con una sola línea de código y requiriendo poco tiempo de cómputo, lo que hace que sea una buena opción utilizar este filtro en aplicaciones en las que no se disponga de un procesador muy potente.
+
+
+\part{Motores y ESC}
+\label{part:motoresyesc}
+
+\chapter{Motores y ESC}
+\label{chapter:motoresyesc}
+
+
+\section{Introducción}
+\label{sec:introduccionmotoresyesc}
+
+Los motores acoplados a los extremos del brazo van a ser los actuadores mediante los que se va a estabilizar el ángulo. Ya que el brazo sólo puede moverse en dos direcciones de un solo eje se necesitan dos motores. Ya se ha explicado en el apartado \ref{sec:ESC} la razón de utilizar los controladores electrónicos de velocidad (ESC), en este apartado se explicará cuál debe ser la conexión entre los motores y el ESC y entre éstos y el Arduino.
+
+\section{Conexión de los motores y los ESC}
+\label{sec:conexionmotoresyesc}
+
+El esquema de la conexión entre batería, ESC, Arduino y los motores se muestran en la figura \ref{fig:esquemafritzing}.
+
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.5]{images/circuitofritzing}
+  \caption{Esquema de conexión motores.}
+  \label{fig:esquemafritzing}
+\end{figure}
+
+Sólo se muestra un motor porque la conexión del otro es idéntica. Como los motores giran a muchas revoluciones y las hélices tienen una sección muy fina son peligrosas cuando están en movimiento. Para asegurarse de que no les está llegando corriente a los motores y no van a empezar a girar se ha conectado un LED verde que se encenderá cuando se conecte el interruptor de la batería. La señal de control del ESC debe llevarse a una salida digital y la masa de los pines de control del ESC debe conectarse al pin GND del Arduino. {\bf Nunca se debe conectar el pin rojo de la señal de control al pin de 5 V del Arduino}. Como se indica en \cite{proteccionarduino} no hay protección frente en ese pin del Arduino. Este pin está conectado directamente al microcontrolador ATmega328, la interfaz de USB del microcontrolador y al regulador de 5 V, siendo la tensión máxima soportada por todos ellos 6 V. \\
+
+Antes de conectar los motores hay que asegurarse de que ambos giran en el mismo sentido. Si cada motor gira en un sentido ambos motores van a empujar al brazo en la misma dirección, siendo imposible estabilizarlo una vez pasado el punto de equilibrio. Si por ejemplo el motor izquierdo empuja el brazo hacia arriba y el motor derecho empuja el brazo hacia abajo sólo se puede actuar sobre el brazo girándolo hacia la derecha. Si la conexión realizada hace girar a cada motor en un sentido sólo se debe {\bf intercambiar la conexión de dos fases} en un motor y el problema está solucionado.\\
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.13]{images/detallefases}
+  \caption{Fases intercambiadas en uno de los motores.}
+  \label{fig:cambiofases}
+\end{figure}
+
+
+Con las conexiones de los motores ya realizadas se pueden empezar a realizar pruebas con los motores para conocer su funcionamiento con el objetivo de que los reguladores que se implementen tengan un funcionamiento óptimo.
+
+
+
+\section{Regulación de velocidad de los motores}
+\label{sec:regulacionvelocidad}
+
+La señal mediante la que se regulan los motores es una señal PPM (pulse position modulation), como se ha explicado en la sección \ref{sec:ESC}. Este apartado se va a centrar en explicar cómo se realiza el programa necesario para generar esas señales y enviarlas al ESC. Tiene varias modos de funcionamiento, entre los que se incluye el modo acelerador o \textit{throttle} y el modo freno. Para que los motores se muevan se debe programar el ESC en modo \textit{throttle}. Una peculiaridad de estos controladores es que la elección del modo de funcionamiento se realiza mediante sonidos, justo después de escuchar el sonido asociado al modo de funcionamiento que se quiere elegir se debe enviar la señal mínima al controlador y el ESC quedará programado en ese modo. El modo \textit{throttle} corresponde al segundo sonido emitido por el ESC, el primero indica que está conectado. Para enviar señales al ESC se debe hacer como si fuese un servo, utilizando la librería servo de Arduino. Los pasos necesarios para llegar a arrancar un motor son los siguientes:
+
+\begin{enumerate}
+	
+	\item {\bf Incluir la librería}: para poder utilizar las funciones y clases de datos definidas en la librería servo hay que incluirla en el proyecto. 
+	
+	\item {\bf Declarar una variable}: en la librería servo hay una clase de datos llamada \textit{servo}, hay que declarar una variable por cada motor.
+	
+	\item {\bf ''Adjuntar'' el motor}: mediante la función \textit{attach} declarada en la librería servo se especifica en qué pin está conectado cada motor.
+	
+	\item {\bf Programación del ESC}: para iniciar el modo programación del ESC hay que escribir la señal máxima de los motores, que son 2 ms.
+	
+	\item {\bf Elección modo \textit{throttle}}: el modo de funcionamiento se elige mediante sonidos, cuando se oiga el sonido asociado al modo en el que se quiere trabajar se quiere enviar la señal mínima, que son 0.7 ms.
+	
+	\item {\bf Escribir un valor de velocidad en los motores}: el último paso es escribir el valor de velocidad a la que se quiere que giren los motores, ese valor deberá estar comprendido entre 1 y 2 ms.
+	
+\end{enumerate}
+
+Un ejemplo de un programa mediante el que se arrancan los motores se muestra en el código \ref{cod:ejemplo10}. En él se han programado todos los pasos arriba mencionados para poder la velocidad de los motores.
+
+
+
+\begin{lstlisting}[caption=Ejemplo de programa para arrancar los motores., label=cod:ejemplo10,style=Cnice]
+#include <Servo.h>  							//Librería para para controlar un servo
+
+
+#define MAX_SIGNAL                 2000
+#define MIN_SIGNAL                 700 
+
+#define MOTOR_IZQUIERDO_PIN        9     
+
+Servo motorizquierdo;				//Definición de la variable para poder adjuntar el motor
+int velocidad_motor_izquierdo;
+
+void setup()
+{
+	//Adjuntar el motor, se asocia la variable motorizquierdo con el motor conectado al pin 9
+		motorizquierdo.attach(MOTOR_IZQUIERDO_PIN); 
+     
+    //Ahora se debe entrar en modo programación, para lo que se escribe la señal máxima en el ESC
+     	motorizquierdo.writeMicroseconds(MAX_SIGNAL);
+
+    // Esperando a que se pulse una tecla
+      	while (!Serial.available());
+      	Serial.read();
+
+    // Enviar valor minimo 
+    		motorizquierdo.writeMicroseconds(MIN_SIGNAL)
+  }
+  
+void loop()
+{
+	velocidad_motor_izquierdo = 1300;
+	motorizquierdo.writeMicroseconds(velocidad_motor_izquierdo);
+}
+\end{lstlisting}
+
+
+El bucle while de la línea 18 está ejecutándose hasta que se pulse una tecla cualquiera. Se coloca para que cuando se escuche el sonido correspondiente al modo de funcionamiento del controlador con el que se quiere trabajar se pulse cualquier tecla y el programa siga ejecutándose. Para mandar un valor de velocidad al controlador se utiliza la función \textit{writeMicroseconds}. Como el valor pasado son microsegundos hay que multiplicar por 1000 el valor de milisegundos correspondiente.
+
+
+
+
+\part{Estabilización del brazo}
+\label{part:reguladores}
+
+\chapter{Estabilización del brazo}
+\label{chapter:reguladores}
+
+
+***Hacer estudio teorico(METERLO EN UN "PART" ANTERIOR A ESTE) con la identificacionn del sistema y despues comparar con los resultaods expermientales
+
+\section{Introducción}
+\label{sec:introduccionreguladores}
+
+Hasta este punto el trabajo se ha centrado en estudiar los componentes y cómo utilizarlos para tomar medidas en l caso de los sensores y variar su velocidad en el caso de los motores, pero no se ha aplicado ningún control sobre ningún componente. En este apartado se va a aplicar la teoría de control para estabilizar el brazo en un ángulo que será indicado al sistema como referencia.
+
+
+\section{Controladores}
+\label{sec:controladores}
+
+Un controlador tiene la función de mantener constante una característica determinada del sistema. En este caso se mantendrá constante el ángulo brazo mediante la actuación de los motores. Los controladores más comunes son los denominados como PID, sin embargo en este trabajo se realizarán pruebas con controladores PPI, PIP, PIDPID. A continuación se explicará cómo implementarlos y se mostrarán los resultados de cada uno.
+
+
+\subsection{PID}
+\label{sec:controladorpid}
+
+Es un mecanismo de control sobre un mecanismo de control por realimentación. Estos 3 controladores en conjunto procesan el error calculado a partir de la señal de referencia menos la señal de salida real. El algoritmo del control PID cosiste de tres controladores distintos:
+
+\begin{itemize}
+
+		\item {\bf Proporcional}: su respuesta es proporcional al error. Si sólo se usa este controlador hay mucho ruido en el sistema y el sistema oscilaría mucho hasta estabilizarse.
+		
+		\item {\bf Integral}: su respuesta es proporcional a la integral del error, es decir, a la variación del error. Se puede considerar una memoria que estima lo que va a pasar en función de los errores pasados. Elimina el error en régimen estacionario a costa de aumentar el tiempo de establecimiento y hacer la respuesta más lenta.
+		
+		\item {\bf Derivativo}: su respuesta es proporcional a la derivada del error, es decir, a la velocidad de variación del error. Con este controlador se aumenta la velocidad de respuesta del sistema a costa de introducir ruido a alta frecuencia.
+
+
+\end{itemize}
+
+Conjuntando estos tres reguladores se consigue un buen sistema de control. Su comportamiento se varía ajustando las constantes de cada controlador, consiguiendo así la mejor respuesta en función de la aplicación. El esquema del sistema incluyendo el PID se muestra en la figura \ref{fig:pid}.
+
+ \begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.5]{images/PIDdesglose}
+  \caption{Esquema del sistema.}
+  \label{fig:pid}
+\end{figure}
+
+La entrada de referencia es el ángulo en grados al que se quiere estabilizar el brazo. Para estabilizar el brazo se va a establecer una velocidad base de 1,3 ms para cada motor, que será la velocidad a la que giren los motores si el error es nulo. Si hay error el PID actuará acelerando un motor y desacelerando el otro para corregirlo. Los pasos a seguir para implementar este controlador son:
+
+\begin{enumerate}
+
+	\item {\bf Definir las constantes}: hay que definir los valores de las constantes que se multiplicarán a cada parámetro del controlador, después se ajustarán experimentalmente.
+
+	\item {\bf Calcular el error}: como ya se ha calculado el ángulo del brazo en el capítulo \ref{chapter:sensores} ahora se necesita un dato de entrada, el ángulo de referencia. Para empezar se escribirá en en el programa como un \textit{\# define}, más adelante se modificará desde LabView. Para calcular el error sólo hay que restar el ángulo de referencia al ángulo medido del brazo.
+	
+	\item {\bf Calcular el integral}: como el parámetro es una integral es imprescindible multiplicar por DT\footnote{Delta Time: es la duración del bucle principal en segundos} la suma del error.
+	
+	\item {\bf Calcular el derivativo}: ya que es una derivada hay que dividir por DT la resta del error actual y el error de la iteración anterior.
+	
+	\item {\bf Cálculo del PID}: teniendo los 3 parámetros hay que combinarlos todos en una única variable.
+	
+	\item {\bf Aplicar el control a los motores}: como se indica en la sección \ref{sec:conexionmotoresyesc} cada motor gira en un sentido, por lo tanto a un motor hay que sumar el valor del controlador y al otro restarlo.
+	
+\end{enumerate}
+
+
+\begin{lstlisting}[caption=Implementación del PID., label=cod:ejemplo111,style=Cnice]
+#include <Servo.h>  							
+#include <Wire.h>
+#include <LSM303.h>
+#include <L3G.h>
+
+#define DT 0.03 
+#define ANGULO_REFERENCIA = 0; //Ángulo al que se quiere estabilizar el brazo
+
+#define MAX_SIGNAL                 2000
+#define MIN_SIGNAL                 700 
+#define MAX_VEL                    1500	
+#define MIN_VEL                    1000 
+
+#define MOTOR_IZQUIERDO_PIN        9
+#define MOTOR_DERECHO_PIN          10    
+
+#define Throttle_Motor_Izquierdo   1300   //Velocidad de los motores si el error es 0
+#define Throttle_Motor_Derecho     1300 
+
+double angulo_y
+
+//VARIABLES MOTORES
+
+Servo motorizquierdo, motorderecho;		
+int velocidad_motor_izquierdo, velocidad_motor_derecho;
+
+//VARIABLES PID
+
+    float Kp = 6, Ki = 3, Kd = 2;  
+    float error, error_pasado, derivativo, integral;
+    float PID_angulo;
+
+void setup()
+{
+	 	Serial.begin(115200);
+    		Wire.begin(); 
+	//Adjuntar motores, programar ESC's y habilitar sensores
+			
+		...
+} 
+void loop()
+{
+	//Medida ángulo
+		...
+	 angulo_y = 0.95*(angulo_y + dps_y*DT) + 0.05*angulo_acelerometro_y;	
+	 
+	//PID
+		 
+	 error = ANGULO_REFERENCIA - angulo_y; 
+    	 integral+=(error*DT);
+    	 derivativo = (error-error_pasado)/DT;
+    	 PID_angulo = Kp*error + Ki*integral + Kd*derivativo;
+
+	//Control motores
+	
+	 velocidad_motor_izquierdo = Throttle_Motor_Izquierdo + PID_angulo;
+     velocidad_motor_derecho   = Throttle_Motor_Derecho - PID_angulo;
+     
+      velocidad_motor_izquierdo = (velocidad_motor_izquierdo > MAX_VEL) ? MAX_VEL:velocidad_motor_izquierdo;
+     velocidad_motor_izquierdo = (velocidad_motor_izquierdo < MIN_VEL) ? MIN_VEL:velocidad_motor_izquierdo; //Velocidad minima para que no se pare el motor izquierdo
+     
+     velocidad_motor_derecho = (velocidad_motor_derecho > MAX_VEL) ? MAX_VEL:velocidad_motor_derecho;
+     velocidad_motor_derecho = (velocidad_motor_derecho < MIN_VEL) ? MIN_VEL:velocidad_motor_derecho;//Velocidad minima para que no se pare el motor derecho
+     
+     motorizquierdo.writeMicroseconds(velocidad_motor_izquierdo);
+     motorderecho.writeMicroseconds(velocidad_motor_derecho);
+     
+     error_pasado = error;	//Para calcular el derivativo 
+}
+\end{lstlisting}
+
+El código \ref{cod:ejemplo111} muestra cómo se implementa el controlador PID. Las constantes MAX\_VEL y MIN\_VEL se utilizan para limitar la velocidad de los motores desde la línea 64 del código hasta la línea 69. Es recomendable para que la velocidad no sobrepase el límite, si desciende de 1 ms el motor se puede parar y si aumenta de 2 ms el motor puede llegar a romperse. Se ha establecido en 1,5 ms la máxima porque la fuente de alimentación no suministra suficiente corriente para llevar a un motor a la velocidad máxima mientras el otro sigue girando. El resultado de la estabilización con este controlador se muestra en la figura \ref{fig:escalonpid}. Los valores de las constantes para estos resultados son \mathbf {$K_p = 6$, $K_i = 3$ y $K_d = 2$}. 
+
+ \begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.6]{images/respuestaescalonpid}
+  \caption{Respuesta del sistema para controlador PID.}
+  \label{fig:escalonpid}
+\end{figure}
+
+El ruido presente se debe a las vibraciones de los motores,  cuando el brazo llega al ángulo de referencia la vibración de los motores provoca un pequeño error que el controlador intenta corregir constantemente, y a la constante $K_d$ , aumentándola se consigue un mayor tiempo de respuesta pero también se introduce más ruido en el sistema. En la figura \ref{fig:errorpid} se muestra la magnitud del ruido después del escalón.
+
+ \begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.6]{images/respuestaescalonpiddetalle}
+  \caption{Detalle del ruido presente en la respuesta en régimen permanente del controlador PID.}
+  \label{fig:errorpid}
+\end{figure}
+
+El error máximo es de 3º, que es un error aceptable para la estabilización del brazo. Variando los valores de las constantes del controlador, lo que se denomina \textit{PID tuning}, se puede cambiar el comportamiento del sistema. si bien se puede mejorar también se puede empeorar y siendo este un buen resultado se van a dejar estos valores de las constantes.\\
+\\
+Para poder comparar los resultados con el resto de controladores se van a calcular en la respuesta de cada controlador los parámetros en régimen transitorio. Para poder obtener el valor exacto de algunos de ellos es recomendable escribir un script de Matlab. El código \ref{cod:matlab1} permite obtener el tiempo de establecimiento, el tiempo de pico y el sobreimpulso máximo con exactitud.   
+
+
+\lstset{language=matlab}
+\lstset{tabsize=2}
+\lstset{commentstyle=\textit}
+\lstset{stringstyle=\ttfamily, basicstyle=\small}
+\begin{lstlisting}[caption=Cálculo de parámetros en régimen transitorio con Matlab., label=cod:matlab1,frame=trbl]{}
+ 
+ figure(1);
+ plot(dt, angulomedido, dt, anguloreferencia);
+ title('Respuesta al escalón');
+ xlabel('Time[s]');
+ ylabel('Ángulo[º]');
+ legend('Ángulo medido', 'Ángulo de referencia');
+ 
+ m = 1031;
+ while angulomedido(m) > 27 & angulomedido(m) < 33
+ 	m = m-1;
+ end
+ Tiempo_de_establecimiento = dt(m)-9.5;
+ [Mp, k] = max(angulomedido);
+ Tiempo_de_pico = dt(k)-9.5;
+ 
+ \end{lstlisting}
+
+El valor de la variable \textit{m} tiene que ser el número de muestras de \textit{angulomedido}, se recorre el array \textit{angulomedido} desde la última muestra y cuando su valor deja de estar en el 10\% del ángulo de referencia. La constante 9.5 restada a los tiempos de establecimiento y de pico es el instante en que comienza el escalón, que es cuando hay que medir los parámetros. El tiempo de retardo y el tiempo de subida se puden obtener con el puntero de Matlab, situándose sobre el punto adecuado, el momento en que se llega al 50\% del valor del valor máximo en el caso del tiempo de retardo y el momento en el que se llega por primera vez al valor de escalón en elk caso del tiempo de subida. En el caso del controlador PID los valores de estos parámetros son:
+
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Parámetros en régimen transitorio PID.}
+  \label{table11}
+  \begin{center}
+            \begin{tabular}{|c|c|c|}
+      \hline
+      \rowcolor{LightBlue2} Parámetro & Valor teórico & Valor experimental \\
+      \hline
+      Tiempo de retardo ($t_d$) & *** & 2 seg\\
+      \hline
+      Tiempo de subida ($t_r$) & *** & 3 seg\\
+      \hline
+      Tiempo de pico ($t_p$) & ***  & 1.84 seg\\
+      \hline
+      Tiempo de establecimiento ($t_{s10\%}$) & *** & 14.83 seg\\
+      \hline
+     Máximo sobreimpulso ($M_p$) & *** & 41º (1.36)\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{PPI}
+\label{sec:controladorppi}
+
+En este controlador se incluye un nuevo bucle de realimentación. Ahora se realimenta también la velocidad angular, que es la salida de la planta, para aplicar un regulador. El esquema de este regulador se muestra en la figura \ref{fig:ppi}
+
+
+ \begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.8]{images/PPIdesglose}
+  \caption{Esquema del controlador PPI.}
+  \label{fig:ppi}
+\end{figure}
+
+Este controlador consiste en realimentar la salida en grados aplicándole al error un controlador proporcional y realimentar la salida de la planta en grados por segundo y al error aplicarle un controlador proporcional integral. La implementación de este controlador se realiza mediante el código \ref{cod:ejemplo123}.
+
+
+\begin{lstlisting}[caption=Implementación del PID., label=cod:ejemplo123,style=Cnice]
+#include <Servo.h>  							
+#include <Wire.h>
+#include <LSM303.h>
+#include <L3G.h>
+
+#define DT 0.03 
+#define ANGULO_REFERENCIA = 0; //Ángulo al que se quiere estabilizar el brazo
+
+#define MAX_SIGNAL                 2000
+#define MIN_SIGNAL                 700 
+
+#define MAX_VEL                    1500	
+#define MIN_VEL                    1000 
+
+#define MOTOR_IZQUIERDO_PIN        9
+#define MOTOR_DERECHO_PIN          10    
+
+#define Throttle_Motor_Izquierdo   1300   //Velocidad de los motores si el error es 0
+#define Throttle_Motor_Derecho     1300 
+
+double angulo_y
+
+//VARIABLES MOTORES
+
+Servo motorizquierdo, motorderecho;		
+int velocidad_motor_izquierdo, velocidad_motor_derecho;
+
+//VARIABLES PID
+
+    float Kp = 6, Kpi_p = 3, Kpi_i = 2;  
+    float error_p, error_pi, integral;
+    float PPI_angulo;
+
+void setup()
+{
+	 	Serial.begin(115200);
+    		Wire.begin(); 
+	//Adjuntar motores, programar ESC's y habilitar sensores
+			
+		...
+} 
+void loop()
+{
+	//Medida ángulo
+		...
+	 angulo_y = 0.95*(angulo_y + dps_y*DT) + 0.05*angulo_acelerometro_y;	
+	 
+	//PPI
+		 
+	  error_p = ANGULO_REFERENCIA - angulo_y; 
+    error_pi = Kp*error_p - dps_y;
+    integral+=(error_pi*DT);
+       
+    PPI_angulo = Kpi_p*error_pi + Kpi_i*integral;
+ 
+	//Control motores
+	
+	 velocidad_motor_izquierdo = Throttle_Motor_Izquierdo + PPI_angulo;
+     velocidad_motor_derecho   = Throttle_Motor_Derecho - PPI_angulo;
+     
+     //El resto igual que en el PID
+     
+     .....
+    
+  
+}
+\end{lstlisting}
+
+A partir de la línea 50 está la implementación del controlador, primero se calcula el error de la salida en grados y después a ese error multiplicado por la constante $K_p$ se le resta la salida en grados por segundo. El resultado de la estabilización con este controlador se muestra en la figura \ref{fig:escalonppi}. Los valores de las constantes para estos resultados son \mathbf {$K_p = 4$, $K_{pi\_p} = 5$ y $K_{pi\_i} = 2$}. 
+
+
+ \begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.65]{images/respuestaescalonPPI}
+  \caption{Respuesta del sistema para controlador PPI.}
+  \label{fig:escalonppi}
+\end{figure}
+
+A simple vista con este controlador se ha conseguido reducir el máximo sobreimpulso y el ruido en régimen permanente es menor.Cuando está estabilizado a 0º antes de introducir el escalón la respuesta del sistema sigue a la referencia con un error de 1º. El ruido en régimen permanente se muestra en detalle en la figura \ref{fig:errorppi}.
+
+ \begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.65]{images/respuestaescalonppidetalle}
+  \caption{Detalle del ruido presente en la respuesta en régimen permanente del controlador PPI.}
+  \label{fig:errorppi}
+\end{figure}
+
+\newpage
+Los parámetros en régimen transitorio de este controlador son:
+
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Parámetros en régimen transitorio PPI.}
+  \label{table11}
+  \begin{center}
+            \begin{tabular}{|c|c|c|}
+      \hline
+      \rowcolor{LightBlue2} Parámetro & Valor teórico & Valor experimental \\
+      \hline
+      Tiempo de retardo ($t_d$) & *** & 1.1 seg\\
+      \hline
+      Tiempo de subida ($t_r$) & *** & 1.2 seg\\
+      \hline
+      Tiempo de pico ($t_p$) & ***  & 1.32 seg\\
+      \hline
+      Tiempo de establecimiento ($t_{s10\%}$) & *** & 9.63 seg\\
+      \hline
+     Máximo sobreimpulso ($M_p$) & *** & 37º (1.23)\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+***Hacer tabal comparativa al final de este apartado con los resultados de cada controlador de tiempo de establecimiento, maximo swobreimpulso, tiempo de subida...
+
+
+
+\subsection{Definiciones específicas del tipo de documento}
+\label{sec:definicion-del-tipo}
+
+Para comenzar a usar la plantilla es fundamental revisar el fichero
+\texttt{book.tex} en el que se incluyen todos los detalles genéricos de
+la estructura usada en el documento, con comentarios que esperamos que
+os ayuden a entenderlo. Si sois de los impacientes, basta con que
+comencéis por la parte en la que se incluyen los distintos capítulos
+(buscad la parte de los \texttt{\textbackslash{}input\{chapters/*.tex\}}).
+
+Uno de los ficheros de configuración más importantes es el
+\texttt{config/myconfig.tex} en el que se incluyen elementos para
+determinar la configuración específica de tu documento. El primero de
+ellos (para facilitar la generación de documentos en español o inglés),
+es el que define el idioma que vas a utilizar. Para seleccionarlo, basta
+con asignar \texttt{spanish} o \texttt{english} a la variable
+\texttt{\textbackslash{}mybooklanguage}. A partir de ella, el sistema
+generará las cabeceras y títulos adecuados a cada una.
+
+Igualmente, tendréis que definir las siguientes variables sobre el tipo
+de trabajo y el autor:
+
+\begin{itemize} 
+\item Acrónimo de la titulación correspondiente al trabajo (variable
+  \texttt{\textbackslash{}mydegree}): Que se seleccionará entre los
+  definidos (por ahora\footnote{Este documento se generó a finales de
+    2013.} son \texttt{IT}, \texttt{IE}, \texttt{ITTSE}, \texttt{ITTST},
+  \texttt{ITI}, \texttt{GIEC}, \texttt{GIEAI}, \texttt{GIST},
+  \texttt{GITT}, \texttt{GIT}, \texttt{GIC}, \texttt{GII}, \texttt{GSI},
+  \texttt{MUSEA}, \texttt{PHDUAH} y \texttt{PHDUPM}) y que
+  automáticamente configura portadas\footnote{Un comentario sobre el
+    color de las bandas en la portada de los TFGs: de acuerdo con la
+    normativa, dicho color debe ser PANTONE 160c. Yo he intentado
+    utilizar dicho color, pero el aspecto con el que finalmente aparece
+    no es ni de lejos similar al del modelo que proporciona la EPS, con
+    lo que he optado por utilizar el que se ve realmente en dicho
+    modelo. Si quieres cambiarlo, busca ``PANTONE'' en \texttt{config/preamble.tex}.}, entre otras cosas.
+\item Título del documento (variable \texttt{\textbackslash{}mybooktitle}).
+\item Nombre del autor del trabajo (variable \texttt{\textbackslash{}mybookauthor}).
+\item DNI del autor del trabajo, usado en el papeleo de los TFGs (variable \texttt{\textbackslash{}mybookDNI}).
+\item Departamento en el que se realiza el trabajo (variable
+  \texttt{\textbackslash{}mybookdepartment}, en español, y \texttt{\textbackslash{}mybookdepartmentEnglish}, en inglés).
+\item Programa de Doctorado (en su caso) en el que se realiza el trabajo (variable
+  \texttt{\textbackslash{}mybookphdprogram}, en español, y
+  \texttt{\textbackslash{}mybookphdprogramEnglish}, en inglés). 
+\item Grupo de investigación en el que se realiza el trabajo (variable
+  \texttt{\textbackslash{}mybookresearchgroup}.
+\item Centro en el que se realiza el trabajo (variable \texttt{\textbackslash{}mybookschool}, que debería ser la Escuela Politénica Superior, pero se incluye por generalidad).
+\item Universidad en el que se realiza el trabajo (variable \texttt{\textbackslash{}mybooksuniversidad}, que debería ser la de Alcalá, pero se incluye por generalidad).
+\item Titulación del autor (usada en las tesis de UPM, (variable \texttt{\textbackslash{}mybookauthordegree})).
+\item Email del autor (variable \texttt{\textbackslash{}mybookemail}).
+\item Nombre del primer (o único, en su caso) director del trabajo
+  (variable \texttt{\textbackslash{}mybookNameFirstAdvisor}).
+\item Nombre del segundo (en su caso) director del trabajo (variable \texttt{\textbackslash{}mybookNameSecondAdvisor}).
+\item Nombre del presidente del tribunal (variable \texttt{\textbackslash{}mybookpresident}).
+\item Nombre del primer vocal del tribunal (variable \texttt{\textbackslash{}mybookfirstvocal}).
+\item Nombre del segundo vocal del tribunal (variable \texttt{\textbackslash{}mybooksecondvocal}).
+\item Nombre del secretario del tribunal, en su caso (variable \texttt{\textbackslash{}mybooksecretary}).
+\item Año del trabajo (variable \texttt{\textbackslash{}mybookyear}).
+\item Fecha del anteproyecto, en su caso (variable \texttt{\textbackslash{}mybookanteproyectodate}), en el caso de que se usen la plantilla del anteproyecto.
+\item Fecha de la defensa del trabajo, en su caso (variable
+  \texttt{\textbackslash{}mydefensedate}, en español, o
+  \texttt{\textbackslash{}mydefensedateEnglish}).
+\item Palabras clave en inglés (variable \texttt{\textbackslash{}mybookkeywords}).
+\item Palabras clave en español (variable \texttt{\textbackslash{}mybookpalabrasclave}).
+\end{itemize}
+
+Y también variables para el caso de los trabajos que necesitan papeleo
+adicional (publicación en abierto, autorizaciones, etc.).
+
+\begin{itemize}
+\item Nombre del Secretario del Departamento (que firmará parte del papeleo)
+  (variable \texttt{\textbackslash{}mybookdepartmentsecretary}).
+\item Fecha que aparecerá en la firma del papeleo (variable \texttt{\textbackslash{}mybookdateforpaperwork}).
+\item DNI del alumno (variable
+  \texttt{\textbackslash{}mybookDNIOpenPublishing}).
+\item Figura del autor del trabajo, que es normalmente ``alumno''
+  (variable \texttt{\textbackslash{}mybookProfFigureOpenPublishing}).
+\item DNIs del/de los tutores, para los permisos de publicación en
+  abierto (variables \texttt{\textbackslash{}mybookDNIFirstAdvisor} y
+  \texttt{\textbackslash{}mybookDNISecondAdvisor}, en su caso)
+\end{itemize}
+
+Se ha comenzado a trabajar en la versión alfa del soporte para
+\textit{research reports}, y en ese caso se usa la variable
+\texttt{\textbackslash{}mybookresearchreportID}.
+
+Parte de esa información se utilizará para rellenar la metainformación
+incluida en el fichero \texttt{pdf} que se genera.
+
+También se definen los colores que se usarán en los hiperenlaces del
+documento. En concreto\footnote{Os rogamos encarecidamente que cambiéis
+  los colores definidos actualmente, que se han usado para verificar que
+  todo funciona correctamente.}:
+
+\begin{itemize}
+\item Color de los enlaces en el índice de contenidos (variable
+  \texttt{\textbackslash{}mytoclinkcolor}).
+\item Color de los enlaces en el índice de figuras (variable
+  \texttt{\textbackslash{}myloflinkcolor}).
+\item Color de los enlaces en el índice de tablas (variable
+  \texttt{\textbackslash{}mylotlinkcolor}).
+\item Color de los enlaces en otros índices (variable
+  \texttt{\textbackslash{}myothertoclinkcolor}), de los que ahora se
+  incluye un ejemplo en el fichero \texttt{cover/extralistings.tex}.
+\item Color de los enlaces (\texttt{\textbackslash{}ref}) en el
+  documento (variable \texttt{\textbackslash{}mylinkcolor}).
+\item Color de los enlaces a URLs (variable
+  \texttt{\textbackslash{}myurlcolor}).
+\item Color de los enlaces a referencias bibliográficas (variable
+  \texttt{\textbackslash{}mycitecolor}).
+\end{itemize}
+
+Basta con que defináis las variables correspondientes y la plantilla
+generará automáticamente las portadas adecuadas a la normativa y usará
+las definiciones específicas que hayas seleccionado.
+
+Por si os hace falta, en \texttt{config/postamble.tex} se definen
+algunas variables relacionadas con el tipo de trabajo. Por ejemplo las
+variables \texttt{\textbackslash{}mydegreefull} (igual a
+``\mydegreefull'' en esta compilación),
+\texttt{\textbackslash{}mybookworktype} (igual a ``\mybookworktype'' en
+esta compilación) y \texttt{\textbackslash{}mybookworktypefull} (igual a
+``\mybookworktypefull'' en esta compilación). Otro ejemplo sería el
+autor de contacto: \contactauthor.
+
+Importante para las tesis de UAH: si necesitáis incluir ficheros pdf
+(los de autorización e informes de los tutores, por ejemplo), esta
+plantilla lo permite: mirad los \texttt{\textbackslash{}includepdf} en
+el \texttt{book.tex}.
+
+\subsection{Plantilla de anteproyecto}
+\label{sec:plantilla-de-anteproyecto}
+
+Para el caso de los TFMs/TFGs/TFCs, se incluye una plantilla para
+realizar el anteproyecto.
+
+La plantilla se encuentra en el directorio \texttt{anteproyecto}, y en
+fichero \texttt{anteproyecto.tex} tenéis un ejemplo. El
+\texttt{Makefile} genera automáticamente el \texttt{anteproyecto.pdf},
+haciendo un \texttt{make} en ese directorio, y tiene targets similares a los
+del \texttt{Makefile} del documento principal, incluyendo
+\texttt{flatten} y \texttt{latexdiff}, con lo que también puede
+generarse el fichero con control de cambios, tal y como se describe en
+la sección~\ref{sec:control-de-cambios} (cambiando las referencias a
+\texttt{book...} por \texttt{anteproyecto...}).
+
+
+\subsection{Papeleo adicional para la defensa de los TFGs}
+\label{sec:introapp1}
+
+Para el caso de los TFGs y TFMs (al menos los del MUSEA), se incluyen en
+el directorio \texttt{papeleo} algunos de los documentos que hay que
+generar en el momento de la defensa. En concreto:
+
+\begin{itemize}
+\item La autorización del tutor para la publicación en abierto, en el
+  fichero \texttt{autorizacionTutorPublicarRepositorio.tex} para TFGs.
+\item La autorización del autor para la publicación en abierto, en el
+  fichero \texttt{autorizacionAutorPublicarRepositorio.tex}
+\item El visto bueno del tutor para la defensa del TFG
+  \texttt{vistoBuenoTutorTFG.tex}
+\item La autorización del autor y tutor/tutores para la publicación en
+  abierto, en el fichero
+  \texttt{autorizacionPublicarAbiertoTFM-MUSEA.tex}.
+\item El visto bueno del tutor para la defensa del TFM
+  \texttt{vistoBuenoTutorTFM-MUSEA.tex}
+\end{itemize}
+
+En el directorio se incluye un \texttt{Makefile} que genera los
+\texttt{pdfs} correspondientes a esos documentos. El sistema
+automáticamente adapta los singulares/plurales necesarios para el caso
+de que haya uno o varios directores/tutores.
+ 
+
+\subsection{Generación del documento con control de cambios (para revisión)}
+\label{sec:control-de-cambios}
+
+Uno de los problemas de \LaTeX{} frente a otros sistemas de edición de
+textos viene en el momento de la revisión de cambios realizados a un
+documento. En el caso que nos ocupa serían los que nos sugiere nuestro
+tutor de TFC/TFG/TFG o director de tesis doctoral y que luego querrá
+verificar cómo se han aplicado. En un procesador al estilo de
+libreoffice (vaaaaaaaaale, o Microsoft Word también), tenemos la opción
+de comparar documentos o llevar el control de cambios y que el sistema
+automáticamente nos marque los añadidos o borrados. 
+
+En \LaTeX{} también es posible si usamos un sistema de control de
+versiones (y si no lo estáis usando, deberíais plantearos seriamente el
+hacerlo), con la ayuda de herramientas adicionales.
+
+Hay varias soluciones disponibles, la mayoría basada en el uso de la
+\texttt{latexdiff} \cite{latexdiff} (o derivados). Lo recomendable sería
+el uso de un sistema automatizado como el disponible en
+\texttt{git-latexdiff} \cite{git-latexdiff}, pero necesita el soporte de
+\texttt{git}, y por el momento estoy manteniendo esto en \texttt{cvs}
+(flames to \texttt{/dev/null}, please).
+
+\texttt{latexdiff} permite comparar dos versiones de un documento y
+generar un nuevo fichero fuente en \LaTeX{} que, al compilarlo, muestra un
+pdf ``bonito'', con las marcas de las diferencias (resaltando lo añadido
+y lo quitado). El resultado es perfecto para hacer una buena revisión de
+los cambios, y por supuesto no tiene punto de comparación con ver un
+\texttt{diff} a palo seco de las dos versiones del documento. 
+
+Lo que finalmente he implementado es muy ad-hoc, pero funciona. El
+procedimiento para hacer uso de ello sería (asumiendo que usáis
+\texttt{cvs} como sistema de control de versiones\footnote{Si usáis
+  \texttt{git} (lo que también os recomiendo que hagáis), el proceso es
+  más sencillo porque \texttt{git-latexdiff} lo hace todo automático,
+  aunque os tendréis que trabajar la parte correspondiente del
+  \texttt{Makefile}}:
+
+\begin{itemize}
+\item Primero hay que preparar la versión base sobre la que luego se
+  harán los cambios. Esa preparación se hace normalmente cuando se tiene
+  una versión razonablemente estable, y con la que luego se quiere
+  comparar (por ejemplo cuando le entregas a tu tutor tu primer borrador
+  del documento completo). La preparación es sencilla: basta hacer un
+  \texttt{make flatten}. Eso generará un fichero
+  \texttt{book-flatten.tex} que contiene el estado actual del documento,
+  expandido. Luego hay que registrarlo en el repositorio basta hacer un
+  \texttt{cvs commit -m ``New flattened version'' book-flatten.tex}.
+\item A partir de ahí ya se puede trabajar en los cambios al documento,
+  los que sean necesarios.
+\item Cuando se quiera obtener el fichero pdf con el control de cambios,
+  bastará hacer un \texttt{make latexdiff}, que acabará generando
+  \texttt{book-flatten-diff.pdf}, que será lo que estábamos buscando.
+\end{itemize}
+
+
+
+\subsection{Problemas conocidos}
+\label{sec:problemas-conocidos}
+
+Resumimos a continuación los problemas con los que nos hemos ido
+encontrando tras el uso más generalizado de esta plantilla, y, en su
+caso, la solución propuesta/adoptada:
+
+\begin{itemize}
+
+\item Al menos en la versión 12.04 de ubuntu, se producía un fallo de
+  compilación por un problema del \textit{option clash} del paquete
+  \texttt{xcolor}. La solución fue incluir las opciones
+  \texttt{[RGB,rgb]} de dicho paquete en el \texttt{documentclass}, y
+  eliminar la inclusión de \texttt{xcolor} (que ya lo incluye, al menos,
+  \texttt{listings}). No es muy bonito como solución, pero
+  funcionaba. Eso dio lugar a otro problema, que hacía que todas las
+  página aparecieran como en color cuando se llevaba a la imprenta (con
+  el consiguiente incremento de precio). Para intentar solucionarlo, he
+  vuelto a eliminar las opciones \texttt{[RGB,rgb]} del
+  \texttt{documentclass}, y se las paso con un
+  \texttt{PassOptionsToPackage}, pero está pendiente de
+  verificación. Please, confirmadme que funciona (tanto lo del color
+  como la compilación en un ubuntu 12.04 (o posterior).
+
+\item También hemos observado en la versión 12.04 de ubuntu que
+  \texttt{evince} no es capaz de visualizar la primera página de los
+  TFGs (generada con \texttt{tikz}), y que \texttt{xpdf} genera un core
+  cuando intenta abrir el fichero compilado. La solución es usar
+  \texttt{qpdfview} o \texttt{acroread}. 
+
+\end{itemize}
+
+Si das con más problemas, escribid por favor a \contactauthor
+contándonoslos y trataremos de solucionarlo (y si tenéis la solución,
+contádnosla también).
+
+
+\section{Ejemplos de elementos de utilidad}
+\label{sec:ejempl-de-elem}
+
+\subsection{Uso de comandos definidos}
+\label{sec:uso-de-comandos}
+
+A modo de ejemplo, hemos definido el comando
+\texttt{\textbackslash{}texten\{\}} en \texttt{config/myconfig.tex} para
+usarlo, por ejemplo, para marcar palabras escritas en inglés (aka
+\texten{English}). Sigue el ejemplo para definir aquellos que utilices
+con frecuencia.
+
+Si quieres escribir el símbolo \texttt{backslash} puedes usar el comando
+\texttt{\textbackslash{}backlash\{\}}:~\textbackslash{}.
+
+Lo mismo aplica para el símbolo \texttt{tilde}, para lo que puedes usar
+el comando \texttt{\textbackslash{}textasciitilde\{\}}:~\textasciitilde{}.
+
+
+\subsection{Uso de ``frases célebres''}
+\label{sec:uso-de-frases}
+
+Respecto a la frase célebre del inicio de los capítulos: todas las que
+hemos usado y las definiciones que las generen están sacadas del
+excelente trabajo de Marco Antonio Gomez-Martín y Pedro Pablo
+Gomez-Martín en el proyecto \texis, una plantilla para la creación de
+tesis y otros documentos y disponible en \cite{texis}.
+
+
+\subsection{Inclusión de diagramas}
+\label{sec:diagrama}
+
+Para incluir gráficos, la compilación que utilizamos permite usar
+ficheros \texttt{png}, \texttt{jpg} y \texttt{pdf}, en el comando
+\texttt{\textbackslash{}includegraphics}. Si queréis ahorraros incluir
+el path a cada fichero, podéis definir todos aquellos en los que haya
+ficheros gráficos en el \texttt{\textbackslash{}graphicspath} del
+\texttt{book.tex}.
+
+En la figura \ref{fig:fig_clobj} se muestra un ejemplo de gráfico
+generado automáticamente a partir de un fichero
+\texttt{.dia}\footnote{Tomadas de los proyectos fin de carrera de David
+  Casillas y Manuel Villaverde.}: \texttt{diagrams/Esquema\_objetos.dia}
+(podéis generalizar su generación en el \texttt{Makefile}).
+
+\begin{figure}[tphb]
+  \centering
+  \includegraphics{Esquema_objetos}
+  \caption{Clasificación de los objetos para la gramática (aquí también
+    se pueden poner acrónimos como \acs{ETTS} y símbolos como \ac{xidet})}
+  \label{fig:fig_clobj}
+\end{figure}
+
+
+\subsection{Definición y uso de acrónimos (aquí también
+    se pueden poner acrónimos como \acs{ETTS})}
+\label{sec:uso-de-acronimos}
+
+El uso del paquete \texttt{glossaries} permite definir los acrónimos y
+el sistema automáticamente gestiona su inclusión completa la primera vez
+que se usa. Los acrónimos de ejemplo están en el fichero
+\texttt{acronyms/defacronymsgl.tex} (con opciones adicionales de
+configuración en \texttt{acronyms/acronymsgl.tex}).
+
+Así, si nos referimos a \ac{ETTS} o bien a \ac{EMODB},
+veremos como aparecen expandidas la primera vez. A partir de ahí, sólo
+se usará el acrónimo como puede verse al volver a hablar de \ac{ETTS} y
+\ac{EMODB}.
+
+Tiene también soporte para resetear todos los acrónimos como si no
+estuvieran usados. Vuelvo a incluir el párrafo anterior tras un reset
+(que se hace con un \texttt{\textbackslash{}glsresetall[acronym]}):
+
+\glsresetall[acronym]
+
+El uso del paquete acronym permite definir los acrónimos y el sistema
+automáticamente gestiona su inclusión completa la primera vez que se
+usa. Así, si nos referimos a \ac{ETTS} o bien a \ac{EMODB}, veremos como
+aparecen expandidas de nuevo (como si fuera la primera vez que se
+usan). A partir de ahí, sólo se usará el acrónimo como puede verse al
+volver a hablar de \ac{ETTS} y \ac{EMODB}.
+
+Y permite también forzar que se vuelva a citar completo aunque ya se
+haya utilizado (con el acrónimo entre paréntesis), como puede verse en
+\acl{ETTS} (equivalente a \glsdesc{ETTS} que vale para cualquier
+glosario), y también a usar forzosamente el acrónimo. Primero reseteamos
+de nuevo.
+
+\glsresetall[acronym]
+
+Y ahora forzamos el acrónimo: \acs{EMODB} (equivalente a
+\glsname{EMODB} que vale para cualquier glosario). También podemos
+forzar a que lo ponga todo, con \acf{EMODB}.
+
+
+Podemos seguir definiendo entradas de acrónimos, referirnos a \ac{DBN}
+por primera vez, y las siguientes aparecerá como \ac{DBN}.  Pongo ahora
+el resto de acrónimos \ac{SQ}, \ac{EIR}, \ac{SIR} y
+\ac{ES}. Finalmente los repito para que se vea el efecto: \ac{SQ},
+\ac{EIR}, \ac{SIR} y \ac{ES}.
+
+Y gestiona bien los plurales, ponemos el plural como  la
+primera vez, y luego la segunda como . Y podemos volver al
+singular.
+
+
+\subsection{Definición y uso de símbolos (aquí también
+    se pueden símbolos como \ac{xidet})}
+\label{sec:simbolos}
+
+Los símbolos definidos están incluidos en el fichero
+\texttt{symbols/defsymbolsgl.tex} (con configuración adicional en
+\texttt{symbols/symbolsgl.tex}) y en esta sección mostramos algunos
+ejemplos.
+
+El \ac{angstrom} se usa en biología estructural, mientras que el
+\ac{ohm} se usa en electrónica. También podemos poner~\ac{xdet}. Y
+también funciona en entornos \texttt{math} (\$...\$)
+$(\ac{xdet})$.
+
+Es posible incluso deshabilitar los hiperenlaces, usando un ``*'', como
+en ~\ac*{xdet} o \ac*{EMODB}.
+
+También valen en entornos \texttt{equation}:
+
+\begin{equation}
+  \label{eq:1}
+  \ac{xdet}
+\end{equation}
+
+Y finalmente la que nos falta: \ac{xidet}, también dentro de ecuaciones
+(otra cosa es que sea conveniente o útil):
+
+\begin{equation}
+  \label{eq:2}
+  \ac{xidet} = \sqrt{i}
+\end{equation}
+
+Acabamos con un par de acrónimos: \ac{TDPSOLA} y \ac{STRAIGHT}. 
+
+Recientemente nos han pedido información sobre cómo introducir el
+comando de independencia incondicional y también funciona (la definición
+está en el \texttt{config/myconfig.tex}, y se usa tal cual en el
+\texttt{symbols/symbolsgl.tex} (revisadlos para ver cómo se implementa):
+\ac{condindep}. 
+
+
+
+
+\section{Motivación y objetivos}
+\label{sec:motiv-y-objet}
+
+La motivación de este proyecto\ldots
+
+Los objetivos principales de este trabajo son (ejemplo utilizando
+''enumerate''):
+
+\begin{enumerate}
+\item Primer objetivo\ldots
+\item Segundo objetivo\ldots
+  \begin{enumerate}
+  \item Objetivo 2.1\ldots
+  \item Objetivo 2.2\ldots
+  \end{enumerate}
+\item Tercer objetivo\ldots
+\end{enumerate}
+
+
+
+\section{Organización de la memoria}
+\label{sec:organizacion-memoria}
+
+Esta memoria se organiza en cinco grandes capítulos. El primero \ldots
+
+ 
+
+\makeatletter{}
+\chapter{Estudio teórico}
+\label{cha:estudio-teorico}
+
+\begin{FraseCelebre}
+  \begin{Frase}
+    Y así, del mucho leer y del poco dormir, se le secó el cerebro de
+    manera que vino a perder el juicio\footnote{Tomado de ejemplos del
+      proyecto \texis{}.}.
+  \end{Frase}
+  \begin{Fuente}
+    Miguel de Cervantes Saavedra
+  \end{Fuente}
+\end{FraseCelebre}
+
+
+\section{Introducción}
+\label{sec:introduccion-teoria}
+
+En este capítulo se cuenta tal y tal.
+
+El capítulo se estructura en $n$ apartados\ldots
+
+
+\section{Estado del Arte}
+\label{sec:estadoarte}
+
+En el estado del arte se enumeran los trabajos más relevantes de otros
+grupos de investigación. A continuación se muestra un ejemplo del uso de
+viñetas que nos proporciona \texttt{itemize}:
+
+\begin{itemize}
+\item En el trabajo ..... 
+\item En el siguiente trabajo.....
+\end{itemize}
+
+O citas en un párrafo real: Sin embargo, hay entornos acústicos donde
+las tasas de error conseguidas son todavía demasiado altas. En concreto,
+las aplicaciones en las que la captura de la señal de habla se hace
+usando micrófonos alejados del locutor (típicamente para distancias
+superiores a un metro) muestran una fuerte sensibilidad a los problemas
+de reverberación, ruido aditivo y baja relación señal a ruido
+(\cite{gelbart02},\cite{kochkin02}). En estos entornos, se ha propuesto
+el uso de arrays de micrófonos como un método para mejorar la calidad
+del habla capturada \cite{seltzer03}\cite{herbordt05}.
+
+Existen múltiples formas de insertar figuras en Latex. A continuación,
+se muestra un ejemplo del uso de \texttt{figure}. Como se puede ver en
+la Figura \ref{fig1} también se pueden poner referencias a las figuras
+por medio de \texttt{ref} y la etiqueta \texttt{label} de la figura en
+particular.
+
+\begin{figure}[h]   \centering
+  \includegraphics[width=4.7in]{Figure1}
+      \caption{Departamento de Electrónica.}
+  \label{fig1}
+\end{figure}
+
+Y ahora un ejemplo en el que ponemos el \texttt{caption} en el lateral:
+
+\begin{SCfigure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{Figure1}
+  \caption{Departamento de Electrónica en el lateral.}
+\end{SCfigure}
+
+
+
+\section{Técnicas utilizadas}
+\label{sec:tecnicas-utilizadas}
+
+Aquí vamos a probar todos los niveles de sección disponibles, para
+evaluar la asignación de \texttt{tocdepth}...
+
+Blah, blah, blah\ldots
+
+
+\subsection{Subsección}
+\label{sec:subseccion}
+
+
+\subsubsection{Subsubsección}
+\label{sec:subsubseccion}
+
+\paragraph{Paragraph}
+\label{sec:paragraph-1}
+
+
+\subparagraph{Subparagraph}
+\label{sec:subparagraph}
+
+
+
+\section{Conclusiones}
+\label{sec:conclusiones-teoria}
+
+Blah, blah, blah\ldots
+
+ 
+
+\makeatletter{}
+\chapter{Desarrollo}
+\label{cha:desarrollo}
+
+
+\begin{FraseCelebre}
+  \begin{Frase}
+    A fuerza de construir bien, se llega a buen
+    arquitecto\footnote{Tomado de ejemplos del proyecto \texis{}.}.
+  \end{Frase}
+  \begin{Fuente}
+    Aristóteles
+  \end{Fuente}
+\end{FraseCelebre}
+
+\section{Introducción}
+\label{sec:introduccion-desarrollo}
+
+En este capítulo se incluirá la descripción del desarrollo del trabajo.
+
+El capítulo se estructura en n apartados:...
+
+
+\section{Desarrollo del sistema de experimentación}
+\label{sec:desarr-del-sist}
+
+Blah, blah, blah\ldots
+
+
+\section{Planteamiento matemático}
+\label{sec:libr-desarr}
+
+También resulta útil poder introducir ecuaciones que se encuentran tanto
+en línea con el texto (como por ejemplo $\sigma=0.75$), como en un
+párrafo aparte (como en la ecuación \ref{eq1}). Al igual que ocurre con
+las figuras, también se pueden referenciar las ecuaciones.
+
+\begin{equation}
+  \label{eq1}
+  p[q_t=\sigma_t|q_{t-1}=\sigma_{t-1}]
+\end{equation}
+
+\section{Conclusiones}
+\label{sec:conclusiones-desarrollo}
+
+Blah, blah, blah\ldots
+
+
+
+ 
+
+\makeatletter{}
+\chapter{Resultados}
+\label{cha:resultados}
+
+
+\begin{FraseCelebre}
+  \begin{Frase}
+        Rem tene, verba sequentur (Si dominas el tema, las palabras vendrán
+    solas)\footnote{Tomado de ejemplos del proyecto \texis{}.}.
+  \end{Frase}
+  \begin{Fuente}
+        Catón el Viejo
+  \end{Fuente}
+\end{FraseCelebre}
+
+\section{Introducción}
+\label{sec:introduccion-resultados}
+
+En este capítulo se introducirán los resultados más relevantes del
+trabajo. 
+
+La estructura del capítulo es\ldots
+
+
+\section{Entorno experimental}
+\label{sec:entorno-experimental}
+
+Blah, blah, blah.
+
+
+\subsection{Bases de datos utilizadas}
+\label{sec:bases-de-datos-1}
+
+Blah, blah, blah.
+
+
+\subsection{Métricas de calidad}
+\label{sec:metricas-de-calidad}
+
+Blah, blah, blah.
+
+
+\subsection{Estrategia y metodología de experimentación}
+\label{sec:estr-y-metod}
+
+Blah, blah, blah.
+
+
+\section{Resultados experimentales}
+\label{sec:result-experim}
+
+A continuación, se muestra un ejemplo de tabla simple (ver tabla \ref{table1}).
+
+\begin{table}
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Comparativa.}
+  \label{table1}
+  \begin{center}
+            \begin{tabular}{|c|c|c|}
+      \hline
+      Method & Training Time & Man-Work (\%)\\
+      \hline
+      Propagation model & $<$ 30 sec & 5\\
+      \hline
+      Manual & 9 h 30 min & 24\\
+      \hline
+      Automatic & 2 h & 10 8\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Cuando las tablas ocupan más de un página se debe utilizar un tipo
+especial de tablas denominado \texttt{longtable}. A continuación, se
+muestra un ejemplo del mismo (ver tabla \ref{table2}).
+
+\begin{center}
+	\begin{longtable}{|c|c|c|c|}
+    \caption[Resultados de la correlación cruzada.]{Resultados de la correlación cruzada.} \label{table2} \\
+    
+    \hline \multicolumn{1}{|c|}{\textbf{Posición Real}} & \multicolumn{1}{c|}{\textbf{Posición estimada}} & \multicolumn{1}{c|}{\textbf{Coef. Correlación}} & \multicolumn{1}{c|}{\textbf{Acierto/Fallo}} \\ \hline 
+    \endfirsthead
+    
+    \multicolumn{4}{c}    {{\bfseries \tablename\ \thetable{} -- continúa en la página anterior}} \\
+    \hline \multicolumn{1}{|c|}{\textbf{Posición Real}} & \multicolumn{1}{c|}{\textbf{Posición estimada}} & \multicolumn{1}{c|}{\textbf{Coef. Correlación}} & \multicolumn{1}{c|}{\textbf{Acierto/Fallo}} \\ \hline 
+    \endhead
+    
+    \hline \multicolumn{4}{|r|}{{Continúa en la página siguiente}} \\ \hline
+    \endfoot
+
+    \hline \hline
+    \endlastfoot
+    
+    \hline	2P0	&	2P0	&	0,004954	&	A	\\
+    \hline	2P1	&	2P4	&	0,005752	&	F	\\
+    \hline	2P2	&	2P2	&	0,005461	&	A	\\
+    \hline	2P3	&	2P0	&	0,004634	&	F	\\
+    \hline	2P5	&	2P4	&	0,005991	&	F	\\
+    \hline	2P6	&	2P16	&	0,004410	&	F	\\
+    \hline	2P7	&	3P9	&	0,008038	&	F	\\
+    \hline	2P8	&	3P9	&	0,003753	&	F	\\
+    \hline	2P9	&	2P7	&	0,004908	&	F	\\
+    \hline	2P10	&	2P10	&	0,007273	&	A	\\
+    \hline	2P14	&	2P16	&	0,006485	&	F	\\
+    \hline	2P15	&	2P15	&	0,004932	&	A	\\
+    \hline	2P16	&	2P16	&	0,006237	&	A	\\
+    \hline	2P17	&	2P15	&	0,005110	&	F	\\
+    \hline	2P18	&	3P18	&	0,006235	&	F	\\
+    \hline	2P19	&	3P18	&	0,004827	&	F	\\
+    \hline	2P20	&	2P20	&	0,006877	&	A	\\
+    \hline	2P22	&	3P18	&	0,003048	&	F	\\
+    \hline	2P24	&	2P24	&	0,006833	&	A	\\
+    \hline	2P25	&	2P25	&	0,004875	&	A	\\
+    \hline	2P26	&	2P31	&	0,005511	&	F	\\
+    \hline	2P27	&	2P28	&	0,004590	&	F	\\
+    \hline	2P30	&	2P31	&	0,005576	&	F	\\
+    \hline	2P31	&	2P31	&	0,007213	&	A	\\
+    \hline	2P32	&	2P35	&	0,003340	&	F	\\
+    \hline	2P34	&	2P34	&	0,004128	&	A	\\
+    \hline	2P36	&	2P35	&	0,003329	&	F	\\
+    \hline	2P37	&	2P37	&	0,003468	&	A	\\
+    \hline	2P39	&	2P38	&	0,002577	&	F	\\
+    \hline	2P40	&	2P43	&	0,004303	&	F	\\
+    \hline	2P41	&	2P41	&	0,001573	&	A	\\
+    \hline	2P42	&	2P41	&	0,000846	&	F	\\
+    \hline	2P44	&	2P44	&	0,002732	&	A	\\
+    \hline	2P45	&	23P45	&	0,001958	&	F	\\
+    \hline	2P47	&	2P34	&	0,002869	&	F	\\
+    \hline	2P48	&	2P43	&	0,004569	&	F	\\
+    \hline	2P49	&	3P51	&	0,001374	&	F	\\
+    \hline	2P50	&	2P34	&	0,002274	&	F	\\
+    \hline	2P51	&	2P63	&	0,003931	&	F	\\
+    \hline	2P52	&	2P55	&	0,003537	&	F	\\
+    \hline	2P53	&	3P56	&	0,003126	&	F	\\
+    \hline	2P54	&	2P67	&	0,005560	&	F	\\
+    \hline	2P56	&	2P55	&	0,002817	&	F	\\
+    \hline	2P57	&	2P67	&	0,006168	&	F	\\
+    \hline	2P58	&	2P58	&	0,005278	&	A	\\
+    \hline	2P60	&	3P66	&	0,004966	&	F	\\
+    \hline	2P61	&	3P61	&	0,004748	&	A	\\
+    \hline	2P64	&	2P67	&	0,005342	&	F	\\
+    \hline	2P66	&	2P4	&	0,004172	&	F	\\
+    \hline	2P67	&	2P67	&	0,005706	&	A	\\
+    \hline	3P0	&	3P0	&	0,003674	&	A	\\
+    \hline	3P61	&	2P61	&	0,003263	&	F	\\
+    \hline	3P64	&	2P67	&	0,003484	&	F	\\
+    \hline	3P65	&	2P67	&	0,002975	&	F	\\
+    \hline	3P66	&	2P58	&	0,005029	&	F	\\
+    \hline	3P67	&	3P67	&	0,003714	&	A	\\
+	\end{longtable}
+\end{center}
+
+
+
+En algunas ocasiones, también resulta útil emplear el entorno
+\texttt{subfigure} para añadir múltiples imágenes dentro de la misma
+figura. A continuación, se muestra un ejemplo del uso en la figura
+\ref{fig:fig3}. También se pueden referenciar las sub-figuras de forma
+individual, por ejemplo la sub-figura \ref{fig:fig3b} (usando un método
+de cita), o bien la sub-figura \ref{fig:fig3}.\subref{fig:fig3b} (usando
+otro alternativo).
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{Figure2}
+    \caption{Mean Entropy.}
+    \label{fig:fig3a}
+  \end{subfigure}  ~     \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{Figure3}
+    \caption{Error Percentage.}
+    \label{fig:fig3b}
+  \end{subfigure}
+  \caption{Optimal trames number in the training data set.}
+  \label{fig:fig3}
+\end{figure}
+
+La figura~\ref{fig:LIdiapRoom} muestra otro ejemplo con referencias a
+las subfigures en el caption principal. 
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.30\textwidth}
+    \includegraphics[width=\textwidth]{roomlayout2}
+    \caption{}
+    \label{fig:RoomLayout}
+  \end{subfigure}  \qquad \qquad     \begin{subfigure}[b]{0.425\textwidth}
+    \includegraphics[width=\textwidth]{idiap-seq45-cam2.jpg}
+    \caption{}
+    \label{fig:RoomPicture}
+  \end{subfigure}
+  \caption{Idiap Smart Meeting Room for AV16.3 recordings.
+    (\protect\subref{fig:RoomLayout}) Room layout showing the centered
+    table, and the microphones arranged in two circular arrays.
+    (\protect\subref{fig:RoomPicture}) Sample of recorded video frame
+    showing the arrays area. \vspace{-0.3cm}}
+  \label{fig:LIdiapRoom}
+\end{figure}
+
+Os incluimos a continuación un
+párrafo de un artículo en el que hacemos referencia a varias figuras y
+subfiguras: 
+
+\emph{The IDIAP Meeting Room (shown in figure~\ref{fig:LIdiapRoom}) is a $8.2m
+\times 3.6m \times 2.4m$ rectangular space containing a centrally
+located $4.8m \times 1.2m$ rectangular table, on top of which two
+circular microphone arrays of $10 cm$ radius are located, each of them
+composed by 8 microphones. The centers of the two arrays are separated
+by $80 cm$ and the origin of coordinates is located in the middle point
+between the two arrays. The arrays can be also seen in
+figures~\ref{fig:simureal_positions}.\subref{fig:Simulated_positions},
+~\ref{fig:simureal_positions}.\subref{fig:real_positions_short}, and
+~\ref{fig:simureal_positions}.\subref{fig:real_positions_long}, in which
+only the relevant section of the room is displayed, each one showing
+different scenarios that were used in the experiments. A detailed
+description of the meeting room can be found in~\cite{moore2002}.}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[t]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{angular2-short-improved}
+    \caption{For validation\\with simulated data.}
+    \label{fig:Simulated_positions}
+  \end{subfigure}
+~      \begin{subfigure}[t]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{positions1-short-improved}
+    \caption{For validation\\with real data and microphone pairs with $20~cm$ spacing.}
+    \label{fig:real_positions_short}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[t]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{positions2-short-improved}
+    \caption{For validation\\with real data and microphone pairs with
+      $82.46~cm$ spacing.}
+    \label{fig:real_positions_long}
+  \end{subfigure}
+  \caption{Geometrical details for the experiments carried out. Only the
+    relevant section of the room is shown, and microphone pairs are
+    connected by solid lines.}
+  \label{fig:simureal_positions}
+\end{figure}
+
+En la figura~\ref{fig:Sim_angles} mostramos un ejemplo de varias
+figuras organizadas de forma un poco más complejo.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{Sim_seg025_ang090}
+    \caption{$0^{\circ}$}
+    \label{fig:Sim_ang090}
+  \end{subfigure}
+    
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{Sim_seg025_ang108}
+    \caption{$18^{\circ}$}
+    \label{fig:Sim_ang108}
+  \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{Sim_seg025_ang126}
+    \caption{$36^{\circ}$}
+    \label{fig:Sim_ang126}
+  \end{subfigure}
+      \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{Sim_seg025_ang144}
+    \caption{$54^{\circ}$}
+    \label{fig:Sim_ang144}
+  \end{subfigure}
+    
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{Sim_seg025_ang162}
+    \caption{$72^{\circ}$}
+    \label{fig:Sim_ang162}
+  \end{subfigure}
+
+  \caption{Comparison between the steered power response generated
+    by the model (solid line) and that calculated using simulated
+    waveforms in the AV16.3 environment (stems). Results for the
+    speaker in given angles and the array steered from -90º to
+    +90º are shown.}
+  \label{fig:Sim_angles}
+\end{figure}
+
+También es posible incluir el código de una figura en un fichero
+\texttt{.tex} independiente (para hacer más legible el código del
+documento principal). Un ejemplo lo tenéis a continuación, incluyendo el
+texto en inglés del documento original:
+
+\emph{Figure~\ref{fig:SRPvsPatternSelected} includes the results of the
+comparison, for several speaker positions (1, 2, 4, 6, 8 and 16,
+emphasized in
+figure~\ref{fig:simureal_positions}.\subref{fig:real_positions_short}),
+and selected to provide different acoustic situations, both in terms of
+distance and angular position with respect to the arrays. All the
+graphics show the acoustic power map (predicted or calculated) for a
+regular two-dimensional grid of $10~cm$. The plot is provided from a top
+view of the room, spanning the full plan at a height of $61~cm$ above the
+microphone arrays (this height was the ground truth one for sequence
+01). For each speaker position shown, three graphics are plotted:}
+
+\begin{itemize}
+\item The graphics on the left show the SRP-PHAT acoustic power maps
+  generated by the proposed model (for example, the left graphic in
+  figure~\ref{fig:SRPvsPatternSelected}.\subref{fig:SRPvsModel_Fo1500_position1}
+  for position 1).
+\item The graphics in the middle show the real SRP-PHAT acoustic power
+  maps calculated using the real acoustic waveforms (for example, the
+  middle graphic in
+  figure~\ref{fig:SRPvsPatternSelected}.\subref{fig:SRPvsModel_Fo1500_position1}
+  for position 1), for a single selected frame.
+\item The graphics on the right show the average real SRP-PHAT acoustic
+  power maps, averaging for all the frames in which the user was in the
+  given position (for example, the right graphic in
+  figure~\ref{fig:SRPvsPatternSelected}.\subref{fig:SRPvsModel_Fo1500_position1}
+  for position 1).
+\end{itemize}
+
+\emph{The green point represents the real (ground truth) speaker
+position, and the black dots represent the positions of the four
+microphones used. The hyperbolic shapes found in the figure are
+consistent with the fact that the place of points with equal acoustic
+power value, for a given microphone pair, is a hyperbola (in our
+two-dimensional case, being a hyperboloid of revolution in the
+three-dimensional case).}
+
+\emph{From figure~\ref{fig:SRPvsPatternSelected}, it can clearly be seen that,
+again, the predictions closely match the results with real data for the
+different acoustic conditions, even when the simulations are using fixed
+and frequency independent average reflection coefficients, and that the
+acoustic model is based on the simplistic image method model.}
+
+\makeatletter{}\begin{figure}
+  \centering
+  \begin{subfigure}[t]{0.47\textwidth}
+    \begin{minipage}[t]{\textwidth}
+      \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos01}
+                \label{fig:Pattern_Fo1500_pos01}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_frame003_pos01}
+                \label{fig:SRP_Fo1500_pos01}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos01}
+                \label{fig:SRP_Fo1500_mean_pos01}
+      \end{subfigure}
+      \vspace{\verticalSpacingSRPMaps}
+      \caption{\centering For position 1}
+      \label{fig:SRPvsModel_Fo1500_position1}
+      \vspace{0.25cm}
+    \end{minipage}
+  \end{subfigure}
+  ~      \begin{subfigure}[t]{0.47\textwidth}
+    \begin{minipage}[t]{\textwidth}
+      \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos02}
+                \label{fig:Pattern_Fo1500_pos02}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_frame161_pos02}
+                \label{fig:SRP_pos02}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos02}
+                \label{fig:SRP_Fo1500_mean_pos02}
+      \end{subfigure}
+      \vspace{\verticalSpacingSRPMaps}
+      \caption{\centering For position 2}
+      \vspace{0.25cm}
+    \end{minipage}
+  \end{subfigure}
+
+  \begin{subfigure}[t]{0.47\textwidth}
+    \begin{minipage}[t]{\textwidth}
+      \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos04}
+                \label{fig:Pattern_Fo1500_pos04}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_frame464_pos04}
+                \label{fig:SRP_pos04}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos04}
+                \label{fig:SRP_Fo1500_mean_pos04}
+      \end{subfigure}
+      \vspace{\verticalSpacingSRPMaps}
+      \caption{\centering For position 4}
+      \vspace{0.25cm}
+    \end{minipage}
+  \end{subfigure}
+  ~      \begin{subfigure}[t]{0.47\textwidth}
+    \begin{minipage}[t]{\textwidth}
+      \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos06}
+                \label{fig:Pattern_Fo1500_pos06}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_frame809_pos06}
+                \label{fig:SRP_pos06}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos06}
+                \label{fig:SRP_Fo1500_mean_pos06}
+      \end{subfigure}
+      \vspace{\verticalSpacingSRPMaps}
+      \caption{\centering For position 6}
+      \vspace{0.25cm}
+    \end{minipage}
+  \end{subfigure}
+
+  \begin{subfigure}[t]{0.47\textwidth}
+    \begin{minipage}[t]{\textwidth}
+      \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos08}
+                \label{fig:Pattern_Fo1500_pos08}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_frame1127_pos08}
+                \label{fig:SRP_pos08}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos08}
+                \label{fig:SRP_Fo1500_mean_pos08}
+      \end{subfigure}
+      \vspace{\verticalSpacingSRPMaps}
+      \caption{\centering For position 8}
+      \vspace{0.25cm}
+    \end{minipage}
+  \end{subfigure}
+  ~      \begin{subfigure}[t]{0.47\textwidth}
+    \begin{minipage}[t]{\textwidth}
+      \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos16}
+                \label{fig:Pattern_Fo1500_pos16}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_frame2518_pos16}
+                \label{fig:SRP_pos16}
+      \end{subfigure}
+                        \begin{subfigure}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos16}
+                \label{fig:SRP_Fo1500_mean_pos16}
+      \end{subfigure}
+      \vspace{\verticalSpacingSRPMaps}
+      \caption{\centering For position 16}
+      \vspace{0.25cm}
+    \end{minipage}
+  \end{subfigure}
+  \caption{Comparison between the SRP-PHAT map predicted by the model
+    (left graphics),
+    the real SRP-PHAT map (middle graphics), and the average (real)
+    SRP-PHAT map (right graphics), for
+    several speaker positions ($f_0=1.5~KHz$). See
+    figure~~\ref{fig:simureal_positions}.\subref{fig:real_positions_short}
+    for geometrical references.}
+  \label{fig:SRPvsPatternSelected}
+\end{figure}
+  
+
+Incluso podemos poner una tabla ``apaisada'', como en la
+\ref{tablas2006}, donde se muestra un resumen de los resultados
+obtenidos en una serie de experimentos de localización de locutores.
+
+\clearpage
+\begin{sidewaystable}[hbtp]
+  \begin{center}
+
+    \begin{tabular}{||l|c|c|c|c|c||}
+      \hline \hline
+      & UKA & ITC & AIT & UPC & IBM\\
+      \hline
+      \hline
+      Pcor & $57.0\pm1.4\%$ & $84.0\pm3.3\%$ & $47.0\pm3.1\%$ & $20.0\pm2.5\%$ & $67.0\pm2.9\%$ \\
+      \hline
+      Bias fine (x:y:z) [mm] & $20:-42:-75$ & $45:27:-41$ & $-27:-77:-40$ & $-59:112:52$ & $91:-69:-38$ \\
+      \hline
+      Bias fine+gross (x,y,z) [mm] & $735:-93:-258$ & $67:439:-134$ & $17:-402:-118$ & $-141:255:39$ & $474:-141:-14$ \\
+      \hline
+      AEE fine [mm] = MOTP & $210$ & $130$ & $266$ & $344$ & $228$ \\
+      \hline
+      Fine+gross [mm] & $1201$ & $632$ & $1006$ & $1188$ & $884$ \\
+      \hline
+      Loc. frames & $5035$ & $22$ & $995$ & $977$ & $1023$ \\
+      \hline
+      Ref. duration (s) & $6287.0$ & $596.0$ & $1143.0$ & $1180.0$ & $1194.0$ \\
+      \hline \hline
+    \end{tabular}
+    \caption{Resultados TEST CLEAR 2006.}
+    \label{tablas2006}
+  \end{center}
+\end{sidewaystable}
+
+
+\section{Conclusiones}
+\label{sec:conclusiones-resultados}
+
+Blah, blah, blah.
+
+
+ 
+
+\makeatletter{}
+\chapter{Conclusiones y líneas futuras}
+\label{cha:concl-y-line}
+
+En este apartado se resumen las conclusiones obtenidas y se proponen
+futuras líneas de investigación que se deriven del trabajo.
+
+La estructura del capítulo es...
+
+
+\section{Conclusiones}
+\label{sec:conclusiones}
+
+Para añadir una referencia a un autor, se puede utilizar el paquete
+\texttt{cite}. En el trabajo \cite{armani03}, se muestra un trabajo...
+
+Y podemos usar de nuevo algún acrónimo, como por ejemplo \ac{TDPSOLA}, o
+uno ya referenciado como \ac{ANN}.
+
+
+\section{Líneas futuras}
+\label{sec:lineas-futuras}
+
+Pues eso.
+
+
+
+
+ 
+
+
+
+
+
+\makeatletter{}
+\bibliographystyle{IEEEtran}
+
+\newcommand{\mybibfileOne}{biblio/biblio}
+\newcommand{\mybibfileTwo}{biblio/biblio2}
+
+\newcommand{\mybibfiles}{\myreferencespath\mybibfileOne}
+
+\bibliography{\mybibfiles}
+
+
+
+
+                
+
+
+
+\appendix                                         
+\makeatletter{}
+\chapter{Manual de usuario}
+\label{cha:manual-de-usuario}
+
+\section{Introducción}
+\label{sec:intro-manual-de-usuario}
+
+Blah, blah, blah\ldots
+
+
+\section{Manual}
+\label{sec:sec-manual-de-usuario}
+
+Pues eso.
+
+
+\section{Ejemplos de inclusión de fragmentos de código fuente}
+\label{sec:codigo-fuente}
+
+Para la inclusión de código fuente se utiliza el paquete
+\texttt{listings}, para el que se han definido algunos estilos de
+ejemplo que pueden verse en el fichero \texttt{config/preamble.tex} y
+que se usan a continuación.
+
+Así se inserta código fuente, usando el estilo \texttt{CppExample} que
+hemos definido en el preamble, escribiendo el código directamente :
+
+\begin{lstlisting}[style=Cnice]
+#include <stdio.h>
+
+// Esto es una función de prueba
+void funcionPrueba(int argumento)
+{	
+	int prueba = 1;
+
+  printf("Esto es una prueba [
+}
+\end{lstlisting}
+
+O bien insertando directamente código de un fichero externo, como en el
+ejemplo \ref{cod:sample1}, usando
+\texttt{\textbackslash{}lstinputlisting} y cambiando el estilo a
+\texttt{Cbluebox} (además de usar el entorno \texttt{codefloat} para
+evitar pagebreaks, etc.).
+
+
+
+
+O por ejemplo en matlab, definiendo settings en lugar de usar estilos
+definidos:
+
+\lstset{language=matlab}
+\lstset{tabsize=2}
+\lstset{commentstyle=\textit}
+\lstset{stringstyle=\ttfamily, basicstyle=\small}
+\begin{lstlisting}[frame=trbl]{}
+a = 9;
+b = 10;
+
+c = a+b;
+
+fprintf(1, 'La suma de \end{lstlisting}
+
+O incluso como en el listado \ref{cod:sample2}, usando un layout más refinado (con
+los settings de \url{http://www.rafalinux.com/?p=599} en un \texttt{lststyle}
+\texttt{Cnice}).
+
+
+Y podemos reutilizar estilos cambiando algún parámetro, como podemos ver
+en el listado \ref{cod:sample3}, en el que hemos vuelto a usar el estilo
+\texttt{Cnice} eliminando la numeración.
+
+
+
+
+
+\noindent
+Ahora compila usando \texttt{gcc}:
+
+
+\begin{lstlisting}[style=console, numbers=none]
+$ gcc  -o hello hello.c
+\end{lstlisting}
+
+Y también podemos poner ejemplos de código \textit{coloreado}, como se
+muestra en el \ref{cod:sample5}.
+
+
+Finalmente aquí tenéis un ejemplo de código shell, usando el estilo
+\texttt{BashInputStyle}:
+
+\begin{lstlisting}[style=BashInputStyle, numbers=none]
+#!/bin/sh
+
+HOSTS_ALL="gc000 gc001 gc002 gc003 gc004 gc005 gc006 gc007"
+
+for h in $HOSTS_ALL
+do
+	echo "Running [$*] in $h..."
+  echo -n "   "
+  ssh root@$h $*
+done
+\end{lstlisting}
+
+\section{Ejemplos de inclusión de algoritmos}
+\label{sec:algoritmos}
+
+En la versión actual (abril de 2014), empezamos a usar el paquete
+\texttt{algorithm2e} para incluir algoritmos, y hay ajustes específicos
+y dependientes de este paquete tanto en \texttt{config/preamble.tex}
+como en \texttt{cover/extralistings.tex} (editadlos según vuestras
+necesidades). 
+
+Hay otras opciones disponibles (por ejemplo las descritas en
+\url{http://en.wikibooks.org/wiki/LaTeX/Algorithm}), y podemos
+abordarlas, pero por el momento nos quedamos con \texttt{algorithm2e}.
+
+Incluimos dos ejemplos directamente del manual: uno sencillo en el
+algoritmo~\ref{alg:howto}, y otro un poco más complicado en el
+algoritmo~\ref{alg:restriction}.
+
+\begin{algorithm}[H]
+ \caption{How to write algorithms}
+ \label{alg:howto}
+ \KwData{this text}
+ \KwResult{how to write algorithm with \LaTeX2e }
+ initialization\;
+ \While{not at end of this document}{
+  read current\;
+  \eIf{understand}{
+   go to next section\;
+   current section becomes this one\;
+   }{
+   go back to the beginning of current section\;
+  }
+ }
+\end{algorithm}
+
+
+\begin{algorithm}
+\caption{IntervalRestriction\label{IR}}
+ \label{alg:restriction}
+\DontPrintSemicolon
+\KwData{$G=(X,U)$ such that $G^{tc}$ is an order.}
+\KwResult{$G'=(X,V)$ with $V\subseteq U$ such that $G'^{tc}$ is an
+interval order.}
+\Begin{
+$V \longleftarrow U$\;
+$S \longleftarrow \emptyset$\;
+\For{$x\in X$}{
+$NbSuccInS(x) \longleftarrow 0$\;
+$NbPredInMin(x) \longleftarrow 0$\;
+$NbPredNotInMin(x) \longleftarrow |ImPred(x)|$\;
+}
+\For{$x \in X$}{
+\If{$NbPredInMin(x) = 0$ {\bf and} $NbPredNotInMin(x) = 0$}{
+$AppendToMin(x)$}
+}
+\nl\While{$S \neq \emptyset$}{\label{InRes1}
+\nlset{REM} remove $x$ from the list of $T$ of maximal index\;\label{InResR}
+\lnl{InRes2}\While{$|S \cap ImSucc(x)| \neq |S|$}{
+\For{$ y \in S-ImSucc(x)$}{
+\{ remove from $V$ all the arcs $zy$ : \}\;
+\For{$z \in ImPred(y) \cap Min$}{
+remove the arc $zy$ from $V$\;
+$NbSuccInS(z) \longleftarrow NbSuccInS(z) - 1$\;
+move $z$ in $T$ to the list preceding its present list\;
+\{i.e. If $z \in T[k]$, move $z$ from $T[k]$ to
+$T[k-1]$\}\;
+}
+$NbPredInMin(y) \longleftarrow 0$\;
+$NbPredNotInMin(y) \longleftarrow 0$\;
+$S \longleftarrow S - \{y\}$\;
+$AppendToMin(y)$\;
+}
+}
+$RemoveFromMin(x)$\;
+}
+}
+\end{algorithm}
+
+
+
+ 
+\makeatletter{}
+\chapter{Herramientas y recursos}
+\label{cha:herr-y-recurs}
+
+Las herramientas necesarias para la elaboración del proyecto han sido:
+
+\begin{itemize}
+\item PC compatible 
+\item Sistema operativo GNU/Linux \cite{gnulinux}
+\item Entorno de desarrollo Emacs \cite{emacs}
+\item Entorno de desarrollo KDevelop \cite{kdevelop}
+\item Procesador de textos \LaTeX \cite{lamport94}
+\item Lenguaje de procesamiento matemático Octave  \cite{octave}
+\item Control de versiones CVS \cite{cvs}
+\item Compilador C/C++ gcc \cite{gcc}
+\item Gestor de compilaciones make \cite{make}
+\end{itemize}
+
+
+
+ 
+
+
+
+\backmatter                                       
+\makeatletter{}
+
+\ifthenelse{\equal{\mybookworktype}{TFG}}
+{
+  \makeatletter{}
+\chapter*{ }
+\thispagestyle{empty}
+
+\cleartoleftpage
+\thispagestyle{empty}
+
+\BgThispage
+
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[yshift=-5cm] at (current page.north west)
+      {
+        \begin{tikzpicture}[remember picture, overlay]
+          \draw[fill=headingPortadaTFG,headingPortadaTFG] (0,0) rectangle (\paperwidth,5cm);
+
+          \node [yshift=3cm, xshift=0.5\paperwidth, font=\Huge, text centered, midway] {\color{textoHeadingPortadaTFG}\mybookuniversity};
+          \node [yshift=2cm, xshift=0.5\paperwidth, font=\Huge, text centered, midway] {\color{textoHeadingPortadaTFG}\mybookschool};
+
+        \end{tikzpicture}
+      };
+   \end{tikzpicture}
+
+
+\large
+\vspace{20cm}
+\begin{center}
+  
+  \centerline{\includegraphics[height=2.5cm]{uah/01_logo-vA_pant293.pdf}}
+
+\end{center}
+
+
+
+
+
+ 
+}
+{
+
+}
+
+
+
+                     
+                                              
+\end{document}
