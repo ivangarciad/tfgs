@@ -28,11 +28,21 @@
 
 \usepackage{emptypage}
 
+
+\usepackage{tabu}
+\usepackage{booktabs}
+
 \usepackage{multicol}
+
+\usepackage{rotating}
+
+\usepackage[nottoc,numbib]{tocbibind}
 
 \usepackage{tocbibind}
 
 \usepackage{animate}
+
+\usepackage{tabularx}
 
 \usepackage{eurosym}
 
@@ -68,7 +78,7 @@
 \usepackage[noadjust]{cite}      
 
 \usepackage[center]{caption}
-             \usepackage{subcaption}
+	             \usepackage{subcaption}
 
 \usepackage{xcolor}
 
@@ -1558,6 +1568,12 @@ Agradezco también a mi padre y a mi hermano su apoyo incondicional a lo largo de
 
 
 
+
+
+
+
+
+
 \makeatletter{}
 \chapter*{Resumen}
 \label{cha:resumen}
@@ -1707,11 +1723,11 @@ Estas son las aplicaciones más conocidas de estos aparatos. No obstante, tienen 
 \section{Estado del arte}
 \label{sec:arte}
 
-En este apartado se van a enumerar algunos trabajos de otros grupos de investigación el el campo de los cuadricópteros.
+En este apartado se van a enumerar algunos trabajos de otros grupos de investigación el el campo de los cuadricópteros que sean innovadores respecto a la mayoría de las investigaciones.
 
 \begin{itemize}
 
-	\item En el trabajo de Mark Johnson ***\cite{Johnson} se realiza el diseño y el control de un cuadricópetro con vuelo autónomo y con variador del ángulo de inclinación de las hélices. Los aspectos más destacables de este proyecto son los servos añadidos a las hélices para variar el ángulo de éstas; además ha implementado un software que permite el vuelo invertido del aparato.
+	\item En  \cite{primertrabajo} se realiza el diseño y el control de un cuadricópetro con vuelo autónomo y con variador del ángulo de inclinación de las hélices. Los aspectos más destacables de este proyecto son los servos añadidos a las hélices para variar el ángulo de éstas; además ha implementado un software que permite el vuelo invertido del aparato.
 	
 	\begin{figure}[!h]
 		\centering
@@ -1724,9 +1740,16 @@ En este apartado se van a enumerar algunos trabajos de otros grupos de investiga
 	
 	
 	
-	***Añadir otro trabajo\item {\bf Instrumentación Electrónica}
-	*** Indexar citas a la bilbliografía
+	\item En  \cite{segundotrabajo} se utiliza una tecnología denominada BCI\footnote{Siglas de Brain-computer interface (Interfaz cerebro-computadora)}, que es una tecnología que consiste en la adquisición de ondas cerebrales para luego ser procesadas e interpretadas por un ordenador. En él se realiza un experimento en el que se controla un cuadricópetro en un espacio tridimensional usando un electroencefalograma no invasivo.
 	
+	\begin{figure}[!h]
+		\centering
+			\includegraphics[scale=0.4]{images/bci}
+			\label{fig:vueloinvertido }
+			\\
+			\caption{Diagrama conceptual de la potencial función de la robótica de telepresencia BCI impulsada en la restauración de la autonomía a una persona paralizada.}
+		
+\end{figure}
 		
 \end{itemize}
 
@@ -1746,7 +1769,7 @@ Mediante la realización de este proyecto se afianzan conocimientos estudiados du
 
 	\item {\bf Control}: se deben utilizar los conocimientos adquiridos en las distintas asignaturas de control para el control del brazo.
 
-	
+	\item {\bf Circuitos eléctricos}: se deben conectar dos circuitos muy simples, uno de control que enviará las señales de comunicación entre sensor y Arduino y entre ESC y Arduino, y otro circuito de potencia que alimentará los motores desde la fuente de alimentación que se utilice.
 	
 	\item {\bf Programación}: se requieren conocimientos estudiados en asignaturas de programación y en sistemas digitales (para el manejo de registros de un microcontrolador) para programar el microcontrolador, que generalmente requieren el lenguaje C o C++. 
 	
@@ -1771,7 +1794,6 @@ El proyecto se dará por concluido cuando se cumplan los siguientes objetivos:
 		
 \end{enumerate}
 	
-
 \section{Medios y herramientas necesarios}
 \label{sec:Medios}
 
@@ -1804,7 +1826,10 @@ En este apartado sólo se enumerarán los recursos necesarios para la realización 
 	
 	\item Matlab
 	
-
+	\item AutoDesk Inventor
+	
+		
+	
 \end{itemize}
 
 \end{multicols}
@@ -1910,7 +1935,7 @@ La unidad inercial de medidas o IMU por sus siglas en inglés es un dispositivo q
 \subsection{AltIMU-10}
 \label{subsec:altimu}
 
-Esta IMU combina un barómetro digital, un giróscopo de 3 ejes, un acelerómetro de 3 ejes, un magnetómetro de 3 ejes y un altímetro. Por lo tanto es un dispositivo con 10 grados de libertad. La ventaja de elegir esta IMU es que el vendedor proporciona unas librerías mediante las que leer los valores de los sensores sin tener que recurrir a lecturas de registros; sólo hay que hacer llamadas a las funciones definidas en la librería y se leerán los datos de los sensores. 
+Esta IMU \cite{pololu} combina un barómetro digital, un giróscopo de 3 ejes, un acelerómetro de 3 ejes, un magnetómetro de 3 ejes y un altímetro. Por lo tanto es un dispositivo con 10 grados de libertad. La ventaja de elegir esta IMU es que el vendedor proporciona unas librerías mediante las que leer los valores de los sensores sin tener que recurrir a lecturas de registros; sólo hay que hacer llamadas a las funciones definidas en la librería y se leerán los datos de los sensores. 
 
 
 \begin{figure}[!h]
@@ -1929,7 +1954,7 @@ La lectura se realiza mediante comunicación I$^2$C, que es un protocolo de comun
 \subsection{MPU 6050}
 \label{subsec:mpu}
 
-Este dispositivo combina un giróscopo de 3 ejes y un acelerómetro de 3 ejes. Es un dispositivo con 6 grados de libertad. En este caso el fabricante no proporciona librerías y las operaciones para leer datos de los sensores son algo más complejas, necesitando acceder a registros y realizar operaciones de desplazamiento de bits para obtener los datos de los sensores.
+Este dispositivo \cite{mpu} combina un giróscopo de 3 ejes y un acelerómetro de 3 ejes. Es un dispositivo con 6 grados de libertad. En este caso el fabricante no proporciona librerías y las operaciones para leer datos de los sensores son algo más complejas, necesitando acceder a registros y realizar operaciones de desplazamiento de bits para obtener los datos de los sensores.
 
 \begin{figure}[!h]
 		\centering
@@ -1978,7 +2003,7 @@ La única diferencia significativa es el precio. No obstante la mayor facilidad a
 \section{Motores}
 \label{sec:eleccionmotores}
 
-La elección de unos motores adecuados resulta imprescindible, pues de sus características dependerá la estabilización y el consumo de energía. Los dos tipos de motores entre los que hay que elegir son los motores con escobillas, que generalmente son motores de continua, o motores sin escobillas. Para analizar las diferencias entre los motores se ha utilizado información obtenida de ***\cite{Vila}.
+La elección de unos motores adecuados resulta imprescindible, pues de sus características dependerá la estabilización y el consumo de energía. Los dos tipos de motores entre los que hay que elegir son los motores con escobillas, que generalmente son motores de continua, o motores sin escobillas. Para analizar las diferencias entre los motores se ha utilizado información obtenida de \cite{Vila}.
 
 \subsection{Motores DC (Brushed Motors)}
 \label{subsec:motordc}
@@ -2197,7 +2222,7 @@ La fuente utilizada tiene dos fuentes independientes, una de 5 V y una de 12 V. 
 
 \section{Montaje final}
 
-Para montar el brazo se necesita un material que sea ligero y que sea fácil de trabajar, para que el montaje de la estructura no resulte excesivamente largo y complejo. El material usado en este trabajo es el aglomerado, que se obtiene a partir de virutas o serrín. pues su manipulación sólo requiere de una sierra de vaivén y se puede taladrar fácilmente para acoplar las distintas partes. El montaje del brazo debe tener suficiente peso y suficiente superficie en la base para que ante movimientos bruscos en la fase de pruebas del PID la estructura no se balancee, sólo debe moverse el brazo a estabilizar. \\
+Para montar el brazo se necesita un material que sea ligero y que sea fácil de trabajar, para que el montaje de la estructura no resulte costosa. El material usado en este trabajo es el aglomerado, que se obtiene a partir de virutas o serrín. Su manipulación sólo requiere de una sierra de vaivén y se puede taladrar fácilmente para acoplar las distintas partes. El montaje del brazo debe tener suficiente peso y suficiente superficie en la base para que ante movimientos bruscos en la fase de pruebas del PID la estructura no se balancee, sólo debe moverse el brazo a estabilizar. \\
 
 \begin{figure}[!h]
 		\centering
@@ -2223,7 +2248,14 @@ La estructura de la figura \ref{fig:estructuraensamblada} tiene un eje central s
   \label{fig:esquemaycircuito}
 \end{figure}
 
-En la figura \ref{fig:esquemaycircuito} se muestran el esquema del circuito montado y una imagen real del circuito. En el esquema sólo se ha representado uno de los motores porque la conexión del otro es idéntica.
+En la figura \ref{fig:esquemaycircuito} se muestran el esquema del circuito montado y una imagen real del circuito. En el esquema sólo se ha representado uno de los motores porque la conexión del otro es idéntica. 
+
+\begin{sidewaysfigure}[!h]
+		\centering
+			\includegraphics[width=\textwidth]{images/BrazoTFG}
+			\caption{Alzado, planta y perfil de la estructura.}
+			\label{fig:vistasdiedrico}
+\end{sidewaysfigure}
 
 
 \part{Sensores de posición}
@@ -2267,17 +2299,17 @@ Uno de los aspectos a tener en cuenta para identificar correctamente el ángulo m
 
 \begin{figure}[!h]
 		\centering
-			\includegraphics[scale=0.6]{images/detalleimureal}
+			\includegraphics[scale=0.3]{images/detalleimureal}
 			\caption{Conexión de la IMU.}
 			\label{fig:ejesimu}
 \end{figure}
 
-Teniendo una vista global de la conexión completa en la figura \ref{fig:esquemaycircuito}, en esta vista en detalle se sabe que el eje que se va a medir es el eje Y. La flecha significa que en la dirección hacia la que apunta la flecha los valores del sensor crecen y en el sentido contrario decrecen.
+Teniendo una vista global de la conexión completa en la figura \ref{fig:esquemaycircuito}, en esta vista en detalle se sabe que el eje que se va a medir es el eje X. La flecha significa que en la dirección hacia la que apunta la flecha los valores del sensor crecen y en el sentido contrario decrecen.
 
 \section{Giróscopo}
 \label{sec:explicaciongiroscopo}
 
-Es un sensor que sirve para medir la velocidad angular de un algún aparato o vehículo. En la figura \ref{fig:imagengiroscopo} se observa su estructura. Para medir la velocidad de giro utiliza los principios del momento angular. Como se indica en ***\cite{wikigrioscopo}, cuando el giróscopo se somete a un momento de fuerza que tiende a cambiar la orientación de su eje de rotación, éste cambia de orientación girando respecto a un tercer eje, perpendicular tanto a aquel respecto del cual se lo ha empujado a girar, como a su eje de rotación inicial. Si está montado sobre un soporte de Cardano\footnote{Es un mecanismo de suspensión consistente en dos aros concéntricos cuyos ejes forman un ángulo recto.} que minimiza cualquier momento angular externo, o simplemente gira libre en el espacio, el giroscópo conserva la orientación de su eje de rotación ante fuerzas externas que tiendan a desviarlo.
+Es un sensor que sirve para medir la velocidad angular de un algún aparato o vehículo. En la figura \ref{fig:imagengiroscopo} se observa su estructura. Para medir la velocidad de giro utiliza los principios del momento angular. Como se indica en \cite{wikigiroscopo}, cuando el giróscopo se somete a un momento de fuerza que tiende a cambiar la orientación de su eje de rotación, éste cambia de orientación girando respecto a un tercer eje, perpendicular tanto a aquel respecto del cual se lo ha empujado a girar, como a su eje de rotación inicial. Si está montado sobre un soporte de Cardano\footnote{Es un mecanismo de suspensión consistente en dos aros concéntricos cuyos ejes forman un ángulo recto.} que minimiza cualquier momento angular externo, o simplemente gira libre en el espacio, el giroscópo conserva la orientación de su eje de rotación ante fuerzas externas que tiendan a desviarlo.
 
 
  \begin{figure}[!h]
@@ -2288,7 +2320,7 @@ Es un sensor que sirve para medir la velocidad angular de un algún aparato o veh
 		
 \end{figure}
 
-Debido a los tamaños con los que se trabaja hoy en día en el campo de  la electrónica resulta imposible construir un giróscopo electrónico con la estructura de la figura \ref{fig:imagengiroscopo}, por lo que se suelen utilizar giróscopos denominados de estructura vibrante o de vibración de Coriolis. Como se indica en \cite{patentegiroscopo} funcionan como resultado de fuerzas de Coriolis desarrolladas que ocurren cuando una partícula experimenta movimiento lineal en un bastidor rotatorio de referencia.\\
+Debido a los tamaños con los que se trabaja hoy en día en el campo de  la electrónica resulta imposible construir un giróscopo electrónico con la estructura de la figura \ref{fig:imagengiroscopo}, por lo que se suelen utilizar giróscopos denominados de estructura vibrante o de vibración de Coriolis. Como se indica en \cite[p. 2]{patentegiroscopo} funcionan como resultado de fuerzas de Coriolis desarrolladas que ocurren cuando una partícula experimenta movimiento lineal en un bastidor rotatorio de referencia.\\
 \\
 Conociendo los tipos de giróscopos y su funcionamiento ya se puede pasar a realizar el programa para tomar medidas con el giróscopo utilizado en este trabajo. El giróscopo integrado en la IMU utilizada es el L3GD20H de la marca STMicroelectronics, un giróscopo de 3 ejes con salida digital. Se comunica mediante el bus de comunicación serie $I^2$C. Como ya se ha comentado previamente el fabricante del giróscopo adquirido provee una librería para que la lectura de datos de los sensores de la IMU resulte más sencilla. A continuación se muestran los pasos a seguir para poder empezar a leer datos del sensor:
 
@@ -2338,7 +2370,7 @@ void loop()
 
 \end{lstlisting}
 
-Estos valores leídos del sensor y almacenados en la variable gyro son valores ``raw``, es decir, es un entero de 16 bits, no la velocidad angular. Para obtener la velocidad angular hay que realizar una serie de operaciones especificadas por el fabricante en la hoja de características del sensor. Para obtener valores de velocidad angular se debe multiplicar el valor ``raw`` obtenido  por un factor de conversión llamado sensibilidad, cuyas unidades son mdps\footnote{mdps hace referencia a milidegrees per second (miligrados por segundo)}/digit. Los valores de estas constantes para cada FS se encuentran en ***\cite{hojacarcaterísticasgiroscopo}. El objetivo final no es obtener la velocidad angular sino la posición, que es el ángulo. Como la velocidad es la derivada de la posición respecto del tiempo la solución es aplicar la ecuación \ref{ecuacion1} para obtener la posición.
+Estos valores leídos del sensor y almacenados en la variable gyro son valores ``raw``, es decir, es un entero de 16 bits, no la velocidad angular. Para obtener la velocidad angular hay que realizar una serie de operaciones especificadas por el fabricante en la hoja de características del sensor. Para obtener valores de velocidad angular se debe multiplicar el valor ``raw`` obtenido  por un factor de conversión llamado sensibilidad, cuyas unidades son mdps\footnote{mdps hace referencia a milidegrees per second (miligrados por segundo)}/digit. Los valores de estas constantes para cada FS se encuentran en \cite[p. 10]{hoja}. El objetivo final no es obtener la velocidad angular sino la posición, que es el ángulo. Como la velocidad es la derivada de la posición respecto del tiempo la solución es aplicar la ecuación \ref{ecuacion1} para obtener la posición.
 
 
 \begin{equation}
@@ -2358,9 +2390,9 @@ Para poder programar esa integral hay que controlar el tiempo que tarda en ejecu
 
 #define DT 0.03 							//Tiempo en segundos
 
-int16_t dps_y;
+int16_t dps_x;
 unsigned long time_loop1, time_loop2;	//Variables para medir el tiempo de ejecución
-double angulo_giroscopio_y;
+double angulo_giroscopio_x;
 
 ...
   
@@ -2370,8 +2402,8 @@ void loop()
 	time_loop1 = millis();
 	gyro.read();
 	
-	dps_y =  (gyro.g.y)*FACTOR_CONVERSION_245PS;
-	angulo_giroscopio_y += (double) dps_y*DT; 		//La integral se realiza mediante una multiplicación
+	dps_x =  (gyro.g.x)*FACTOR_CONVERSION_245PS;
+	angulo_giroscopio_x += (double) dps_x*DT; 		//La integral se realiza mediante una multiplicación
 	
 	time_loop2 = millis();
 	
@@ -2402,8 +2434,8 @@ Este error se refiere al valor que dan los sensores si el brazo está parado, es 
 
 #define DT 0.03 							//Tiempo en segundos
 
-int16_t dps_y;
-int sampleNum = 500, offsetg_y = 0;;
+int16_t dps_x;
+int sampleNum = 500, offsetg_x = 0;;
 
 
 void setup()
@@ -2412,9 +2444,9 @@ void setup()
 for(int n=0;n<sampleNum;n++){
   
   gyro.read();
-  offsetg_y+=(int)gyro.g.y;
+  offsetg_x+=(int)gyro.g.x;
 }
-offsetg_y = offsetg_y/sampleNum;
+offsetg_x = offsetg_x/sampleNum;
 
 }
 
@@ -2422,7 +2454,7 @@ offsetg_y = offsetg_y/sampleNum;
 void loop()
 {
 	gyro.read();
-	dps_y =  (gyro.g.y-offsetg_y)*FACTOR_CONVERSION_245PS;
+	dps_x =  (gyro.g.x-offsetg_y)*FACTOR_CONVERSION_245PS;
 	...
 }
 
@@ -2479,7 +2511,7 @@ La variación máxima real del ángulo es de 110º y después se ha vuelto a la posic
 \section{Acelerómetro}
 \label{sec:explicacionacelerometro}
 
-Es cualquier instrumento destinado a medir las fuerzas de aceleración. Como se indica en ***\cite{analisisacelerometro}, hay muchas maneras diferentes de fabricar un acelerómetro. Algunos acelerómetros usan el efecto piezo-resistivo (contienen cristales microsópicos que se estiran debido a la aceleración y generan una tensión), otro tipo de tecnología es medir los cambios en la capacidad. Este último es el caso del acelerómetro utilizado , que utiliza la tecnología de fabricación MEMS\footnote{Sistemas Microelectromecánicos}. Estos acelerómetros están compuestos de una masa móvil con unas placas que están unidas mediante un sistema de suspensión mecánica a un marco de referencia, como se muestra en la figura \ref{fig:acelerometromems}. Las placas móviles y las placas exteriores fijas forman condensadores. La desviación de la masa se mide usando la diferencia de capacidades.
+Es cualquier instrumento destinado a medir las fuerzas de aceleración. Como se indica en \cite[p. 2]{analisisacelerometro}, hay muchas maneras diferentes de fabricar un acelerómetro. Algunos acelerómetros usan el efecto piezo-resistivo (contienen cristales microsópicos que se estiran debido a la aceleración y generan una tensión), otro tipo de tecnología es medir los cambios en la capacidad. Este último es el caso del acelerómetro utilizado , que utiliza la tecnología de fabricación MEMS\footnote{Sistemas Microelectromecánicos}. Estos acelerómetros están compuestos de una masa móvil con unas placas que están unidas mediante un sistema de suspensión mecánica a un marco de referencia, como se muestra en la figura \ref{fig:acelerometromems}. Las placas móviles y las placas exteriores fijas forman condensadores. La desviación de la masa se mide usando la diferencia de capacidades.
 
 
 \begin{figure}[!h]
@@ -2533,14 +2565,12 @@ void loop()
 
 \end{lstlisting} 
  
- Estos valores leídos del sensor y almacenados en la variable \textit{compass} son valores ``raw``, es decir, es un entero de 16 bits, no las fuerzas debidas a la aceleración. Para obtener la fuerza debida a la aceleración hay que realizar una serie de operaciones especificadas por el fabricante en la hoja de características del sensor. Para obtener valores de fuerza, medidos en g, se debe multiplicar el valor ``raw`` obtenido  por un factor de conversión llamado sensibilidad de aceleración lineal, cuyas unidades son mg\footnote{mg hace referencia a miligauss}/LSB. Los valores de estas constantes para cada FS se encuentran en ***\cite{hojacarcaterísticasacelerometro}. El procedimiento para obtener las fuerzas de aceleración es idéntico al que se ha llevado a cabo para obtener la velocidad angular con el giróscopo. Sin embargo, el objetivo final no es obtener las fuerzas de aceleración sino la posición, que es el ángulo. El ángulo se obtiene mediante los ángulos de Euler, que consiste en resolver unas matrices de rotación cuya solución son los ángulos de inclinación de un sólido rígido. La resolución de estas matrices se ha consultado en el documento del fabricante Freescale Semiconductor ***\cite{calculoangulosacelerometrofreescale}. La ecuación usada para estimar el ángulo es la ecuación \ref{ecuacion2}, que en el documento equivale a la ecuación 37:
+ Estos valores leídos del sensor y almacenados en la variable \textit{compass} son valores ``raw``, es decir, es un entero de 16 bits, no las fuerzas debidas a la aceleración. Para obtener la fuerza debida a la aceleración hay que realizar una serie de operaciones especificadas por el fabricante en la hoja de características del sensor. Para obtener valores de fuerza, medidos en g, se debe multiplicar el valor ``raw`` obtenido  por un factor de conversión llamado sensibilidad de aceleración lineal, cuyas unidades son mg\footnote{mg hace referencia a miligauss}/LSB. Los valores de estas constantes para cada FS se encuentran en \cite[p. 10]{hojab}. El procedimiento para obtener las fuerzas de aceleración es idéntico al que se ha llevado a cabo para obtener la velocidad angular con el giróscopo. Sin embargo, el objetivo final no es obtener las fuerzas de aceleración sino la posición, que es el ángulo. El ángulo se obtiene mediante los ángulos de Euler, que consiste en resolver unas matrices de rotación cuya solución son los ángulos de inclinación de un sólido rígido. La resolución de estas matrices se ha consultado en el documento del fabricante Freescale Semiconductor \cite[p. 10]{calculoangulosacelerometrofreescale}. La ecuación usada para estimar el ángulo es la ecuación \ref{ecuacion2}, que en el documento equivale a la ecuación 37:
  
-****APARECE UNA INTERROGACION EN LA ECUACIÓN 
  
  \begin{equation}
   tan(angulo\_acelerometro\_y) = {\displaystyle {{{-fuerza\_x} \over {\sqrt{fuerza\_y^2+fuerza\_z^2}}}}}
   \label{ecuacion2}
-??
 \end{equation}
 
 El resultado está en radianes, así que hay que pasarlo a grados con una constante que se llamará \textit{RAD\_TO\_DEG} y cuyo valor es ${180 \over 2\pi} = 57.2958$. Mediante este método sólo se obtienen ángulos entre -90º y +90º. Dado que el brazo sólo puede girar en un rango de entre -75º y +75º, el rango de medidas mediante este método es válido para este trabajo.\\
@@ -2557,7 +2587,7 @@ El programa para implementar esa ecuación es más sencillo que el programa necesa
 
 LSM303 compass;		  							//Declaración variable del tipo LSM303
 double fuerza__x, fuerza_y, fuerza_z;
-double angulo_acelerometro_y;
+double angulo_acelerometro_x, raiz_x;
 ...
   
   
@@ -2569,9 +2599,9 @@ void loop()
   	fuerza_y =  -((compass.a.y)*FACTOR_CONVERSION_2G);
   	fuerza_z =  -((compass.a.z)*FACTOR_CONVERSION_2G);
   	
-  	raiz_y = sqrt((fuerza_y*fuerza_y)+(fuerza_z*fuerza_z)); 
+  	raiz_x = sqrt((fuerza_x*fuerza_x)+(fuerza_z*fuerza_z)); 
 	
-	angulo_acelerometro_y = (atan2(-fuerza_x,raiz_y))*RAD_TO_DEG;
+	angulo_acelerometro_x = (atan2(fuerza_y,raiz_x))*RAD_TO_DEG;
 }
 
  \end{lstlisting} 
@@ -2593,8 +2623,8 @@ Este error se refiere al valor que dan los sensores si la fuerza en un eje es 0.
 
 #define FACTOR_CONVERSION_2G 0.000061
 
-double fuerza_y;
-int sampleNum = 500, offset_y = 0;;
+double fuerza_x;
+int sampleNum = 500, offset_x = 0;;
 
 
 void setup()
@@ -2603,9 +2633,9 @@ void setup()
 for(int n=0;n<sampleNum;n++){
   
   compass.read();
-  offsetg_y+=(int)compass.a.y;
+  offsetg_x+=(int)compass.a.x;
 }
-offset_y = offset_y/sampleNum;
+offset_x = offset_y/sampleNum;
 
 }
 
@@ -2613,7 +2643,7 @@ offset_y = offset_y/sampleNum;
 void loop()
 {
 	compass.read();
-	fuerza_y =  -((compass.a.y-offseta_y)*FACTOR_CONVERSION_2G);
+	fuerza_x =  -((compass.a.x-offseta_x)*FACTOR_CONVERSION_2G);
 	...
 }
 
@@ -2684,7 +2714,7 @@ El concepto del filtro complementario consiste en tomar las variaciones lentas d
 
 
 \begin{lstlisting}[caption=Línea de código para implementar el filtro complementario., label=cod:ejemplo7,style=Cnice]
-angulo_y = 0.95*(angulo_y + dps_y*DT) + 0.05*angulo_acelerometro_y; 
+angulo_x = 0.95*(angulo_x + dps_x*DT) + 0.05*angulo_acelerometro_x; 
 	
 \end{lstlisting}
 
@@ -2765,7 +2795,7 @@ Los motores acoplados a los extremos del brazo van a ser los actuadores mediante
 \section{Conexión de los motores y los ESC}
 \label{sec:conexionmotoresyesc}
 
-El esquema de la conexión entre batería, ESC, Arduino y los motores se muestran en la figura \ref{fig:esquemafritzing}.
+El esquema de la conexión, realizado con Fritzing \cite{fritzing}, entre batería, ESC, Arduino y los motores se muestran en la figura \ref{fig:esquemafritzing}.
 
 
 \begin{figure}[!h]
@@ -2863,45 +2893,92 @@ El bucle while de la línea 18 está ejecutándose hasta que se pulse una tecla cua
 \chapter{Estabilización del brazo}
 \label{chapter:reguladores}
 
-
-***Hacer estudio teorico(METERLO EN UN "PART" ANTERIOR A ESTE) con la identificacionn del sistema y despues comparar con los resultaods expermientales
-
 \section{Introducción}
 \label{sec:introduccionreguladores}
 
-Hasta este punto el trabajo se ha centrado en estudiar los componentes y cómo utilizarlos para tomar medidas en l caso de los sensores y variar su velocidad en el caso de los motores, pero no se ha aplicado ningún control sobre ningún componente. En este apartado se va a aplicar la teoría de control para estabilizar el brazo en un ángulo que será indicado al sistema como referencia.
+Hasta este punto el trabajo se ha centrado en estudiar los componentes y cómo utilizarlos para tomar medidas en l caso de los sensores y variar su velocidad en el caso de los motores, pero no se ha aplicado ningún control sobre ningún componente. En este apartado se va a aplicar la teoría de control implementando distintos controladores para estabilizar el brazo en un ángulo que será indicado al sistema como referencia.
 
 
 \section{Controladores}
 \label{sec:controladores}
 
-Un controlador tiene la función de mantener constante una característica determinada del sistema. En este caso se mantendrá constante el ángulo brazo mediante la actuación de los motores. Los controladores más comunes son los denominados como PID, sin embargo en este trabajo se realizarán pruebas con controladores PPI, PIP, PIDPID. A continuación se explicará cómo implementarlos y se mostrarán los resultados de cada uno.
+Un controlador tiene la función de mantener constante una característica determinada del sistema. En este caso se mantendrá constante el ángulo del brazo midiendo la posición mediante la IMU y actuando mediante los motores cuando haya error. Existen muchos controladores pero los más comunes son los controladores PID. en este trabajo se implementarán, además del controlador PID, otros controladores para comprobar cómo mejoran o empeoran la respuesta del sistema en lazo cerrado respecto al controlador PID. Se probarán los controladores PPI, PIP, PIDPID. Para cada controlador se realizarán pruebas experimentales variando los valores de las constantes y midiendo parámetros que determinan la calidad de la respuesta como el tiempo de establecimiento, el tiempo de subida... En adelante se explicará cómo implementarlos y se mostrarán los resultados de cada uno.
 
 
 \subsection{PID}
 \label{sec:controladorpid}
 
-Es un mecanismo de control sobre un mecanismo de control por realimentación. Estos 3 controladores en conjunto procesan el error calculado a partir de la señal de referencia menos la señal de salida real. El algoritmo del control PID cosiste de tres controladores distintos:
+Es un mecanismo de control sobre un bucle de control por realimentación. Consiste en una combinación de 3 controladores independientes. Estos 3 controladores en conjunto procesan el error calculado a partir de la señal de referencia menos la señal de salida real. Con cada uno de los controladores se mejora uno de los dos regímenes de un sistema de control, bien la respuesta en régimen transitorio o bien la respuesta en régimen permanente, mejorando la estabilidad, la precisión y la velocidad de respuesta. Como se indica en \cite[p. 669]{ogata}, el algoritmo del control PID consiste en la suma de los tres controladores mencionados, su esquema se muestra en la figura \ref{fig:pid}.
 
-\begin{itemize}
+\newpage 
 
-		\item {\bf Proporcional}: su respuesta es proporcional al error. Si sólo se usa este controlador hay mucho ruido en el sistema y el sistema oscilaría mucho hasta estabilizarse.
-		
-		\item {\bf Integral}: su respuesta es proporcional a la integral del error, es decir, a la variación del error. Se puede considerar una memoria que estima lo que va a pasar en función de los errores pasados. Elimina el error en régimen estacionario a costa de aumentar el tiempo de establecimiento y hacer la respuesta más lenta.
-		
-		\item {\bf Derivativo}: su respuesta es proporcional a la derivada del error, es decir, a la velocidad de variación del error. Con este controlador se aumenta la velocidad de respuesta del sistema a costa de introducir ruido a alta frecuencia.
-
-
-\end{itemize}
-
-Conjuntando estos tres reguladores se consigue un buen sistema de control. Su comportamiento se varía ajustando las constantes de cada controlador, consiguiendo así la mejor respuesta en función de la aplicación. El esquema del sistema incluyendo el PID se muestra en la figura \ref{fig:pid}.
-
- \begin{figure}[!h]
+\begin{figure}[!h]
   \centering
     \includegraphics[scale=0.5]{images/PIDdesglose}
   \caption{Esquema del sistema.}
   \label{fig:pid}
 \end{figure}
+
+
+Cada controlador puede expresarse de distinta manera en función de si se trabaja en el dominio de Laplace o en el dominio del tiempo, aplicando las propiedades de la transformada de Laplace se pasará del dominio del tiempo al dominio de Laplace para mostrar ambas expresiones:
+
+\begin{itemize}
+
+		\item {\bf Proporcional}: su respuesta es proporcional al error. Si sólo se utiliza este controlador hay mucho ruido en el sistema y el sistema oscilaría mucho hasta estabilizarse. A mayor valor de la constante $K_p$ mejor es la precisión y peor es la estabilidad, es decir, mejor es la respuesta en régimen permanente y peor es la respuesta en régimen transitorio.
+		
+\begin{equation}
+  {u(t) \over e(t)} = K_p 
+  \label{ecuacion11}
+\end{equation}
+
+\begin{equation}
+  {U(s) \over E(s)} = K_p 
+  \label{ecuacion12}
+\end{equation}
+
+		
+		
+		\item {\bf Integral}: su respuesta es proporcional a la integral del error, es decir, a la variación del error. Se puede considerar una memoria que estima lo que va a pasar en función de los errores pasados. Elimina el error en régimen estacionario a costa de aumentar el tiempo de establecimiento y hacer la respuesta más lenta.
+		
+\begin{equation}
+  u(t) = K_i \int_{0}^{t}e(\tau)\, d\tau
+  \label{ecuacion11}
+\end{equation}
+
+Por la propiedad de la integral de la tabla de propiedades de la transformada de Laplace se sabe que una integral en el dominio del tiempo equivale a una división por \textit{s} en el dominio de Laplace, por lo tanto:
+\begin{equation}
+  {U(s) \over E(s)} = {K_i \over s} =  K_p {1 \over T_i s}
+  \label{ecuacion12}
+\end{equation}
+
+				
+		
+		\item {\bf Derivativo}: su respuesta es proporcional a la derivada del error, es decir, a la velocidad de variación del error. El efecto derivativo mejora la respuesta transitoria del sistema pero empeora la respuesta en régimen permanente. En particular aumenta la velocidad de respuesta del sistema pero introduce ruido a alta frecuencia, que se disminuye mediante la acción del proporcional.
+		
+		
+		\begin{equation}
+  u(t) = K_d {de(t) \over dt}
+  \label{ecuacion11}
+\end{equation}
+
+Por la propiedad de la derivada de la tabla de propiedades de la transformada de Laplace se sabe que una derivada en el dominio del tiempo equivale a una multiplicación por \textit{s} en el dominio de Laplace, por lo tanto:
+
+\begin{equation}
+  {U(s) \over E(s)} = K_d s =  K_p T_d s
+  \label{ecuacion12}
+\end{equation}
+
+
+\end{itemize}
+
+Teniendo la función de transferencia de cada controlador que compone el PID se puede obtener su función de transferencia sumando cada componente:
+
+\begin{equation}
+  PID = {U(s) \over E(s)} = P+I+D = K_p + {K_i \over s} + K_d s = K_p (1+{1 \over T_i s}+T_d s)
+  \label{ecuacion12}
+\end{equation}
+
+Estas dos formas de representar la expresión de un PID se denominan paralela (la expresión que tiene las constantes K) y estándar (la expresión que incluye las constantes T_i y T_d ).\\
 
 La entrada de referencia es el ángulo en grados al que se quiere estabilizar el brazo. Para estabilizar el brazo se va a establecer una velocidad base de 1,3 ms para cada motor, que será la velocidad a la que giren los motores si el error es nulo. Si hay error el PID actuará acelerando un motor y desacelerando el otro para corregirlo. Los pasos a seguir para implementar este controlador son:
 
@@ -2942,7 +3019,7 @@ La entrada de referencia es el ángulo en grados al que se quiere estabilizar el 
 #define Throttle_Motor_Izquierdo   1300   //Velocidad de los motores si el error es 0
 #define Throttle_Motor_Derecho     1300 
 
-double angulo_y
+double angulo_x;
 
 //VARIABLES MOTORES
 
@@ -2967,11 +3044,11 @@ void loop()
 {
 	//Medida ángulo
 		...
-	 angulo_y = 0.95*(angulo_y + dps_y*DT) + 0.05*angulo_acelerometro_y;	
+	 angulo_x = 0.95*(angulo_x + dps_x*DT) + 0.05*angulo_acelerometro_x;	
 	 
 	//PID
 		 
-	 error = ANGULO_REFERENCIA - angulo_y; 
+	 error = ANGULO_REFERENCIA - angulo_x; 
     	 integral+=(error*DT);
     	 derivativo = (error-error_pasado)/DT;
     	 PID_angulo = Kp*error + Ki*integral + Kd*derivativo;
@@ -2994,25 +3071,46 @@ void loop()
 }
 \end{lstlisting}
 
-El código \ref{cod:ejemplo111} muestra cómo se implementa el controlador PID. Las constantes MAX\_VEL y MIN\_VEL se utilizan para limitar la velocidad de los motores desde la línea 64 del código hasta la línea 69. Es recomendable para que la velocidad no sobrepase el límite, si desciende de 1 ms el motor se puede parar y si aumenta de 2 ms el motor puede llegar a romperse. Se ha establecido en 1,5 ms la máxima porque la fuente de alimentación no suministra suficiente corriente para llevar a un motor a la velocidad máxima mientras el otro sigue girando. El resultado de la estabilización con este controlador se muestra en la figura \ref{fig:escalonpid}. Los valores de las constantes para estos resultados son \mathbf {$K_p = 6$, $K_i = 3$ y $K_d = 2$}. 
+El código \ref{cod:ejemplo111} muestra cómo se implementa el controlador PID. Las constantes MAX\_VEL y MIN\_VEL se utilizan para limitar la velocidad de los motores desde la línea 64 del código hasta la línea 69. Es recomendable para que la velocidad no sobrepase el límite, si desciende de 1 ms el motor se puede parar y si aumenta de 2 ms el motor puede llegar a romperse. Se ha establecido en 1,5 ms la máxima porque la fuente de alimentación no suministra suficiente corriente para llevar a un motor a la velocidad máxima mientras el otro sigue girando.\\
+\\
 
- \begin{figure}[!h]
+Para comprobar cómo varía la respuesta en función de los valores de las constantes se van a realizar dos pruebas variando las tres constantes del controlador. El resultado de la estabilización con este controlador para las dos pruebas se muestra en la figura \ref{fig:escalonpid}. 
+
+
+\begin{figure}[!h]
   \centering
-    \includegraphics[scale=0.6]{images/respuestaescalonpid}
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonpid}
+    \caption{K_p = 6 - K_i = 3 - K_d = 2.}
+  \end{subfigure}  
+      \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonpid2}
+    \caption{K_p = 5 - K_i = 0.5 - K_d = 4.}
+  \end{subfigure}
   \caption{Respuesta del sistema para controlador PID.}
   \label{fig:escalonpid}
 \end{figure}
 
-El ruido presente se debe a las vibraciones de los motores,  cuando el brazo llega al ángulo de referencia la vibración de los motores provoca un pequeño error que el controlador intenta corregir constantemente, y a la constante $K_d$ , aumentándola se consigue un mayor tiempo de respuesta pero también se introduce más ruido en el sistema. En la figura \ref{fig:errorpid} se muestra la magnitud del ruido después del escalón.
 
- \begin{figure}[!h]
+
+El ruido presente en ambas respuestas tiene dos orígenes, el primero son las vibraciones provocadas por el giro de los motores, cuando el brazo llega al ángulo de referencia la vibración de los motores provoca un pequeño error que el controlador intenta corregir constantemente, y el segundo a la constante $K_d$ , aumentándola se consigue un mayor tiempo de respuesta pero también se introduce más ruido en el sistema. Sin embargo la magnitud de ruido introducida por los motores es mucho mayor que la que introduce el aumento de la constante ya que este último se puede contrarrestar (comose observa en la el caso (b)) mediante un buen ajuste de las constantes. En la figura \ref{fig:errorpid} se muestra la magnitud del ruido después del escalón.
+
+\begin{figure}[!h]
   \centering
-    \includegraphics[scale=0.6]{images/respuestaescalonpiddetalle}
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonpiddetalle}
+    \caption{K_p = 6 - K_i = 3 - K_d = 2.}
+  \end{subfigure}  
+      \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonpid2detalle}
+    \caption{K_p = 5 - K_i = 0.5 - K_d = 4.}
+  \end{subfigure}
   \caption{Detalle del ruido presente en la respuesta en régimen permanente del controlador PID.}
   \label{fig:errorpid}
 \end{figure}
 
-El error máximo es de 3º, que es un error aceptable para la estabilización del brazo. Variando los valores de las constantes del controlador, lo que se denomina \textit{PID tuning}, se puede cambiar el comportamiento del sistema. si bien se puede mejorar también se puede empeorar y siendo este un buen resultado se van a dejar estos valores de las constantes.\\
+ 
+Mediante estas dos pruebas se comprueba cómo con un sencillo ajuste de las constantes se puede mejorar mucho la respuesta del sistema, tanto en régimen permanente como en régimen transitorio.\\
 \\
 Para poder comparar los resultados con el resto de controladores se van a calcular en la respuesta de cada controlador los parámetros en régimen transitorio. Para poder obtener el valor exacto de algunos de ellos es recomendable escribir un script de Matlab. El código \ref{cod:matlab1} permite obtener el tiempo de establecimiento, el tiempo de pico y el sobreimpulso máximo con exactitud.   
 
@@ -3046,21 +3144,21 @@ El valor de la variable \textit{m} tiene que ser el número de muestras de \texti
 \begin{table}[!h]
     \renewcommand{\arraystretch}{1.3}
   \caption{Parámetros en régimen transitorio PID.}
-  \label{table11}
+  \label{table119}
   \begin{center}
             \begin{tabular}{|c|c|c|}
       \hline
-      \rowcolor{LightBlue2} Parámetro & Valor teórico & Valor experimental \\
+      \rowcolor{LightBlue2} Parámetro & Caso (a) & Caso (b) \\
       \hline
-      Tiempo de retardo ($t_d$) & *** & 2 seg\\
+      Tiempo de retardo ($t_d$) & 2 seg & 1.2 seg\\
       \hline
-      Tiempo de subida ($t_r$) & *** & 3 seg\\
+      Tiempo de subida ($t_r$) & 3 seg & 5.4 seg\\
       \hline
-      Tiempo de pico ($t_p$) & ***  & 1.84 seg\\
+      Tiempo de pico ($t_p$) & 1.84  &  6.59 seg\\
       \hline
-      Tiempo de establecimiento ($t_{s10\%}$) & *** & 14.83 seg\\
+      Tiempo de establecimiento ($t_{s10\%}$) & 14.83 seg &  4.19 seg\\
       \hline
-     Máximo sobreimpulso ($M_p$) & *** & 41º (1.36)\\
+     Máximo sobreimpulso ($M_p$) & 41º (1.36) & 31º (1.03)\\
       \hline
     \end{tabular}
   \end{center}
@@ -3079,10 +3177,10 @@ En este controlador se incluye un nuevo bucle de realimentación. Ahora se realim
   \label{fig:ppi}
 \end{figure}
 
-Este controlador consiste en realimentar la salida en grados aplicándole al error un controlador proporcional y realimentar la salida de la planta en grados por segundo y al error aplicarle un controlador proporcional integral. La implementación de este controlador se realiza mediante el código \ref{cod:ejemplo123}.
+Este controlador consiste en realimentar la salida en grados aplicándole al error un controlador proporcional y realimentar la salida de la planta en grados por segundo y al error aplicarle un controlador proporcional integral. La implementación de este controlador se realiza mediante el código \ref{cod:ejemplo1235}.
 
 
-\begin{lstlisting}[caption=Implementación del PID., label=cod:ejemplo123,style=Cnice]
+\begin{lstlisting}[caption=Implementación del PPI., label=cod:ejemplo1235,style=Cnice]
 #include <Servo.h>  							
 #include <Wire.h>
 #include <LSM303.h>
@@ -3103,7 +3201,7 @@ Este controlador consiste en realimentar la salida en grados aplicándole al erro
 #define Throttle_Motor_Izquierdo   1300   //Velocidad de los motores si el error es 0
 #define Throttle_Motor_Derecho     1300 
 
-double angulo_y
+double angulo_x;
 
 //VARIABLES MOTORES
 
@@ -3128,12 +3226,12 @@ void loop()
 {
 	//Medida ángulo
 		...
-	 angulo_y = 0.95*(angulo_y + dps_y*DT) + 0.05*angulo_acelerometro_y;	
+	 angulo_x = 0.95*(angulo_x + dps_x*DT) + 0.05*angulo_acelerometro_x;	
 	 
 	//PPI
 		 
-	  error_p = ANGULO_REFERENCIA - angulo_y; 
-    error_pi = Kp*error_p - dps_y;
+	  error_p = ANGULO_REFERENCIA - angulo_x; 
+    error_pi = Kp*error_p - dps_x;
     integral+=(error_pi*DT);
        
     PPI_angulo = Kpi_p*error_pi + Kpi_i*integral;
@@ -3151,28 +3249,44 @@ void loop()
 }
 \end{lstlisting}
 
-A partir de la línea 50 está la implementación del controlador, primero se calcula el error de la salida en grados y después a ese error multiplicado por la constante $K_p$ se le resta la salida en grados por segundo. El resultado de la estabilización con este controlador se muestra en la figura \ref{fig:escalonppi}. Los valores de las constantes para estos resultados son \mathbf {$K_p = 4$, $K_{pi\_p} = 5$ y $K_{pi\_i} = 2$}. 
+A partir de la línea 50 está la implementación del controlador, primero se calcula el error de la salida en grados y después a ese error multiplicado por la constante $K_p$ se le resta la salida en grados por segundo. El resultado de la estabilización con este controlador para distintos valores de las constantes se muestra en la figura \ref{fig:escalonppi}. 
 
 
- \begin{figure}[!h]
+\begin{figure}[!h]
   \centering
-    \includegraphics[scale=0.65]{images/respuestaescalonPPI}
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonppi2}
+    \caption{K_p = 3 - K_{pi\_p} = 4 - K_{pi\_i} = 2.}
+  \end{subfigure}  
+      \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonPPI}
+    \caption{K_p = 4 - K{pi\_p} = 5 - K{pi\_i} = 2.}
+  \end{subfigure}
   \caption{Respuesta del sistema para controlador PPI.}
   \label{fig:escalonppi}
 \end{figure}
 
-A simple vista con este controlador se ha conseguido reducir el máximo sobreimpulso y el ruido en régimen permanente es menor.Cuando está estabilizado a 0º antes de introducir el escalón la respuesta del sistema sigue a la referencia con un error de 1º. El ruido en régimen permanente se muestra en detalle en la figura \ref{fig:errorppi}.
 
- \begin{figure}[!h]
+A simple vista con este controlador se ha mejorar la velocidad de respuesta y el ruido en régimen permanente es menor. Además en el caso (a) el error en régimen permanente antes del escalón es prácticamente nulo, siendo el error máximo de 1º en un solo instante. El ruido en régimen permanente se muestra en detalle en la figura \ref{fig:errorppi}.
+
+
+\begin{figure}[!h]
   \centering
-    \includegraphics[scale=0.65]{images/respuestaescalonppidetalle}
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonppi2detalle}
+    \caption{K_p = 3 - K_{pi\_p} = 4 - K_{pi\_i} = 2.}
+  \end{subfigure}  
+      \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonppidetalle}
+    \caption{K_p = 4 - K{pi\_p} = 5 - K{pi\_i} = 2.}
+  \end{subfigure}
   \caption{Detalle del ruido presente en la respuesta en régimen permanente del controlador PPI.}
   \label{fig:errorppi}
 \end{figure}
 
-\newpage
-Los parámetros en régimen transitorio de este controlador son:
+Con el ajuste de las constantes se ha conseguido mejorar la velocidad de respuesta, llegando antes en el caso (a) al régimen permanente y con un máximo sobreimpulso menor. Los parámetros en régimen transitorio de este controlador son:
 
+\newpage
 
 \begin{table}[!h]
     \renewcommand{\arraystretch}{1.3}
@@ -3181,1169 +3295,1026 @@ Los parámetros en régimen transitorio de este controlador son:
   \begin{center}
             \begin{tabular}{|c|c|c|}
       \hline
-      \rowcolor{LightBlue2} Parámetro & Valor teórico & Valor experimental \\
+      \rowcolor{LightBlue2} Parámetro & Caso (a) & Caso (b) \\
       \hline
-      Tiempo de retardo ($t_d$) & *** & 1.1 seg\\
+      Tiempo de retardo ($t_d$) & 0.83 seg & 1.1 seg\\
       \hline
-      Tiempo de subida ($t_r$) & *** & 1.2 seg\\
+      Tiempo de subida ($t_r$) & 0.97 seg & 1.2 seg\\
       \hline
-      Tiempo de pico ($t_p$) & ***  & 1.32 seg\\
+      Tiempo de pico ($t_p$) & 1.65 seg  & 1.32 seg\\
       \hline
-      Tiempo de establecimiento ($t_{s10\%}$) & *** & 9.63 seg\\
+      Tiempo de establecimiento ($t_{s10\%}$) & 1.83 seg & 9.63 seg\\
       \hline
-     Máximo sobreimpulso ($M_p$) & *** & 37º (1.23)\\
+     Máximo sobreimpulso ($M_p$) & 35º (1.16) & 37º (1.23)\\
       \hline
     \end{tabular}
   \end{center}
 \end{table}
 
 
-***Hacer tabal comparativa al final de este apartado con los resultados de cada controlador de tiempo de establecimiento, maximo swobreimpulso, tiempo de subida...
+\subsection{PIP}
+\label{sec:controladorpip}
+
+Este controlador es muy similar al implementado en el apartado anterior, pero ahora se realiza un controlador proporcional integral para los grados y un controlador proporcional para la velocidad angular. El esquema de este regulador se muestra en la figura \ref{fig:pip}
 
 
-
-\subsection{Definiciones específicas del tipo de documento}
-\label{sec:definicion-del-tipo}
-
-Para comenzar a usar la plantilla es fundamental revisar el fichero
-\texttt{book.tex} en el que se incluyen todos los detalles genéricos de
-la estructura usada en el documento, con comentarios que esperamos que
-os ayuden a entenderlo. Si sois de los impacientes, basta con que
-comencéis por la parte en la que se incluyen los distintos capítulos
-(buscad la parte de los \texttt{\textbackslash{}input\{chapters/*.tex\}}).
-
-Uno de los ficheros de configuración más importantes es el
-\texttt{config/myconfig.tex} en el que se incluyen elementos para
-determinar la configuración específica de tu documento. El primero de
-ellos (para facilitar la generación de documentos en español o inglés),
-es el que define el idioma que vas a utilizar. Para seleccionarlo, basta
-con asignar \texttt{spanish} o \texttt{english} a la variable
-\texttt{\textbackslash{}mybooklanguage}. A partir de ella, el sistema
-generará las cabeceras y títulos adecuados a cada una.
-
-Igualmente, tendréis que definir las siguientes variables sobre el tipo
-de trabajo y el autor:
-
-\begin{itemize} 
-\item Acrónimo de la titulación correspondiente al trabajo (variable
-  \texttt{\textbackslash{}mydegree}): Que se seleccionará entre los
-  definidos (por ahora\footnote{Este documento se generó a finales de
-    2013.} son \texttt{IT}, \texttt{IE}, \texttt{ITTSE}, \texttt{ITTST},
-  \texttt{ITI}, \texttt{GIEC}, \texttt{GIEAI}, \texttt{GIST},
-  \texttt{GITT}, \texttt{GIT}, \texttt{GIC}, \texttt{GII}, \texttt{GSI},
-  \texttt{MUSEA}, \texttt{PHDUAH} y \texttt{PHDUPM}) y que
-  automáticamente configura portadas\footnote{Un comentario sobre el
-    color de las bandas en la portada de los TFGs: de acuerdo con la
-    normativa, dicho color debe ser PANTONE 160c. Yo he intentado
-    utilizar dicho color, pero el aspecto con el que finalmente aparece
-    no es ni de lejos similar al del modelo que proporciona la EPS, con
-    lo que he optado por utilizar el que se ve realmente en dicho
-    modelo. Si quieres cambiarlo, busca ``PANTONE'' en \texttt{config/preamble.tex}.}, entre otras cosas.
-\item Título del documento (variable \texttt{\textbackslash{}mybooktitle}).
-\item Nombre del autor del trabajo (variable \texttt{\textbackslash{}mybookauthor}).
-\item DNI del autor del trabajo, usado en el papeleo de los TFGs (variable \texttt{\textbackslash{}mybookDNI}).
-\item Departamento en el que se realiza el trabajo (variable
-  \texttt{\textbackslash{}mybookdepartment}, en español, y \texttt{\textbackslash{}mybookdepartmentEnglish}, en inglés).
-\item Programa de Doctorado (en su caso) en el que se realiza el trabajo (variable
-  \texttt{\textbackslash{}mybookphdprogram}, en español, y
-  \texttt{\textbackslash{}mybookphdprogramEnglish}, en inglés). 
-\item Grupo de investigación en el que se realiza el trabajo (variable
-  \texttt{\textbackslash{}mybookresearchgroup}.
-\item Centro en el que se realiza el trabajo (variable \texttt{\textbackslash{}mybookschool}, que debería ser la Escuela Politénica Superior, pero se incluye por generalidad).
-\item Universidad en el que se realiza el trabajo (variable \texttt{\textbackslash{}mybooksuniversidad}, que debería ser la de Alcalá, pero se incluye por generalidad).
-\item Titulación del autor (usada en las tesis de UPM, (variable \texttt{\textbackslash{}mybookauthordegree})).
-\item Email del autor (variable \texttt{\textbackslash{}mybookemail}).
-\item Nombre del primer (o único, en su caso) director del trabajo
-  (variable \texttt{\textbackslash{}mybookNameFirstAdvisor}).
-\item Nombre del segundo (en su caso) director del trabajo (variable \texttt{\textbackslash{}mybookNameSecondAdvisor}).
-\item Nombre del presidente del tribunal (variable \texttt{\textbackslash{}mybookpresident}).
-\item Nombre del primer vocal del tribunal (variable \texttt{\textbackslash{}mybookfirstvocal}).
-\item Nombre del segundo vocal del tribunal (variable \texttt{\textbackslash{}mybooksecondvocal}).
-\item Nombre del secretario del tribunal, en su caso (variable \texttt{\textbackslash{}mybooksecretary}).
-\item Año del trabajo (variable \texttt{\textbackslash{}mybookyear}).
-\item Fecha del anteproyecto, en su caso (variable \texttt{\textbackslash{}mybookanteproyectodate}), en el caso de que se usen la plantilla del anteproyecto.
-\item Fecha de la defensa del trabajo, en su caso (variable
-  \texttt{\textbackslash{}mydefensedate}, en español, o
-  \texttt{\textbackslash{}mydefensedateEnglish}).
-\item Palabras clave en inglés (variable \texttt{\textbackslash{}mybookkeywords}).
-\item Palabras clave en español (variable \texttt{\textbackslash{}mybookpalabrasclave}).
-\end{itemize}
-
-Y también variables para el caso de los trabajos que necesitan papeleo
-adicional (publicación en abierto, autorizaciones, etc.).
-
-\begin{itemize}
-\item Nombre del Secretario del Departamento (que firmará parte del papeleo)
-  (variable \texttt{\textbackslash{}mybookdepartmentsecretary}).
-\item Fecha que aparecerá en la firma del papeleo (variable \texttt{\textbackslash{}mybookdateforpaperwork}).
-\item DNI del alumno (variable
-  \texttt{\textbackslash{}mybookDNIOpenPublishing}).
-\item Figura del autor del trabajo, que es normalmente ``alumno''
-  (variable \texttt{\textbackslash{}mybookProfFigureOpenPublishing}).
-\item DNIs del/de los tutores, para los permisos de publicación en
-  abierto (variables \texttt{\textbackslash{}mybookDNIFirstAdvisor} y
-  \texttt{\textbackslash{}mybookDNISecondAdvisor}, en su caso)
-\end{itemize}
-
-Se ha comenzado a trabajar en la versión alfa del soporte para
-\textit{research reports}, y en ese caso se usa la variable
-\texttt{\textbackslash{}mybookresearchreportID}.
-
-Parte de esa información se utilizará para rellenar la metainformación
-incluida en el fichero \texttt{pdf} que se genera.
-
-También se definen los colores que se usarán en los hiperenlaces del
-documento. En concreto\footnote{Os rogamos encarecidamente que cambiéis
-  los colores definidos actualmente, que se han usado para verificar que
-  todo funciona correctamente.}:
-
-\begin{itemize}
-\item Color de los enlaces en el índice de contenidos (variable
-  \texttt{\textbackslash{}mytoclinkcolor}).
-\item Color de los enlaces en el índice de figuras (variable
-  \texttt{\textbackslash{}myloflinkcolor}).
-\item Color de los enlaces en el índice de tablas (variable
-  \texttt{\textbackslash{}mylotlinkcolor}).
-\item Color de los enlaces en otros índices (variable
-  \texttt{\textbackslash{}myothertoclinkcolor}), de los que ahora se
-  incluye un ejemplo en el fichero \texttt{cover/extralistings.tex}.
-\item Color de los enlaces (\texttt{\textbackslash{}ref}) en el
-  documento (variable \texttt{\textbackslash{}mylinkcolor}).
-\item Color de los enlaces a URLs (variable
-  \texttt{\textbackslash{}myurlcolor}).
-\item Color de los enlaces a referencias bibliográficas (variable
-  \texttt{\textbackslash{}mycitecolor}).
-\end{itemize}
-
-Basta con que defináis las variables correspondientes y la plantilla
-generará automáticamente las portadas adecuadas a la normativa y usará
-las definiciones específicas que hayas seleccionado.
-
-Por si os hace falta, en \texttt{config/postamble.tex} se definen
-algunas variables relacionadas con el tipo de trabajo. Por ejemplo las
-variables \texttt{\textbackslash{}mydegreefull} (igual a
-``\mydegreefull'' en esta compilación),
-\texttt{\textbackslash{}mybookworktype} (igual a ``\mybookworktype'' en
-esta compilación) y \texttt{\textbackslash{}mybookworktypefull} (igual a
-``\mybookworktypefull'' en esta compilación). Otro ejemplo sería el
-autor de contacto: \contactauthor.
-
-Importante para las tesis de UAH: si necesitáis incluir ficheros pdf
-(los de autorización e informes de los tutores, por ejemplo), esta
-plantilla lo permite: mirad los \texttt{\textbackslash{}includepdf} en
-el \texttt{book.tex}.
-
-\subsection{Plantilla de anteproyecto}
-\label{sec:plantilla-de-anteproyecto}
-
-Para el caso de los TFMs/TFGs/TFCs, se incluye una plantilla para
-realizar el anteproyecto.
-
-La plantilla se encuentra en el directorio \texttt{anteproyecto}, y en
-fichero \texttt{anteproyecto.tex} tenéis un ejemplo. El
-\texttt{Makefile} genera automáticamente el \texttt{anteproyecto.pdf},
-haciendo un \texttt{make} en ese directorio, y tiene targets similares a los
-del \texttt{Makefile} del documento principal, incluyendo
-\texttt{flatten} y \texttt{latexdiff}, con lo que también puede
-generarse el fichero con control de cambios, tal y como se describe en
-la sección~\ref{sec:control-de-cambios} (cambiando las referencias a
-\texttt{book...} por \texttt{anteproyecto...}).
-
-
-\subsection{Papeleo adicional para la defensa de los TFGs}
-\label{sec:introapp1}
-
-Para el caso de los TFGs y TFMs (al menos los del MUSEA), se incluyen en
-el directorio \texttt{papeleo} algunos de los documentos que hay que
-generar en el momento de la defensa. En concreto:
-
-\begin{itemize}
-\item La autorización del tutor para la publicación en abierto, en el
-  fichero \texttt{autorizacionTutorPublicarRepositorio.tex} para TFGs.
-\item La autorización del autor para la publicación en abierto, en el
-  fichero \texttt{autorizacionAutorPublicarRepositorio.tex}
-\item El visto bueno del tutor para la defensa del TFG
-  \texttt{vistoBuenoTutorTFG.tex}
-\item La autorización del autor y tutor/tutores para la publicación en
-  abierto, en el fichero
-  \texttt{autorizacionPublicarAbiertoTFM-MUSEA.tex}.
-\item El visto bueno del tutor para la defensa del TFM
-  \texttt{vistoBuenoTutorTFM-MUSEA.tex}
-\end{itemize}
-
-En el directorio se incluye un \texttt{Makefile} que genera los
-\texttt{pdfs} correspondientes a esos documentos. El sistema
-automáticamente adapta los singulares/plurales necesarios para el caso
-de que haya uno o varios directores/tutores.
- 
-
-\subsection{Generación del documento con control de cambios (para revisión)}
-\label{sec:control-de-cambios}
-
-Uno de los problemas de \LaTeX{} frente a otros sistemas de edición de
-textos viene en el momento de la revisión de cambios realizados a un
-documento. En el caso que nos ocupa serían los que nos sugiere nuestro
-tutor de TFC/TFG/TFG o director de tesis doctoral y que luego querrá
-verificar cómo se han aplicado. En un procesador al estilo de
-libreoffice (vaaaaaaaaale, o Microsoft Word también), tenemos la opción
-de comparar documentos o llevar el control de cambios y que el sistema
-automáticamente nos marque los añadidos o borrados. 
-
-En \LaTeX{} también es posible si usamos un sistema de control de
-versiones (y si no lo estáis usando, deberíais plantearos seriamente el
-hacerlo), con la ayuda de herramientas adicionales.
-
-Hay varias soluciones disponibles, la mayoría basada en el uso de la
-\texttt{latexdiff} \cite{latexdiff} (o derivados). Lo recomendable sería
-el uso de un sistema automatizado como el disponible en
-\texttt{git-latexdiff} \cite{git-latexdiff}, pero necesita el soporte de
-\texttt{git}, y por el momento estoy manteniendo esto en \texttt{cvs}
-(flames to \texttt{/dev/null}, please).
-
-\texttt{latexdiff} permite comparar dos versiones de un documento y
-generar un nuevo fichero fuente en \LaTeX{} que, al compilarlo, muestra un
-pdf ``bonito'', con las marcas de las diferencias (resaltando lo añadido
-y lo quitado). El resultado es perfecto para hacer una buena revisión de
-los cambios, y por supuesto no tiene punto de comparación con ver un
-\texttt{diff} a palo seco de las dos versiones del documento. 
-
-Lo que finalmente he implementado es muy ad-hoc, pero funciona. El
-procedimiento para hacer uso de ello sería (asumiendo que usáis
-\texttt{cvs} como sistema de control de versiones\footnote{Si usáis
-  \texttt{git} (lo que también os recomiendo que hagáis), el proceso es
-  más sencillo porque \texttt{git-latexdiff} lo hace todo automático,
-  aunque os tendréis que trabajar la parte correspondiente del
-  \texttt{Makefile}}:
-
-\begin{itemize}
-\item Primero hay que preparar la versión base sobre la que luego se
-  harán los cambios. Esa preparación se hace normalmente cuando se tiene
-  una versión razonablemente estable, y con la que luego se quiere
-  comparar (por ejemplo cuando le entregas a tu tutor tu primer borrador
-  del documento completo). La preparación es sencilla: basta hacer un
-  \texttt{make flatten}. Eso generará un fichero
-  \texttt{book-flatten.tex} que contiene el estado actual del documento,
-  expandido. Luego hay que registrarlo en el repositorio basta hacer un
-  \texttt{cvs commit -m ``New flattened version'' book-flatten.tex}.
-\item A partir de ahí ya se puede trabajar en los cambios al documento,
-  los que sean necesarios.
-\item Cuando se quiera obtener el fichero pdf con el control de cambios,
-  bastará hacer un \texttt{make latexdiff}, que acabará generando
-  \texttt{book-flatten-diff.pdf}, que será lo que estábamos buscando.
-\end{itemize}
-
-
-
-\subsection{Problemas conocidos}
-\label{sec:problemas-conocidos}
-
-Resumimos a continuación los problemas con los que nos hemos ido
-encontrando tras el uso más generalizado de esta plantilla, y, en su
-caso, la solución propuesta/adoptada:
-
-\begin{itemize}
-
-\item Al menos en la versión 12.04 de ubuntu, se producía un fallo de
-  compilación por un problema del \textit{option clash} del paquete
-  \texttt{xcolor}. La solución fue incluir las opciones
-  \texttt{[RGB,rgb]} de dicho paquete en el \texttt{documentclass}, y
-  eliminar la inclusión de \texttt{xcolor} (que ya lo incluye, al menos,
-  \texttt{listings}). No es muy bonito como solución, pero
-  funcionaba. Eso dio lugar a otro problema, que hacía que todas las
-  página aparecieran como en color cuando se llevaba a la imprenta (con
-  el consiguiente incremento de precio). Para intentar solucionarlo, he
-  vuelto a eliminar las opciones \texttt{[RGB,rgb]} del
-  \texttt{documentclass}, y se las paso con un
-  \texttt{PassOptionsToPackage}, pero está pendiente de
-  verificación. Please, confirmadme que funciona (tanto lo del color
-  como la compilación en un ubuntu 12.04 (o posterior).
-
-\item También hemos observado en la versión 12.04 de ubuntu que
-  \texttt{evince} no es capaz de visualizar la primera página de los
-  TFGs (generada con \texttt{tikz}), y que \texttt{xpdf} genera un core
-  cuando intenta abrir el fichero compilado. La solución es usar
-  \texttt{qpdfview} o \texttt{acroread}. 
-
-\end{itemize}
-
-Si das con más problemas, escribid por favor a \contactauthor
-contándonoslos y trataremos de solucionarlo (y si tenéis la solución,
-contádnosla también).
-
-
-\section{Ejemplos de elementos de utilidad}
-\label{sec:ejempl-de-elem}
-
-\subsection{Uso de comandos definidos}
-\label{sec:uso-de-comandos}
-
-A modo de ejemplo, hemos definido el comando
-\texttt{\textbackslash{}texten\{\}} en \texttt{config/myconfig.tex} para
-usarlo, por ejemplo, para marcar palabras escritas en inglés (aka
-\texten{English}). Sigue el ejemplo para definir aquellos que utilices
-con frecuencia.
-
-Si quieres escribir el símbolo \texttt{backslash} puedes usar el comando
-\texttt{\textbackslash{}backlash\{\}}:~\textbackslash{}.
-
-Lo mismo aplica para el símbolo \texttt{tilde}, para lo que puedes usar
-el comando \texttt{\textbackslash{}textasciitilde\{\}}:~\textasciitilde{}.
-
-
-\subsection{Uso de ``frases célebres''}
-\label{sec:uso-de-frases}
-
-Respecto a la frase célebre del inicio de los capítulos: todas las que
-hemos usado y las definiciones que las generen están sacadas del
-excelente trabajo de Marco Antonio Gomez-Martín y Pedro Pablo
-Gomez-Martín en el proyecto \texis, una plantilla para la creación de
-tesis y otros documentos y disponible en \cite{texis}.
-
-
-\subsection{Inclusión de diagramas}
-\label{sec:diagrama}
-
-Para incluir gráficos, la compilación que utilizamos permite usar
-ficheros \texttt{png}, \texttt{jpg} y \texttt{pdf}, en el comando
-\texttt{\textbackslash{}includegraphics}. Si queréis ahorraros incluir
-el path a cada fichero, podéis definir todos aquellos en los que haya
-ficheros gráficos en el \texttt{\textbackslash{}graphicspath} del
-\texttt{book.tex}.
-
-En la figura \ref{fig:fig_clobj} se muestra un ejemplo de gráfico
-generado automáticamente a partir de un fichero
-\texttt{.dia}\footnote{Tomadas de los proyectos fin de carrera de David
-  Casillas y Manuel Villaverde.}: \texttt{diagrams/Esquema\_objetos.dia}
-(podéis generalizar su generación en el \texttt{Makefile}).
-
-\begin{figure}[tphb]
+ \begin{figure}[!h]
   \centering
-  \includegraphics{Esquema_objetos}
-  \caption{Clasificación de los objetos para la gramática (aquí también
-    se pueden poner acrónimos como \acs{ETTS} y símbolos como \ac{xidet})}
-  \label{fig:fig_clobj}
+    \includegraphics[scale=0.8]{images/PIPdesglose}
+  \caption{Esquema del controlador PIP.}
+  \label{fig:pip}
 \end{figure}
 
-
-\subsection{Definición y uso de acrónimos (aquí también
-    se pueden poner acrónimos como \acs{ETTS})}
-\label{sec:uso-de-acronimos}
-
-El uso del paquete \texttt{glossaries} permite definir los acrónimos y
-el sistema automáticamente gestiona su inclusión completa la primera vez
-que se usa. Los acrónimos de ejemplo están en el fichero
-\texttt{acronyms/defacronymsgl.tex} (con opciones adicionales de
-configuración en \texttt{acronyms/acronymsgl.tex}).
-
-Así, si nos referimos a \ac{ETTS} o bien a \ac{EMODB},
-veremos como aparecen expandidas la primera vez. A partir de ahí, sólo
-se usará el acrónimo como puede verse al volver a hablar de \ac{ETTS} y
-\ac{EMODB}.
-
-Tiene también soporte para resetear todos los acrónimos como si no
-estuvieran usados. Vuelvo a incluir el párrafo anterior tras un reset
-(que se hace con un \texttt{\textbackslash{}glsresetall[acronym]}):
-
-\glsresetall[acronym]
-
-El uso del paquete acronym permite definir los acrónimos y el sistema
-automáticamente gestiona su inclusión completa la primera vez que se
-usa. Así, si nos referimos a \ac{ETTS} o bien a \ac{EMODB}, veremos como
-aparecen expandidas de nuevo (como si fuera la primera vez que se
-usan). A partir de ahí, sólo se usará el acrónimo como puede verse al
-volver a hablar de \ac{ETTS} y \ac{EMODB}.
-
-Y permite también forzar que se vuelva a citar completo aunque ya se
-haya utilizado (con el acrónimo entre paréntesis), como puede verse en
-\acl{ETTS} (equivalente a \glsdesc{ETTS} que vale para cualquier
-glosario), y también a usar forzosamente el acrónimo. Primero reseteamos
-de nuevo.
-
-\glsresetall[acronym]
-
-Y ahora forzamos el acrónimo: \acs{EMODB} (equivalente a
-\glsname{EMODB} que vale para cualquier glosario). También podemos
-forzar a que lo ponga todo, con \acf{EMODB}.
+Este controlador consiste en realimentar la salida en grados aplicándole al error un controlador proporcional y realimentar la salida de la planta en grados por segundo y al error aplicarle un controlador proporcional integral. La implementación de este controlador se realiza mediante el código \ref{cod:ejemplo123456}.
 
 
-Podemos seguir definiendo entradas de acrónimos, referirnos a \ac{DBN}
-por primera vez, y las siguientes aparecerá como \ac{DBN}.  Pongo ahora
-el resto de acrónimos \ac{SQ}, \ac{EIR}, \ac{SIR} y
-\ac{ES}. Finalmente los repito para que se vea el efecto: \ac{SQ},
-\ac{EIR}, \ac{SIR} y \ac{ES}.
+\begin{lstlisting}[caption=Implementación del PID., label=cod:ejemplo123456,style=Cnice]
+#include <Servo.h>  							
+#include <Wire.h>
+#include <LSM303.h>
+#include <L3G.h>
 
-Y gestiona bien los plurales, ponemos el plural como  la
-primera vez, y luego la segunda como . Y podemos volver al
-singular.
+#define DT 0.03 
+#define ANGULO_REFERENCIA = 0; //Ángulo al que se quiere estabilizar el brazo
 
+#define MAX_SIGNAL                 2000
+#define MIN_SIGNAL                 700 
 
-\subsection{Definición y uso de símbolos (aquí también
-    se pueden símbolos como \ac{xidet})}
-\label{sec:simbolos}
+#define MAX_VEL                    1500	
+#define MIN_VEL                    1000 
 
-Los símbolos definidos están incluidos en el fichero
-\texttt{symbols/defsymbolsgl.tex} (con configuración adicional en
-\texttt{symbols/symbolsgl.tex}) y en esta sección mostramos algunos
-ejemplos.
+#define MOTOR_IZQUIERDO_PIN        9
+#define MOTOR_DERECHO_PIN          10    
 
-El \ac{angstrom} se usa en biología estructural, mientras que el
-\ac{ohm} se usa en electrónica. También podemos poner~\ac{xdet}. Y
-también funciona en entornos \texttt{math} (\$...\$)
-$(\ac{xdet})$.
+#define Throttle_Motor_Izquierdo   1300   //Velocidad de los motores si el error es 0
+#define Throttle_Motor_Derecho     1300 
 
-Es posible incluso deshabilitar los hiperenlaces, usando un ``*'', como
-en ~\ac*{xdet} o \ac*{EMODB}.
+double angulo_x;
 
-También valen en entornos \texttt{equation}:
+//VARIABLES MOTORES
 
-\begin{equation}
-  \label{eq:1}
-  \ac{xdet}
-\end{equation}
+Servo motorizquierdo, motorderecho;		
+int velocidad_motor_izquierdo, velocidad_motor_derecho;
 
-Y finalmente la que nos falta: \ac{xidet}, también dentro de ecuaciones
-(otra cosa es que sea conveniente o útil):
+//VARIABLES PID
 
-\begin{equation}
-  \label{eq:2}
-  \ac{xidet} = \sqrt{i}
-\end{equation}
+    float Kpi_p = 3, Kpi_i = 1,  Kp_p = 4;  
+    float error_pi, valor_PI, integral_pi, error_p;
+    float PIP_angulo;
 
-Acabamos con un par de acrónimos: \ac{TDPSOLA} y \ac{STRAIGHT}. 
-
-Recientemente nos han pedido información sobre cómo introducir el
-comando de independencia incondicional y también funciona (la definición
-está en el \texttt{config/myconfig.tex}, y se usa tal cual en el
-\texttt{symbols/symbolsgl.tex} (revisadlos para ver cómo se implementa):
-\ac{condindep}. 
-
-
-
-
-\section{Motivación y objetivos}
-\label{sec:motiv-y-objet}
-
-La motivación de este proyecto\ldots
-
-Los objetivos principales de este trabajo son (ejemplo utilizando
-''enumerate''):
-
-\begin{enumerate}
-\item Primer objetivo\ldots
-\item Segundo objetivo\ldots
-  \begin{enumerate}
-  \item Objetivo 2.1\ldots
-  \item Objetivo 2.2\ldots
-  \end{enumerate}
-\item Tercer objetivo\ldots
-\end{enumerate}
-
-
-
-\section{Organización de la memoria}
-\label{sec:organizacion-memoria}
-
-Esta memoria se organiza en cinco grandes capítulos. El primero \ldots
-
+void setup()
+{
+	 	Serial.begin(115200);
+    		Wire.begin(); 
+	//Adjuntar motores, programar ESC's y habilitar sensores
+			
+		...
+} 
+void loop()
+{
+	//Medida ángulo
+		...
+	 angulo_x = 0.95*(angulo_x + dps_x*DT) + 0.05*angulo_acelerometro_x;	
+	 
+	//PIP
+		 
+	  error_pi = ANGULO_REFERENCIA - angulo_x; 
+    integral_pi+=(error_pi*DT);
+    valor_PI = Kpi_p*error_pi + Kpi_i*integral_pi;
+    error_p = valor_PI - dps_x;
+    
+    PIP_angulo = Kp_p*error_p;
  
+	//Control motores
+	
+	 velocidad_motor_izquierdo = Throttle_Motor_Izquierdo + PIP_angulo;
+     velocidad_motor_derecho   = Throttle_Motor_Derecho - PIP_angulo;
+     
+     //El resto igual que en el PID
+     
+     ..... 
+  
+}
+\end{lstlisting}
 
-\makeatletter{}
-\chapter{Estudio teórico}
-\label{cha:estudio-teorico}
-
-\begin{FraseCelebre}
-  \begin{Frase}
-    Y así, del mucho leer y del poco dormir, se le secó el cerebro de
-    manera que vino a perder el juicio\footnote{Tomado de ejemplos del
-      proyecto \texis{}.}.
-  \end{Frase}
-  \begin{Fuente}
-    Miguel de Cervantes Saavedra
-  \end{Fuente}
-\end{FraseCelebre}
+A partir de la línea 50 está la implementación del controlador, primero se calcula el error de la salida en grados y después de aplicarle a ese error el controlador proporcional integral se le resta la salida en grados por segundo. El resultado de la estabilización con este controlador para distintos valores de las constantes se muestra en la figura \ref{fig:escalonpip}. 
 
 
-\section{Introducción}
-\label{sec:introduccion-teoria}
-
-En este capítulo se cuenta tal y tal.
-
-El capítulo se estructura en $n$ apartados\ldots
-
-
-\section{Estado del Arte}
-\label{sec:estadoarte}
-
-En el estado del arte se enumeran los trabajos más relevantes de otros
-grupos de investigación. A continuación se muestra un ejemplo del uso de
-viñetas que nos proporciona \texttt{itemize}:
-
-\begin{itemize}
-\item En el trabajo ..... 
-\item En el siguiente trabajo.....
-\end{itemize}
-
-O citas en un párrafo real: Sin embargo, hay entornos acústicos donde
-las tasas de error conseguidas son todavía demasiado altas. En concreto,
-las aplicaciones en las que la captura de la señal de habla se hace
-usando micrófonos alejados del locutor (típicamente para distancias
-superiores a un metro) muestran una fuerte sensibilidad a los problemas
-de reverberación, ruido aditivo y baja relación señal a ruido
-(\cite{gelbart02},\cite{kochkin02}). En estos entornos, se ha propuesto
-el uso de arrays de micrófonos como un método para mejorar la calidad
-del habla capturada \cite{seltzer03}\cite{herbordt05}.
-
-Existen múltiples formas de insertar figuras en Latex. A continuación,
-se muestra un ejemplo del uso de \texttt{figure}. Como se puede ver en
-la Figura \ref{fig1} también se pueden poner referencias a las figuras
-por medio de \texttt{ref} y la etiqueta \texttt{label} de la figura en
-particular.
-
-\begin{figure}[h]   \centering
-  \includegraphics[width=4.7in]{Figure1}
-      \caption{Departamento de Electrónica.}
-  \label{fig1}
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonpip}
+    \caption{K_{pi\_p} = 5 - K_{pi\_i} = 2 - K_{p\_p} = 4.}
+  \end{subfigure}  
+      \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonpip2}
+    \caption{K_{pi\_p} = 3 - K_{pi\_i} = 2 - K_{p\_p} = 2.}
+  \end{subfigure}
+  \caption{Respuesta del sistema para controlador PIP.}
+  \label{fig:escalonpip}
 \end{figure}
 
-Y ahora un ejemplo en el que ponemos el \texttt{caption} en el lateral:
+A simple vista con este controlador se consigue un máximo sobreimpulso reducido y una alta velocidad de respuesta, sin embargo en el caso (b) el error en régimen permanente es elevado.  El error en régimen permanente se muestra en detalle en la figura \ref{fig:errorpip}.
 
-\begin{SCfigure}
+
+\begin{figure}[!h]
   \centering
-  \includegraphics[width=0.5\textwidth]{Figure1}
-  \caption{Departamento de Electrónica en el lateral.}
-\end{SCfigure}
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonpipdetalle}
+    \caption{K_{pi\_p} = 5 - K_{pi\_i} = 2 - K_{p\_p} = 4.}
+  \end{subfigure}  
+      \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/respuestaescalonpip2detalle}
+    \caption{K_{pi\_p} = 3 - K_{pi\_i} = 2 - K_{p\_p} = 2.}
+  \end{subfigure}
+  \caption{Detalle del ruido presente en la respuesta en régimen permanente del controlador PIP.}
+  \label{fig:errorpip}
+\end{figure}
 
-
-
-\section{Técnicas utilizadas}
-\label{sec:tecnicas-utilizadas}
-
-Aquí vamos a probar todos los niveles de sección disponibles, para
-evaluar la asignación de \texttt{tocdepth}...
-
-Blah, blah, blah\ldots
-
-
-\subsection{Subsección}
-\label{sec:subseccion}
-
-
-\subsubsection{Subsubsección}
-\label{sec:subsubseccion}
-
-\paragraph{Paragraph}
-\label{sec:paragraph-1}
-
-
-\subparagraph{Subparagraph}
-\label{sec:subparagraph}
-
-
-
-\section{Conclusiones}
-\label{sec:conclusiones-teoria}
-
-Blah, blah, blah\ldots
-
- 
-
-\makeatletter{}
-\chapter{Desarrollo}
-\label{cha:desarrollo}
-
-
-\begin{FraseCelebre}
-  \begin{Frase}
-    A fuerza de construir bien, se llega a buen
-    arquitecto\footnote{Tomado de ejemplos del proyecto \texis{}.}.
-  \end{Frase}
-  \begin{Fuente}
-    Aristóteles
-  \end{Fuente}
-\end{FraseCelebre}
-
-\section{Introducción}
-\label{sec:introduccion-desarrollo}
-
-En este capítulo se incluirá la descripción del desarrollo del trabajo.
-
-El capítulo se estructura en n apartados:...
-
-
-\section{Desarrollo del sistema de experimentación}
-\label{sec:desarr-del-sist}
-
-Blah, blah, blah\ldots
-
-
-\section{Planteamiento matemático}
-\label{sec:libr-desarr}
-
-También resulta útil poder introducir ecuaciones que se encuentran tanto
-en línea con el texto (como por ejemplo $\sigma=0.75$), como en un
-párrafo aparte (como en la ecuación \ref{eq1}). Al igual que ocurre con
-las figuras, también se pueden referenciar las ecuaciones.
-
-\begin{equation}
-  \label{eq1}
-  p[q_t=\sigma_t|q_{t-1}=\sigma_{t-1}]
-\end{equation}
-
-\section{Conclusiones}
-\label{sec:conclusiones-desarrollo}
-
-Blah, blah, blah\ldots
-
-
-
- 
-
-\makeatletter{}
-\chapter{Resultados}
-\label{cha:resultados}
-
-
-\begin{FraseCelebre}
-  \begin{Frase}
-        Rem tene, verba sequentur (Si dominas el tema, las palabras vendrán
-    solas)\footnote{Tomado de ejemplos del proyecto \texis{}.}.
-  \end{Frase}
-  \begin{Fuente}
-        Catón el Viejo
-  \end{Fuente}
-\end{FraseCelebre}
-
-\section{Introducción}
-\label{sec:introduccion-resultados}
-
-En este capítulo se introducirán los resultados más relevantes del
-trabajo. 
-
-La estructura del capítulo es\ldots
-
-
-\section{Entorno experimental}
-\label{sec:entorno-experimental}
-
-Blah, blah, blah.
-
-
-\subsection{Bases de datos utilizadas}
-\label{sec:bases-de-datos-1}
-
-Blah, blah, blah.
-
-
-\subsection{Métricas de calidad}
-\label{sec:metricas-de-calidad}
-
-Blah, blah, blah.
-
-
-\subsection{Estrategia y metodología de experimentación}
-\label{sec:estr-y-metod}
-
-Blah, blah, blah.
-
-
-\section{Resultados experimentales}
-\label{sec:result-experim}
-
-A continuación, se muestra un ejemplo de tabla simple (ver tabla \ref{table1}).
-
-\begin{table}
+En este caso con este ajuste de las constantes no se ha conseguido variar mucho la respuesta del sistema, teniendo en ambos casos similares características. 
+\newpage
+\begin{table}[!h]
     \renewcommand{\arraystretch}{1.3}
-  \caption{Comparativa.}
-  \label{table1}
+  \caption{Parámetros en régimen transitorio PIP.}
+  \label{table11234}
   \begin{center}
             \begin{tabular}{|c|c|c|}
       \hline
-      Method & Training Time & Man-Work (\%)\\
+      \rowcolor{LightBlue2} Parámetro & Caso (a) & Caso (b) \\
       \hline
-      Propagation model & $<$ 30 sec & 5\\
+      Tiempo de retardo ($t_d$) & 0.93 seg & 1.1 seg\\
       \hline
-      Manual & 9 h 30 min & 24\\
+      Tiempo de subida ($t_r$) & 1.07 seg & 1.08 seg\\
       \hline
-      Automatic & 2 h & 10 8\\
+      Tiempo de pico ($t_p$) & 2.19 seg  & 1.23 seg\\
+      \hline
+      Tiempo de establecimiento ($t_{s10\%}$) & 10.95 seg & 12.09 seg\\
+      \hline
+     Máximo sobreimpulso ($M_p$) & 36º (1.12) & 36º (1.2)\\
       \hline
     \end{tabular}
   \end{center}
 \end{table}
 
-Cuando las tablas ocupan más de un página se debe utilizar un tipo
-especial de tablas denominado \texttt{longtable}. A continuación, se
-muestra un ejemplo del mismo (ver tabla \ref{table2}).
-
-\begin{center}
-	\begin{longtable}{|c|c|c|c|}
-    \caption[Resultados de la correlación cruzada.]{Resultados de la correlación cruzada.} \label{table2} \\
-    
-    \hline \multicolumn{1}{|c|}{\textbf{Posición Real}} & \multicolumn{1}{c|}{\textbf{Posición estimada}} & \multicolumn{1}{c|}{\textbf{Coef. Correlación}} & \multicolumn{1}{c|}{\textbf{Acierto/Fallo}} \\ \hline 
-    \endfirsthead
-    
-    \multicolumn{4}{c}    {{\bfseries \tablename\ \thetable{} -- continúa en la página anterior}} \\
-    \hline \multicolumn{1}{|c|}{\textbf{Posición Real}} & \multicolumn{1}{c|}{\textbf{Posición estimada}} & \multicolumn{1}{c|}{\textbf{Coef. Correlación}} & \multicolumn{1}{c|}{\textbf{Acierto/Fallo}} \\ \hline 
-    \endhead
-    
-    \hline \multicolumn{4}{|r|}{{Continúa en la página siguiente}} \\ \hline
-    \endfoot
-
-    \hline \hline
-    \endlastfoot
-    
-    \hline	2P0	&	2P0	&	0,004954	&	A	\\
-    \hline	2P1	&	2P4	&	0,005752	&	F	\\
-    \hline	2P2	&	2P2	&	0,005461	&	A	\\
-    \hline	2P3	&	2P0	&	0,004634	&	F	\\
-    \hline	2P5	&	2P4	&	0,005991	&	F	\\
-    \hline	2P6	&	2P16	&	0,004410	&	F	\\
-    \hline	2P7	&	3P9	&	0,008038	&	F	\\
-    \hline	2P8	&	3P9	&	0,003753	&	F	\\
-    \hline	2P9	&	2P7	&	0,004908	&	F	\\
-    \hline	2P10	&	2P10	&	0,007273	&	A	\\
-    \hline	2P14	&	2P16	&	0,006485	&	F	\\
-    \hline	2P15	&	2P15	&	0,004932	&	A	\\
-    \hline	2P16	&	2P16	&	0,006237	&	A	\\
-    \hline	2P17	&	2P15	&	0,005110	&	F	\\
-    \hline	2P18	&	3P18	&	0,006235	&	F	\\
-    \hline	2P19	&	3P18	&	0,004827	&	F	\\
-    \hline	2P20	&	2P20	&	0,006877	&	A	\\
-    \hline	2P22	&	3P18	&	0,003048	&	F	\\
-    \hline	2P24	&	2P24	&	0,006833	&	A	\\
-    \hline	2P25	&	2P25	&	0,004875	&	A	\\
-    \hline	2P26	&	2P31	&	0,005511	&	F	\\
-    \hline	2P27	&	2P28	&	0,004590	&	F	\\
-    \hline	2P30	&	2P31	&	0,005576	&	F	\\
-    \hline	2P31	&	2P31	&	0,007213	&	A	\\
-    \hline	2P32	&	2P35	&	0,003340	&	F	\\
-    \hline	2P34	&	2P34	&	0,004128	&	A	\\
-    \hline	2P36	&	2P35	&	0,003329	&	F	\\
-    \hline	2P37	&	2P37	&	0,003468	&	A	\\
-    \hline	2P39	&	2P38	&	0,002577	&	F	\\
-    \hline	2P40	&	2P43	&	0,004303	&	F	\\
-    \hline	2P41	&	2P41	&	0,001573	&	A	\\
-    \hline	2P42	&	2P41	&	0,000846	&	F	\\
-    \hline	2P44	&	2P44	&	0,002732	&	A	\\
-    \hline	2P45	&	23P45	&	0,001958	&	F	\\
-    \hline	2P47	&	2P34	&	0,002869	&	F	\\
-    \hline	2P48	&	2P43	&	0,004569	&	F	\\
-    \hline	2P49	&	3P51	&	0,001374	&	F	\\
-    \hline	2P50	&	2P34	&	0,002274	&	F	\\
-    \hline	2P51	&	2P63	&	0,003931	&	F	\\
-    \hline	2P52	&	2P55	&	0,003537	&	F	\\
-    \hline	2P53	&	3P56	&	0,003126	&	F	\\
-    \hline	2P54	&	2P67	&	0,005560	&	F	\\
-    \hline	2P56	&	2P55	&	0,002817	&	F	\\
-    \hline	2P57	&	2P67	&	0,006168	&	F	\\
-    \hline	2P58	&	2P58	&	0,005278	&	A	\\
-    \hline	2P60	&	3P66	&	0,004966	&	F	\\
-    \hline	2P61	&	3P61	&	0,004748	&	A	\\
-    \hline	2P64	&	2P67	&	0,005342	&	F	\\
-    \hline	2P66	&	2P4	&	0,004172	&	F	\\
-    \hline	2P67	&	2P67	&	0,005706	&	A	\\
-    \hline	3P0	&	3P0	&	0,003674	&	A	\\
-    \hline	3P61	&	2P61	&	0,003263	&	F	\\
-    \hline	3P64	&	2P67	&	0,003484	&	F	\\
-    \hline	3P65	&	2P67	&	0,002975	&	F	\\
-    \hline	3P66	&	2P58	&	0,005029	&	F	\\
-    \hline	3P67	&	3P67	&	0,003714	&	A	\\
-	\end{longtable}
-\end{center}
 
 
 
-En algunas ocasiones, también resulta útil emplear el entorno
-\texttt{subfigure} para añadir múltiples imágenes dentro de la misma
-figura. A continuación, se muestra un ejemplo del uso en la figura
-\ref{fig:fig3}. También se pueden referenciar las sub-figuras de forma
-individual, por ejemplo la sub-figura \ref{fig:fig3b} (usando un método
-de cita), o bien la sub-figura \ref{fig:fig3}.\subref{fig:fig3b} (usando
-otro alternativo).
+\subsection{PIDPID}
+\label{sec:controladorpidpid}
 
-\begin{figure}
+En este controlador vuelve a haber dos bucles de realimentación y a ambos errores se les aplica un controlador PID. El esquema de este regulador se muestra en la figura \ref{fig:pidpid}
+
+
+ \begin{figure}[!h]
   \centering
-  \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Figure2}
-    \caption{Mean Entropy.}
-    \label{fig:fig3a}
-  \end{subfigure}  ~     \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Figure3}
-    \caption{Error Percentage.}
-    \label{fig:fig3b}
-  \end{subfigure}
-  \caption{Optimal trames number in the training data set.}
-  \label{fig:fig3}
+    \includegraphics[scale=0.8]{images/PIDPIDdesglose}
+  \caption{Esquema del controlador PIDPID.}
+  \label{fig:pidpid}
 \end{figure}
 
-La figura~\ref{fig:LIdiapRoom} muestra otro ejemplo con referencias a
-las subfigures en el caption principal. 
+La implementación de este controlador se realiza mediante el código \ref{cod:ejemplo12345678}.
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[b]{0.30\textwidth}
-    \includegraphics[width=\textwidth]{roomlayout2}
-    \caption{}
-    \label{fig:RoomLayout}
-  \end{subfigure}  \qquad \qquad     \begin{subfigure}[b]{0.425\textwidth}
-    \includegraphics[width=\textwidth]{idiap-seq45-cam2.jpg}
-    \caption{}
-    \label{fig:RoomPicture}
-  \end{subfigure}
-  \caption{Idiap Smart Meeting Room for AV16.3 recordings.
-    (\protect\subref{fig:RoomLayout}) Room layout showing the centered
-    table, and the microphones arranged in two circular arrays.
-    (\protect\subref{fig:RoomPicture}) Sample of recorded video frame
-    showing the arrays area. \vspace{-0.3cm}}
-  \label{fig:LIdiapRoom}
-\end{figure}
 
-Os incluimos a continuación un
-párrafo de un artículo en el que hacemos referencia a varias figuras y
-subfiguras: 
+\begin{lstlisting}[caption=Implementación del PID., label=cod:ejemplo12345678,style=Cnice]
+#include <Servo.h>  							
+#include <Wire.h>
+#include <LSM303.h>
+#include <L3G.h>
 
-\emph{The IDIAP Meeting Room (shown in figure~\ref{fig:LIdiapRoom}) is a $8.2m
-\times 3.6m \times 2.4m$ rectangular space containing a centrally
-located $4.8m \times 1.2m$ rectangular table, on top of which two
-circular microphone arrays of $10 cm$ radius are located, each of them
-composed by 8 microphones. The centers of the two arrays are separated
-by $80 cm$ and the origin of coordinates is located in the middle point
-between the two arrays. The arrays can be also seen in
-figures~\ref{fig:simureal_positions}.\subref{fig:Simulated_positions},
-~\ref{fig:simureal_positions}.\subref{fig:real_positions_short}, and
-~\ref{fig:simureal_positions}.\subref{fig:real_positions_long}, in which
-only the relevant section of the room is displayed, each one showing
-different scenarios that were used in the experiments. A detailed
-description of the meeting room can be found in~\cite{moore2002}.}
+#define DT 0.03 
+#define ANGULO_REFERENCIA = 0; //Ángulo al que se quiere estabilizar el brazo
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[t]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{angular2-short-improved}
-    \caption{For validation\\with simulated data.}
-    \label{fig:Simulated_positions}
-  \end{subfigure}
-~      \begin{subfigure}[t]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{positions1-short-improved}
-    \caption{For validation\\with real data and microphone pairs with $20~cm$ spacing.}
-    \label{fig:real_positions_short}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[t]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{positions2-short-improved}
-    \caption{For validation\\with real data and microphone pairs with
-      $82.46~cm$ spacing.}
-    \label{fig:real_positions_long}
-  \end{subfigure}
-  \caption{Geometrical details for the experiments carried out. Only the
-    relevant section of the room is shown, and microphone pairs are
-    connected by solid lines.}
-  \label{fig:simureal_positions}
-\end{figure}
+#define MAX_SIGNAL                 2000
+#define MIN_SIGNAL                 700 
+#define MAX_VEL                    1500	
+#define MIN_VEL                    1000 
 
-En la figura~\ref{fig:Sim_angles} mostramos un ejemplo de varias
-figuras organizadas de forma un poco más complejo.
+#define MOTOR_IZQUIERDO_PIN        9
+#define MOTOR_DERECHO_PIN          10    
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Sim_seg025_ang090}
-    \caption{$0^{\circ}$}
-    \label{fig:Sim_ang090}
-  \end{subfigure}
+#define Throttle_Motor_Izquierdo   1300   //Velocidad de los motores si el error es 0
+#define Throttle_Motor_Derecho     1300 
+
+double angulo_x;
+
+//VARIABLES MOTORES
+
+Servo motorizquierdo, motorderecho;		
+int velocidad_motor_izquierdo, velocidad_motor_derecho;
+
+//VARIABLES PID
+
+    float Kp1 = 8, Kp2 = 8, Ki1 = 4, Ki2 = 5, Kd1 = 3, Kd2 = 1;  
+   	float error_PID1, error_pasado_PID1, error_PID2, error_pasado_PID2;
+    float derivativo_PID1, integral_PID1, derivativo_PID2, integral_PID2;
+    float PID1, PIDPID_angulo;
+
+void setup()
+{
+	 	Serial.begin(115200);
+    		Wire.begin(); 
+	//Adjuntar motores, programar ESC's y habilitar sensores
+		...
+} 
+void loop()
+{
+	//Medida ángulo
+		...
+	 angulo_x = 0.95*(angulo_x + dps_x*DT) + 0.05*angulo_acelerometro_x;	
+		 
+	 //PID del angulo
     
-  \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Sim_seg025_ang108}
-    \caption{$18^{\circ}$}
-    \label{fig:Sim_ang108}
-  \end{subfigure}
-      \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Sim_seg025_ang126}
-    \caption{$36^{\circ}$}
-    \label{fig:Sim_ang126}
-  \end{subfigure}
-      \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Sim_seg025_ang144}
-    \caption{$54^{\circ}$}
-    \label{fig:Sim_ang144}
-  \end{subfigure}
-    
-  \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Sim_seg025_ang162}
-    \caption{$72^{\circ}$}
-    \label{fig:Sim_ang162}
-  \end{subfigure}
+    		error_PID1 = ANGULO_REFERENCIA - angulo_x; 
+    		integral_PID1+=(error_PID1*DT);
+    		derivativo_PID1 = (error_PID1-error_pasado_PID1)/DT;
 
-  \caption{Comparison between the steered power response generated
-    by the model (solid line) and that calculated using simulated
-    waveforms in the AV16.3 environment (stems). Results for the
-    speaker in given angles and the array steered from -90º to
-    +90º are shown.}
-  \label{fig:Sim_angles}
+    		PID1 = Kp1*error_PID1 + Ki1*integral_PID1 + Kd1*derivativo_PID1;
+
+    //PID de la velocidad angular
+    
+    		error_PID2 = PID1 - dps_x; 
+    		integral_PID2+=(error_PID2*DT);
+    		derivativo_PID2 = (error_PID2-error_pasado_PID2)/DT;
+    		
+    		PIDPID_angulo = Kp2*error_PID2 + Ki2*integral_PID2 + Kd2*derivativo_PID2;
+  	 
+	//Control motores
+	
+	 velocidad_motor_izquierdo = Throttle_Motor_Izquierdo + PIDPID_angulo;
+     velocidad_motor_derecho   = Throttle_Motor_Derecho - PIDPID_angulo;
+   //El resto igual que en el PID   
+     		..... 
+}
+\end{lstlisting}
+
+El resultado de la estabilización con este controlador sólo se va a mostrar para un valor de las constantes, la sintonización de este controlador resulta compleja debido al elevado número de constantes que hay que variar. 
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.6]{images/respuestaescalonPIDPID}
+  \caption{Respuesta del sistema para controlador PIDPID.}
+  \label{fig:escalonPIDPID}
 \end{figure}
 
-También es posible incluir el código de una figura en un fichero
-\texttt{.tex} independiente (para hacer más legible el código del
-documento principal). Un ejemplo lo tenéis a continuación, incluyendo el
-texto en inglés del documento original:
+Los valores de las constantes utilizados para la respuesta obtenida son los que hay en la línea 29 del código \ref{cod:ejemplo12345678}. El error en régimen permanente es elevado debido al ruido introducido por los motores, que alternan entre la velocidad máxima y mínima constantemente sin mantener la posición estable en ningún momento.
 
-\emph{Figure~\ref{fig:SRPvsPatternSelected} includes the results of the
-comparison, for several speaker positions (1, 2, 4, 6, 8 and 16,
-emphasized in
-figure~\ref{fig:simureal_positions}.\subref{fig:real_positions_short}),
-and selected to provide different acoustic situations, both in terms of
-distance and angular position with respect to the arrays. All the
-graphics show the acoustic power map (predicted or calculated) for a
-regular two-dimensional grid of $10~cm$. The plot is provided from a top
-view of the room, spanning the full plan at a height of $61~cm$ above the
-microphone arrays (this height was the ground truth one for sequence
-01). For each speaker position shown, three graphics are plotted:}
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.6]{images/respuestaescalonPIDPIDdetalle}
+  \caption{Detalle del ruido presente en la respuesta en régimen permanente del controlador PIDPID.}
+  \label{fig:errorPIDPID}
+\end{figure}
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Parámetros en régimen transitorio PIDPID.}
+  \label{table1123456}
+  \begin{center}
+            \begin{tabular}{|c|c|}
+      \hline
+      \rowcolor{LightBlue2} Parámetro & Valores  \\
+      \hline
+      Tiempo de retardo ($t_d$) & 1.12 seg \\
+      \hline
+      Tiempo de subida ($t_r$) & 1.26 seg \\
+      \hline
+      Tiempo de pico ($t_p$) & 2.43 seg  \\
+      \hline
+      Tiempo de establecimiento ($t_{s10\%}$) & 16.44 seg \\
+      \hline
+     Máximo sobreimpulso ($M_p$) & 44º (1.46) \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+El aumento del número de constantes a sintonizar hace que obtener buenos resultados con este controlador sea complicado y no es aconsejable su uso, pues con controladores menos complejos se obtienen mejores resultados con un menor tiempo de cómputo y una menor capacidad de cómputo, lo que es importante en una aplicación como esta en la que no se dispone de un procesador con mucha potencia.
+
+\subsection{Comparativa}
+\label{sec:comparativacontroladores}
+
+Habiendo implementado cada controlador de los arriba comentados y obtenido su respuesta ante un escalón se van a mostrar los mejores resultados de cada controlador para comprobar cuál de todos ellos es el más adecuado.
+
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Parámetros en régimen transitorio PIDPID.}
+  \label{table1123456}
+  \begin{center}
+            \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      \rowcolor{LightBlue2} Parámetro/Controlador & PID & PPI & PIP & PIDPID   \\
+      \hline
+      Mejor caso & (b)  & (a) & (a) & - \\
+      \hline
+      Tiempo de retardo ($t_d$) & 1.2 seg & 0.83 seg & 0.93 seg & 1.12 seg  \\
+      \hline
+      Tiempo de subida ($t_r$) & 5.4 seg  & 0.97 seg & 1.07 seg & 1.26 seg\\
+      \hline
+      Tiempo de pico ($t_p$) & 6.59 seg & 1.65 seg & 2.19 seg & 2.43 seg  \\
+      \hline
+      Tiempo de establecimiento ($t_{s10\%}$) & 4.19 seg & 1.83 seg & 10.95 seg &16.44 seg  \\
+      \hline
+     Máximo sobreimpulso ($M_p$) & 31º (1.03) &  35º (1.16) & 36º (1.12) & 44º (1.46)   \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+En el caso del controlador PID el tiempo de pico es superior al tiempo de establecimiento porque el sistema es subamortiguado, es decir, la salida no llega a superar el ángulo de referencia durante el régimen transitorio, pero sí en algunos momentos del régimen permanente, como se puede observar en la figura \ref{fig:escalonpid}. La elección del controlador más adecuado depende de la aplicación para la que se necesite, si se necesita buena {\bf precisión} el mejor controlador es el {\bf PID}, su error en régimen permanente es pequeño y no tiene sobreimpulso en régimen transitorio. Si lo que se necesita es alta {\bf velocidad de respuesta} el controlador más adecuado es el {\bf PPI}, con él se obtiene una respuesta el doble de rápida que con el segundo controlador más rápido, siendo el régimen transitorio muy corto. Como ya se ha comentado en la sección \ref{sec:controladorpidpid}, el controlador PIDPID no es una buena opción pues su sintonización es complicada por tener el doble de constantes a establecer que el resto de controladores.
+
+\newpage
+\subsection{Eliminación previa de errores}
+\label{sec:eliminacionerrores}
+
+En este apartado se van a comentar dos errores que han surgido durante las pruebas realizadas con el brazo. Debido a estas pruebas se han encontrado maneras de conseguir que el sistema se vuelva inestable, sin embargo con unas pocas líneas de código se pueden eliminar estos errores.
+
+\subsubsection{Anti-Windup}
+\label{sec:antiwindup}
+
+Como se explica en \cite{windup} el windup es un fenómeno que ocurre cuando la salida de un controlador proporcional integral está saturado, resultando en mal funcionamiento e incluso inestabilidad. Al controlar la velocidad de un motor, un cambio brusco en la velocidad puede provocar que la corriente generada por el controlador electrónico de velocidad llegue a su valor máximo, que viene determinado por el protector del controlador, la saturación magnética y el sobrecalentamiento del motor.\\
+\\
+Este efecto se ha conseguido durante las pruebas sujetando el brazo en una posición alejada de la posición de referencia, provocando así que el factor integral del PID esté sumando constantemente y se acumule durante unas decenas de segundos. Al volver a soltar el brazo la suma del integral es muy elevada y el error a corregir por el controlador es mayor que el real, haciendo que l brazo no vuelva a estabilizarse hasta que el integral tiene un valor pequeño. Esto puede pasar en un caso real con una fuerza externa como por ejemplo el viento, si hay una fuerte ráfaga de viento y provoca que el aparato salga de la posición de referencia se produce este efecto. Para eliminar este fenómeno sólo hay que limitar el valor del parámetro integral del controlador, como se muestra en el código \ref{cod:12341234}. El código mostrado corresponde al controlador PID, pero se aplica al resto de controladores que incluyan un integral de la misma manera. A este controlador se le puede denominar controlador Anti-Windup, pues no le afecta este fenómeno.
+
+
+\begin{lstlisting}[caption=Anti-Windup., label=cod:12341234,style=Cnice]
+
+#define MAXIMO_INTEGRAL 200
+...
+void loop()
+{
+	 
+	//PID
+		 
+	 error = ANGULO_REFERENCIA - angulo_x; 
+    	 integral+=(error*DT);
+    	 derivativo = (error-error_pasado)/DT;
+    	 PID_angulo = Kp*error + Ki*integral + Kd*derivativo;
+
+	
+		if(integral > MAXIMO_INTEGRAL)       
+        integral = MAXIMO_INTEGRAL;
+    else if(integral < -MAXIMO_INTEGRAL)
+        integral = -MAXIMO_INTEGRAL;
+        
+	...
+}
+\end{lstlisting}
+
+De la línea 15 a la línea 18 se observa la implementación del Anti-Windup. Hay que limitarlo para todo el margen de valores de la variable integral, puesto que la variable error puede ser positiva o negativa se limita para valores positivos y para valores negativos. El valor de \textit{MAXIMO\_INTEGRAL} se ha establecido mediante pruebas, comprobando que con valores mayores se sigue produciendo el fenómeno wind-up y con valores menores se empeora la estabilización del brazo.
+
+
+\subsubsection{Limitación de la velocidad de los motores}
+\label{sec:limitacionmotores}
+
+La velocidad de los motores se puede variar mediante el ESC desde un mínimo de una señal de 1 ms hasta un máximo de una señal de 2 ms para que estén girando y no se paren. Sin embargo, la fuente de alimentación disponible entrega una corriente limitada y reducida. Debido a la forma de implementar el control de los motores si no se limita su velocidad y el error es elevado se puede dar la situación de que uno de los motores gire a un valor por debajo del mínimo y se pare y el otro gire a una velocidad mayor que la máxima y pueda llegar a romperse. Además se ha comprobado mediante las pruebas que si uno de los motores gira a máxima velocidad y el otro a mínima velocidad la fuente no es capaz de entregar la corriente necesaria y los motores no giran a la velocidad adecuada para estabilizar el brazo, provocando un mal funcionamiento. Para solucionar este problema se debe limitar la velocidad de los motores antes de mandar la señal al ESC, como se muestra en el código \ref{cod:1}.
+
+
+\begin{lstlisting}[caption=Limitación de la velocidad de los motores., label=cod:1,style=Cnice]
+
+...
+#define MAX_VEL                    1500	
+#define MIN_VEL                    1000 
+
+#define MOTOR_IZQUIERDO_PIN        9
+#define MOTOR_DERECHO_PIN          10    
+
+#define Throttle_Motor_Izquierdo   1300   //Velocidad de los motores si el error es 0
+#define Throttle_Motor_Derecho     1300 
+
+double angulo_y
+
+//VARIABLES MOTORES
+
+Servo motorizquierdo, motorderecho;		
+int velocidad_motor_izquierdo, velocidad_motor_derecho;
+
+...
+
+
+void loop()
+{
+	...
+	 
+	//PID
+		 
+	 error = ANGULO_REFERENCIA - angulo_x; 
+    	 integral+=(error*DT);
+    	 derivativo = (error-error_pasado)/DT;
+    	 PID_angulo = Kp*error + Ki*integral + Kd*derivativo;
+
+	//Control motores
+	
+		 velocidad_motor_izquierdo = Throttle_Motor_Izquierdo + PID_angulo;
+     velocidad_motor_derecho   = Throttle_Motor_Derecho - PID_angulo;
+     
+      velocidad_motor_izquierdo = (velocidad_motor_izquierdo > MAX_VEL) ? MAX_VEL:velocidad_motor_izquierdo;
+     velocidad_motor_izquierdo = (velocidad_motor_izquierdo < MIN_VEL) ? MIN_VEL:velocidad_motor_izquierdo; 
+     
+     velocidad_motor_derecho = (velocidad_motor_derecho > MAX_VEL) ? MAX_VEL:velocidad_motor_derecho;
+     velocidad_motor_derecho = (velocidad_motor_derecho < MIN_VEL) ? MIN_VEL:velocidad_motor_derecho;
+     
+     motorizquierdo.writeMicroseconds(velocidad_motor_izquierdo);
+     motorderecho.writeMicroseconds(velocidad_motor_derecho);
+     
+     error_pasado = error;	//Para calcular el derivativo 
+}
+\end{lstlisting}
+De la línea 38 a la línea 43 se muestra cómo se limita la velocidad de los motores. Si no se limita su valor la velocidad de los motores asignada en las líneas 35 y 36 pueden salirse de los valores mínimo y máximo y el sistema dejaría de ser estable.
+
+
+
+\part{Manejo del brazo mediante LabView}
+\label{part:labview}
+
+\chapter{Manejo del brazo mediante LabView}
+\label{chapter:labview}
+
+\section{Introducción}
+\label{sec:introduccionlabview}
+
+Hasta esta parte del trabajo se han explicado todos los pasos necesarios para conseguir una buena estabilización del brazo, desde cómo obtener una estimación precisa del ángulo hasta cómo implementar los controladores para estabilizar el brazo en la posición deseada. Para poder realizar pruebas es necesario hacer un programa mediante el que se pueda variar el ángulo de referencia y las constantes de los controladores. Esto se puede hacer mandando comandos mediante el puerto serie del Arduino y mostrándolos en el monitor serie disponible en la IDE de Arduino pero es poco intuitiva y hay que actualizar los datos mostrados por pantalla a baja frecuencia para que sean visibles. Existe una aplicación de National Instruments \cite{paginani} para ciencia e ingeniería, llamada LabView, que es un entorno de desarrollo gráfico que permite controlar sistemas de una forma más visual y reducir el tiempo empleado para las pruebas. En este apartado se va a explicar brevemente los pasos necesarios para desarrollar un programa en LabView que muestre los resultados por pantalla y recopile datos para después obtener las gráficas en Matlab.
+
+\section{Programación del Arduino}
+\label{sec:programacionarduino}
+
+El primer paso es programar el Arduino las entradas que se van a usar para variar los valores del ángulo de referencia y de las constantes de los controladores. La solución implementada es leer el puerto serie y asociar ciertos caracteres incrementos o decrementos de los valores, como se muestra en el código \ref{cod:ej}.
+
+\begin{lstlisting}[caption=Programación en Arduino para variar referencia y constantes., label=cod:ej,style=Cnice]
+#define ANGULO_REF_MAX  70
+#define ANGULO_REF_MIN -70
+float INCREMENTO_ANGULO_POSITIVO = 1;
+float INCREMENTO_ANGULO_NEGATIVO = -1;
+char val;
+
+void serialEvent(){      
+  
+  if( Serial.available() )    // si hay dato y el puerto lo lee
+      val = Serial.read();    // lee y almacena el dato en 'val'
+   
+    switch (val){
+      
+      case '+':
+        ANGULO_REFERENCIA += INCREMENTO_ANGULO_POSITIVO;
+        if (ANGULO_REFERENCIA > ANGULO_REF_MAX)
+              ANGULO_REFERENCIA -= INCREMENTO_ANGULO_POSITIVO;
+      break;
+      
+      case '-':
+        ANGULO_REFERENCIA += INCREMENTO_ANGULO_NEGATIVO;
+        if (ANGULO_REFERENCIA < ANGULO_REF_MIN)
+              ANGULO_REFERENCIA -= INCREMENTO_ANGULO_NEGATIVO;
+      break;
+
+      case 'R':
+        INCREMENTO_ANGULO_POSITIVO+=1;
+        INCREMENTO_ANGULO_NEGATIVO-=1;
+      break;
+      
+      case 'r':
+        INCREMENTO_ANGULO_POSITIVO-=1;
+        INCREMENTO_ANGULO_NEGATIVO+=1;
+      break;
+      
+     case 'd':
+        Kd-=1;
+      break;
+      
+      case 'D':
+        Kd+=1;
+      break;
+      
+      case 'i':
+        Ki-=1;
+      break;
+      
+      case 'I':
+        Ki+=1;
+      break;
+      
+      case 'p':
+        Kp-=1;
+      break;
+      
+      case 'P':
+        Kp+=1;
+      break;
+      
+    }  
+}
+\end{lstlisting}
+
+La limitación del ángulo se implementa por seguridad por código además de físicamente con la barra horizontal entre las dos vigas que sujetan el brazo. La función \textit{serialEvent()} es un evento que ocurre cuando un dato llega al puerto serie a través de RX. El Arduino lo comprueba cada iteración del bucle principal. Para cada acción se ha asociado un carácter en minúsculas y el mismo carácter en mayúsculas. Por ejemplo, si se pulsa D se incrementa en uno la constante $K_d$ . En el caso de pulsar R lo que se hace es variar el tamaño del escalón de referencia que se incrementará o decrementará al pulsar + o -, es decir, si se pulsa R 4 veces la variable \textit{INCREMENTO\_ANGULO\_POSITIVO} valdrá 5 y la próxima vez que se pulse + el ángulo de referencia será 5º mayor. 
+
+\newpage
+
+Mediante el código \ref{cod:ej} se ha mostrado cómo implementar la entrada de datos, pero también es necesario mostrar los resultados por pantalla. La única manera de comunicación entre la aplicación que se desarrollará en LabView y el programa cargado en Arduino es el puerto serie, por lo tanto para mostrar los resultados hay que escribir desde el programa de Arduino en el puerto serie los valores y leerlos en LabView.
+
+
+\begin{lstlisting}[caption=Escritura de datos, label=cod:ej12,style=Cnice]
+
+void Imprimir_LabView(){
+
+   Serial.print((int) angulo_x); 
+   Serial.print("\t");
+
+   Serial.print((int) velocidad_motor_izquierdo); 
+   Serial.print("\t");
+
+   Serial.print((int) velocidad_motor_derecho); 
+   Serial.print("\t\n");
+}
+\end{lstlisting}
+
+
+Debido a la gran cantidad de código que se va acumulando para poder estabilizar el brazo es conveniente organizarlo en pestañas, disponibles en la IDE del Arduino. En cada pestaña se pueden programar las funciones asociadas a cada parte del trabajo, una para el cálculo del PID, otra para la estimación del ángulo...
+
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/pestanas}
+  \caption{Distribución en pestañas del programa implementado para el controlador PID.}
+  \label{fig:pestanas}
+\end{figure}
+
+
+\section{Desarrollo en LabView}
+\label{sec:desarrollolabview}
+
+Habiendo programado los caracteres que realizarán las modificaciones sólo queda realizar el programa en LabView. Para poder ejecutar el programa desde LabView se debe abrir una comunicación serie igual que si se hiciese mediante Arduino. Como se indica en la página de National Instruments \cite{pag}, para tener acceso al puerto serie usando LabView se debe iniciar una sesión VISA y configurarla con los mismos parámetros que en el Arduino, el baud rate y el carácter de fin de lectura, que en Arduino viene por defecto como 0xA, que es el retorno de carro (\textbackslash n). Una vez configurada la sesión VISA empezará la ejecución del programa cargado en el Arduino, por lo tanto hay que programar los mismos pasos seguidos en Arduino desde LabView, que son escribir un carácter cualquiera en el puerto serie de Arduino para la calibración del ESC y después comienza el bucle principal. 
+
+\newpage
+
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{images/VISA}
+    \caption{Configuración sesión VISA.}
+  \end{subfigure}  
+      \begin{subfigure}{0.34\textwidth}
+    \includegraphics[width=\textwidth]{images/escribircaracter}
+    \caption{Escritura de carácter.}
+  \end{subfigure}
+  \caption{Pasos para que comience el bucle principal.}
+  \label{fig:sesionvisa}
+\end{figure}
+
+Ya se puede pasar al bucle principal para modificar los valores de las constantes y del ángulo de referencia. La duración del bucle de LabView tiene que ser la misma que la del bucle principal del Arduino, tienen que ser síncronos. En LabView se debe estar leyendo el puerto serie cada iteración para mostrar los resultados por pantalla y se deben programar botones para realizar las modificaciones, todo ello metido dentro de un bucle \textit{while} que acabe mediante un botón de Stop. Una captura de la interfaz implementada se muestra en la figura \ref{fig:interfaz}.
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/Interfaz}
+  \caption{Interfaz gráfica desarrollada en LabView.}
+  \label{fig:interfaz}
+\end{figure}
+
+Los elementos que se han programado en la interfaz son:
 
 \begin{itemize}
-\item The graphics on the left show the SRP-PHAT acoustic power maps
-  generated by the proposed model (for example, the left graphic in
-  figure~\ref{fig:SRPvsPatternSelected}.\subref{fig:SRPvsModel_Fo1500_position1}
-  for position 1).
-\item The graphics in the middle show the real SRP-PHAT acoustic power
-  maps calculated using the real acoustic waveforms (for example, the
-  middle graphic in
-  figure~\ref{fig:SRPvsPatternSelected}.\subref{fig:SRPvsModel_Fo1500_position1}
-  for position 1), for a single selected frame.
-\item The graphics on the right show the average real SRP-PHAT acoustic
-  power maps, averaging for all the frames in which the user was in the
-  given position (for example, the right graphic in
-  figure~\ref{fig:SRPvsPatternSelected}.\subref{fig:SRPvsModel_Fo1500_position1}
-  for position 1).
+
+	\item {\bf Botón para modificar el ángulo de referencia}: para programarlo hay que enviar el carácter correspondiente por el puerto serie, que es + para los incrementos y - para los decrementos.
+	
+	\item {\bf Botón para modificar el tamaño del escalón del ángulo de referencia}: se debe escribir por el puerto serie el carácter correspondiente, que es R para incrementos y r para decrementos.
+	
+	\item {\bf Botones para modificar las constantes del controlador}: estos controles son muy útiles para modificar el tipo de respuesta del controlador sin tener que recurrir a la ejecución del programa cada vez que se quiera modificar el valor de estas constantes.
+	
+	\item {\bf Botón para activar/desactivar el \textit{datalog}}: el \textit{datalog} consiste en escribir datos en un fichero para su posterior análisis. En este trabajo se escriben en un fichero \textit{.txt} el ángulo medido, el ángulo de referencia y el instante de tiempo para cada muestra con el fin de obtener una representación en Matlab.
+	
+	\item {\bf Indicadores de la velocidad de los motores}: ya que en la sección \ref{sec:programacionarduino} se ha mostrado cómo programar en Arduino la escritura por el puerto serie de los valores de los motores, en LabView se debe leer el puerto serie cada iteración del bucle y se tiene el valor de la velocidad de cada motor.
+	
+	\item {\bf Indicador del ángulo medido}: también llega por el puerto serie, por lo tanto se debe leer el puerto serie y asignar el valor leído al indicador.
+
+	\item {\bf Gráfica que representa en tiempo real el ángulo medido y el ángulo de referencia}:	mediante esta gráfica se observa el tipo de respuesta del sistema en tiempo real, aunque para posteriores análisis como tiempo de establecimiento, máximo sobreimpulso, etc., se usará Matlab es útil para modificar los valores de las constantes hasta conseguir la respuesta deseada.
+
 \end{itemize}
 
-\emph{The green point represents the real (ground truth) speaker
-position, and the black dots represent the positions of the four
-microphones used. The hyperbolic shapes found in the figure are
-consistent with the fact that the place of points with equal acoustic
-power value, for a given microphone pair, is a hyperbola (in our
-two-dimensional case, being a hyperboloid of revolution in the
-three-dimensional case).}
+Para finalizar con este apartado se va a mostrar una secuencia de imágenes en las que se ha ejecutado el programa con el controlador PID variando el ángulo de referencia, el tamaño del escalón del ángulo de referencia y, por último, las constantes del controlador. El orden de la secuencia de imágenes de la figura \ref{fig:secuencia} es de izquierda a derecha y de arriba a abajo. 
 
-\emph{From figure~\ref{fig:SRPvsPatternSelected}, it can clearly be seen that,
-again, the predictions closely match the results with real data for the
-different acoustic conditions, even when the simulations are using fixed
-and frequency independent average reflection coefficients, and that the
-acoustic model is based on the simplistic image method model.}
-
-\makeatletter{}\begin{figure}
-  \centering
-  \begin{subfigure}[t]{0.47\textwidth}
-    \begin{minipage}[t]{\textwidth}
-      \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos01}
-                \label{fig:Pattern_Fo1500_pos01}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_frame003_pos01}
-                \label{fig:SRP_Fo1500_pos01}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos01}
-                \label{fig:SRP_Fo1500_mean_pos01}
-      \end{subfigure}
-      \vspace{\verticalSpacingSRPMaps}
-      \caption{\centering For position 1}
-      \label{fig:SRPvsModel_Fo1500_position1}
-      \vspace{0.25cm}
-    \end{minipage}
-  \end{subfigure}
-  ~      \begin{subfigure}[t]{0.47\textwidth}
-    \begin{minipage}[t]{\textwidth}
-      \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos02}
-                \label{fig:Pattern_Fo1500_pos02}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_frame161_pos02}
-                \label{fig:SRP_pos02}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos02}
-                \label{fig:SRP_Fo1500_mean_pos02}
-      \end{subfigure}
-      \vspace{\verticalSpacingSRPMaps}
-      \caption{\centering For position 2}
-      \vspace{0.25cm}
-    \end{minipage}
-  \end{subfigure}
-
-  \begin{subfigure}[t]{0.47\textwidth}
-    \begin{minipage}[t]{\textwidth}
-      \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos04}
-                \label{fig:Pattern_Fo1500_pos04}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_frame464_pos04}
-                \label{fig:SRP_pos04}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos04}
-                \label{fig:SRP_Fo1500_mean_pos04}
-      \end{subfigure}
-      \vspace{\verticalSpacingSRPMaps}
-      \caption{\centering For position 4}
-      \vspace{0.25cm}
-    \end{minipage}
-  \end{subfigure}
-  ~      \begin{subfigure}[t]{0.47\textwidth}
-    \begin{minipage}[t]{\textwidth}
-      \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos06}
-                \label{fig:Pattern_Fo1500_pos06}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_frame809_pos06}
-                \label{fig:SRP_pos06}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos06}
-                \label{fig:SRP_Fo1500_mean_pos06}
-      \end{subfigure}
-      \vspace{\verticalSpacingSRPMaps}
-      \caption{\centering For position 6}
-      \vspace{0.25cm}
-    \end{minipage}
-  \end{subfigure}
-
-  \begin{subfigure}[t]{0.47\textwidth}
-    \begin{minipage}[t]{\textwidth}
-      \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos08}
-                \label{fig:Pattern_Fo1500_pos08}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_frame1127_pos08}
-                \label{fig:SRP_pos08}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos08}
-                \label{fig:SRP_Fo1500_mean_pos08}
-      \end{subfigure}
-      \vspace{\verticalSpacingSRPMaps}
-      \caption{\centering For position 8}
-      \vspace{0.25cm}
-    \end{minipage}
-  \end{subfigure}
-  ~      \begin{subfigure}[t]{0.47\textwidth}
-    \begin{minipage}[t]{\textwidth}
-      \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{Pattern_Fo1500_pos16}
-                \label{fig:Pattern_Fo1500_pos16}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_frame2518_pos16}
-                \label{fig:SRP_pos16}
-      \end{subfigure}
-                        \begin{subfigure}[t]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{SRP_Fo1500_mean_pos16}
-                \label{fig:SRP_Fo1500_mean_pos16}
-      \end{subfigure}
-      \vspace{\verticalSpacingSRPMaps}
-      \caption{\centering For position 16}
-      \vspace{0.25cm}
-    \end{minipage}
-  \end{subfigure}
-  \caption{Comparison between the SRP-PHAT map predicted by the model
-    (left graphics),
-    the real SRP-PHAT map (middle graphics), and the average (real)
-    SRP-PHAT map (right graphics), for
-    several speaker positions ($f_0=1.5~KHz$). See
-    figure~~\ref{fig:simureal_positions}.\subref{fig:real_positions_short}
-    for geometrical references.}
-  \label{fig:SRPvsPatternSelected}
-\end{figure}
-  
-
-Incluso podemos poner una tabla ``apaisada'', como en la
-\ref{tablas2006}, donde se muestra un resumen de los resultados
-obtenidos en una serie de experimentos de localización de locutores.
-
-\clearpage
-\begin{sidewaystable}[hbtp]
-  \begin{center}
-
-    \begin{tabular}{||l|c|c|c|c|c||}
-      \hline \hline
-      & UKA & ITC & AIT & UPC & IBM\\
-      \hline
-      \hline
-      Pcor & $57.0\pm1.4\%$ & $84.0\pm3.3\%$ & $47.0\pm3.1\%$ & $20.0\pm2.5\%$ & $67.0\pm2.9\%$ \\
-      \hline
-      Bias fine (x:y:z) [mm] & $20:-42:-75$ & $45:27:-41$ & $-27:-77:-40$ & $-59:112:52$ & $91:-69:-38$ \\
-      \hline
-      Bias fine+gross (x,y,z) [mm] & $735:-93:-258$ & $67:439:-134$ & $17:-402:-118$ & $-141:255:39$ & $474:-141:-14$ \\
-      \hline
-      AEE fine [mm] = MOTP & $210$ & $130$ & $266$ & $344$ & $228$ \\
-      \hline
-      Fine+gross [mm] & $1201$ & $632$ & $1006$ & $1188$ & $884$ \\
-      \hline
-      Loc. frames & $5035$ & $22$ & $995$ & $977$ & $1023$ \\
-      \hline
-      Ref. duration (s) & $6287.0$ & $596.0$ & $1143.0$ & $1180.0$ & $1194.0$ \\
-      \hline \hline
-    \end{tabular}
-    \caption{Resultados TEST CLEAR 2006.}
-    \label{tablas2006}
-  \end{center}
-\end{sidewaystable}
-
-
-\section{Conclusiones}
-\label{sec:conclusiones-resultados}
-
-Blah, blah, blah.
-
-
+\begin{figure}[!h] 
+\centering
+\begin{tabular}{ccc}
+  \includegraphics[scale=0.1]{images/secuencia1} & \includegraphics[scale=0.1]{images/secuencia2}&\includegraphics[scale=0.1]{images/secuencia3}\\
  
+  \includegraphics[scale=0.1]{images/secuencia4} & \includegraphics[scale=0.1]{images/secuencia5}&\includegraphics[scale=0.1]{images/secuencia6}\\
+ 
+  \includegraphics[scale=0.1]{images/secuencia7} & \includegraphics[scale=0.1]{images/secuencia8}&\includegraphics[scale=0.1]{images/secuencia9}\\
+ 
+ \end{tabular}
+ \caption{Secuencia de imágenes de la ejecución del programa con el controlador PID.}
+ \label{fig:secuencia}
+ 
+ \end{figure}
+ 
+ 
+ \part{Conclusiones y trabajo futuro}
+\label{part:conclusiones}
 
-\makeatletter{}
-\chapter{Conclusiones y líneas futuras}
-\label{cha:concl-y-line}
-
-En este apartado se resumen las conclusiones obtenidas y se proponen
-futuras líneas de investigación que se deriven del trabajo.
-
-La estructura del capítulo es...
-
+\chapter{Conclusiones y trabajo futuro}
+\label{chapter:conclusiones}
 
 \section{Conclusiones}
 \label{sec:conclusiones}
 
-Para añadir una referencia a un autor, se puede utilizar el paquete
-\texttt{cite}. En el trabajo \cite{armani03}, se muestra un trabajo...
+El trabajo llevado a cabo ha requerido conocimientos de diversas ramas, utilizando conceptos ya estudiados a lo largo de la carrera y teniendo que realizar un estudio de algunos temas a partir de otros artículos de investigación y libros. En la figura \ref{fig:flujo} se muestra un diagrama de los pasos llevados a cabo para realizar el proyecto.
 
-Y podemos usar de nuevo algún acrónimo, como por ejemplo \ac{TDPSOLA}, o
-uno ya referenciado como \ac{ANN}.
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/diagramaflujo}
+  \caption{Diagrama del sistema.}
+  \label{fig:flujo}
+\end{figure}
+
+Para llevar a cabo este proyecto se han hecho varias tareas de diversos ámbitos:
+
+\begin{itemize}
+
+	\item {\bf Programas para la estimación del ángulo}: ha sido necesario desarrollar programas propios para poder obtener una estimación del ángulo de los sensores utilizados, algunos algoritmos se han tomado como referencia de la bibliografía pero el programa ha sido desarrollado desde cero.
+	
+	\item {\bf Programa para regular la velocidad de los motores}: también se han hecho programas para variar la velocidad de los motores mediante el ESC.
+	
+	\item {\bf Controladores}: cada controlador ha requerido un programa independiente y se han realizado pruebas con cada uno de ellos.
+	
+	\item {\bf Scripts Matlab}: ha sido necesario usar esta herramienta para obtener gráficas de los resultados de la respuesta del sistema.
+	
+	\item {\bf Interfaz LabView}: el desarrollo de una aplicación para manejar el brazo y realizar pruebas con él es imprescindible, una buena opción es realizar esta aplicación con LabView. El aprendizaje para la programación en LabView ha sido rápido y los resultados son muy buenos.
+	
+	\item {\bf Montaje de la estructura}: partiendo de un tablero de madera se han cortado las piezas necesarias para montar la estructura y se ha ensamblado obteniendo la estructura mostrada en la figura \ref{fig:estructuraensamblada}.
+
+	\item {\bf Conexionado del circuito}: el sistema constaba de dos circuitos independientes, uno de potencia que alimentaba los motores mediante la batería, y uno de control mediante el que se mandaban las señales de control a los motores y se leían los datos de los sensores.
+
+\end{itemize}
+
+Llevar a cabo todos estos pasos ha requerido un aprendizaje en las materias de control, electrónica, electricidad y programación. Resulta muy útil aplicar en la práctica conceptos estudiados teóricamente para comprobar las dificultades que se presentan a la hora de implementar un sistema real. Estas dific
 
 
-\section{Líneas futuras}
-\label{sec:lineas-futuras}
+\section{Trabajo futuro}
+\label{sec:trabajofuturo}
 
-Pues eso.
+En este apartado se van a comentar algunas mejoras que se pueden hacer a partir del trabajo realizado en este TFG.
+
+\begin{itemize}
+
+	\item {\bf Identificación del modelo de la planta}: si se obtiene el modelo de la planta se pueden realizar simulaciones con la herramienta \textit{Simulink} de Matlab y se puede realizar una mejor acción de control mediante la obtención de la respuesta en frecuencia, del lugar de las raíces...
+	
+	\item {\bf Añadir un segundo eje y eliminar las barras verticales}: si se eliminan las barras verticales y se añade un segundo eje perpendicular se construye un cuadricóptero, siendo más interesante puesto que se puede controlar el vuelo.
+	
+	\item {\bf Manejo mediante radiofrecuencia}: si se le añade un receptor/emisor de radiofrecuencia al aparato se puede controlar el ángulo mediante un mando a distancia de forma inalámbrica, este requisito se hace imprescindible si se quiere construir un cuadricóptero.
+	
+	\item {\bf Manejo mediante Wi-Fi}: si se añade un módulo Wi-Fi a la placa se puede crear una red mediante la que controlar inalámbricamente el brazo desde el ordenador, sin necesidad de tener conectado el cable USB todo el tiempo que se quieran realizar pruebas.
+	
+
+\end{itemize}
+
+
+ \part{Diagramas}
+\label{part:diagramas}
+
+\chapter{Diagramas}
+\label{chapter:diagramas}
+
+\subsection{Diagrama de flujo del sistema}
+\label{sec:diagramaflujo}
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.45]{images/diagramaflujo1}
+  \caption{Diagrama de flujo del sistema.}
+  \label{fig:diagramaflujo}
+\end{figure}
+
+\subsection{Diagrama general del sistema}
+\label{sec:diagramageneral}
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/diagramaflujo}
+  \caption{Diagrama general del sistema.}
+  \label{fig:diagramageneral}
+\end{figure}
+
+
+\subsection{Esquema de la conexión de los motores y el sensor}
+\label{sec:diagramaconexion}
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/circuitofritzing}
+  \caption{Esquema de la conexión de un motor.}
+  \label{fig:diagramaconexion}
+\end{figure}
+
+\newpage
+
+
+
+\subsection{Diagramas de bloques de los controladores}
+\label{sec:diagramascontroladores}
+
+\subsubsection{PID}
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/PIDdesglose1}
+  \caption{Diagrama de bloques del controlador PID.}
+  \label{fig:diagramaPID}
+\end{figure}
+
+
+\subsubsection{PPI}
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/PPIdesglose1}
+  \caption{Diagrama de bloques del controlador PPI.}
+  \label{fig:diagramaPPI}
+\end{figure}
+
+\subsubsection{PIP}
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/PIPdesglose}
+  \caption{Diagrama de bloques del controlador PIP.}
+  \label{fig:diagramaPIP}
+\end{figure}
+
+\subsubsection{PIDPID}
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/PIDPIDdesglose}
+  \caption{Diagrama de bloques del controlador PIDPID.}
+  \label{fig:diagramaPIDPID}
+\end{figure}
+
+
+\subsection{Diagramas de la estructura}
+\label{sec:diagramasestructura}
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/BrazoTFG_Vista3D}
+  \caption{Representación del objeto en 3D con Autodesk Inventor.}
+  \label{fig:diagrama3D}
+\end{figure}
+
+
+
+\begin{sidewaysfigure}[!h]
+		\centering
+			\includegraphics[width=\textwidth]{images/BrazoTFG}
+			\caption{Vistas de la estructura.}
+			\label{fig:diagramasvistasdiedrico}
+\end{sidewaysfigure}
+
+\part{Pliego de condiciones}
+\label{part:pliegocondiciones}
+
+\chapter{Pliego de condiciones}
+\label{chapter:pliegocondiciones}
+
+\subsection{Requisitos de Hardware}
+\label{sec:requisitoshardware}
+
+\begin{multicols}{2}
+
+\begin{itemize}
+
+
+
+	\item {\bf Microcontrolador Arduino Uno}
+	
+	\item  {\bf Unidad de de medición inercial (IMU) AltIMU-10}
+	
+	\item  {\bf PC con puerto USB}
+	
+	\item  {\bf Fuente de alimentación}
+	
+	\item {\bf Motores Brushless}
+	
+	\item {\bf Hélices}
+	
+	\item {\bf Controladores electrónicos de velocidad (ESC)}
+	
+	\item {\bf Tablones de madera para ensamblar la estructura}
+	
+	\item {\bf Placa de prototipos para soldar el circuito}
+	
+
+\end{itemize}
+
+\end{multicols}
+
+
+\subsection{Requisitos de Software}
+\label{sec:requisitossoftware}
+
+\begin{multicols}{2}
+
+\begin{itemize}
+
+	\item {\bf Matlab R2015 versión estudiante}
+	
+	\item {\bf IDE\footnote{Siglas de Integrated Development environment, en español entorno de desarrollo integrado} de Arduino}
+	
+	\item {\bf Sistema operativo compatible con la IDE de Arduino}
+	
+	\item  {\bf LabView versión estudiante}
+	
+	\item {\bf AutoDesk Inventor versión estudiante}	
+	
+\end{itemize}
+
+\end{multicols}
+
+
+\part{Presupuesto}
+\label{part:presupuesto}
+
+\chapter{Presupuesto}
+\label{chapter:presupuesto}
+
+\subsection{Coste del Hardware}
+\label{sec:presupuestohardware}
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Costes Hardware (21\% IVA incluido).}
+  \label{table112342345}
+  \begin{center}
+  \begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|X[c]|} 
+            
+      \hline
+      \rowcolor{LightBlue2} {\bf CONCEPTO}	 & {\bf Precio [\euro /ud]} & {\bf Unidades} & {\bf TOTAL[\euro]}\\
+      \hline
+      {\bf Arduino Uno} & 24.2 & 1 & 24.2\\
+      \hline
+     {\bf AltIMU-10} & 24.97 & 1 & 24.97\\
+      \hline
+      {\bf MacBook Pro} & 1499   & 1 & 1499\\
+      \hline
+      {\bf Fuente Octek006} & 39.95 & 1 & 39.95\\
+      \hline
+     {\bf Motor Brushless} & 5.79 & 2 & 11.58\\
+      \hline
+      {\bf ESC} & 6.90 & 2 & 13.80\\
+      \hline
+      {\bf Hélice} & 4.97 & 2 & 9.95\\
+      \hline
+      {\bf Tablero madera} & 10 & 1 & 10\\
+      \hline
+    {\bf Placa prototipos} & 10 & 1 & 10\\
+      \hline
+      \multicolumn{3}{|c|}{\bf TOTAL HARDWARE} &      {\bf 1643.45}\\
+      \hline
+    \end{tabu}
+  \end{center}
+\end{table}
 
 
 
 
- 
+\subsection{Coste del Software}
+\label{sec:presupuestosoftware}
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Costes Software (21\% IVA incluido).}
+  \label{table1123423456}
+  \begin{center}
+            \begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|X[c]|} 
+      \hline
+      \rowcolor{LightBlue2} {\bf CONCEPTO}	 & {\bf Precio [\euro /ud]} & {\bf Unidades} & {\bf TOTAL[\euro]}\\
+      \hline
+       {\bf IDE de Arduino} & 0 & 1 & 0\\
+      \hline
+       {\bf Matlab estudiante} & 49.99 & 1 & 49.99\\
+      \hline
+       {\bf LabView estudiante}& 19.99 & 1 & 19.99\\
+      \hline
+       {\bf Inventor  estudiante}& 19.99 & 1 & 19.99\\
+      \hline
+       {\bf Mac OS X} & 0 & 1 & 0\\
+      \hline
+      {\bf TexMaker} & 0 & 1 & 0\\
+      \hline
+      \multicolumn{3}{|c|}{\bf TOTAL SOFTWARE} &      {\bf 89.97}\\
+      \hline
+    \end{tabu}
+  \end{center}
+\end{table}
+
+
+
+\subsection{Importe total}
+\label{sec:presupuestototal}
+\begin{table}[!h]
+    \renewcommand{\arraystretch}{1.3}
+  \caption{Coste total.}
+  \label{table1123423457}
+  \begin{center}
+           \begin{tabu} to \textwidth {|X[c]|X[c]|} 
+      \hline
+     \rowcolor{LightBlue2} {\bf CONCEPTO}	 & {\bf COSTE[\euro]}\\
+      \hline
+      {\bf Hardware} & 4643.5\\
+      \hline
+       {\bf Software} & 89.97\\
+      \hline
+      {\bf TOTAL} & {\bf 1733.42}\\
+      \hline
+    \end{tabu}
+  \end{center}
+\end{table}
+
+
+\part{Manual de usuario}
+\label{part:manual}
+
+\chapter{Manual de usuario}
+\label{chapter:manual}
+
+\section{Introducción}
+\label{sec:introduccionmanual}
+En este apartado se van a especificar todos los pasos necesarios para poder ejecutar el programa final de LabView de manejo del brazo y estabilizarlo en el ángulo deseado.
+
+
+\subsection{Subir programa al Arduino}
+\label{sec:subirprograma}
+
+El primer paso para poder ejecutar el programa es conectar el Arduino mediante el puerto USB al ordenador y subir el programa que se quiere ejecutar. La carga del programa se hace mediante la IDE de Arduino, disponible en \cite{idearduino},  pulsando el botón que se indica en la figura \ref{fig:cargaprograma}.
+
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/cargaprograma}
+  \caption{Cargar programa en el Arduino.}
+  \label{fig:cargaprograma}
+\end{figure}
+
+\newpage
+
+\subsection{Comenzar ejecución}
+\label{sec:comienzoejecución}
+
+Con el programa ya cargado en el Arduino ahora se debe comenzar la ejecución del programa. Previo a la ejecución es importante leer las consideraciones del programa escritas en la interfaz para conocer su funcionamiento. Estas consideraciones son:
+
+\begin{enumerate}
+
+
+
+	\item {\bf Seleccionar en la sesión VISA el Arduino}: normalmente está seleccionado por defecto pero hay que asegurarse previo a la ejecución de que existe comunicación entre LabView y Arduino.
+	
+	\item  {\bf Para finalizar el programa pulsar \textit{Stop} y desconectar la fuente de alimentación}: si sólo se pulsa \textit{Stop} el brazo se queda estabilizado en la última posición indicada por el usuario, para que se paren los motores hay que desconectar la fuente de alimentación.
+	
+	\item  {\bf Los valores del ángulo de referencia y de las constantes del controlador no pueden cambiarse antes de la ejecución del programa}: debido a la forma de comunicación entre LabView y Arduino hasta que no se ejecuta el programa en  LabView no comienza la sesión VISA y no existe comunicación entre la aplicación y Arduino; los valores por defecto coinciden en el programa cargado en Arduino y en la aplicación de LabView, por lo tanto si se cambian en LabView antes de comenzar la ejecución del programa los valores van a ser distintos de los que había por defecto y va a haber un mal funcionamiento.
+	
+
+
+\end{enumerate}
+
+Para comenzar la ejecución del programa en la ventana principal de LabView se debe pulsar el botón ejecutar como se muestra en la figura \ref{fig:botonejecutar}.
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/ejecutar}
+  \caption{Comenzar ejecución.}
+  \label{fig:botonejecutar}
+\end{figure}
+
+Tras este paso ya ha comenzado la ejecución del programa y ya hay comunicación entre al aplicación de LabView y el Arduino, pues ya se ha abierto el puerto serie. Ahora que ha comenzado el programa cargado en Arduino el siguiente paso aparecerá en un mensaje por pantalla con un botón de \textit{OK}. 
+
+\newpage
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[scale=0.3]{images/mensaje}
+  \caption{Botón OK.}
+  \label{fig:botonejecutar}
+\end{figure}
+
+La fuente de alimentación dispone de un interruptor para permitir/cortar el paso de la corriente. Como se indica en el mensaje de la figura \ref{fig:botonejecutar} se debe pulsar el interruptor. Tras pulsar el interruptor se escuchará un sonido proveniente del ESC que indica que se ha encendido, después de ese primer sonido se escuchará otro sonido que indica que la programación del ESC ha entrado en modo \textit{throttle}, que es en la que se quiere trabajar. Después de ese segundo sonido se debe pulsar el botón \textit{OK}.
+
+
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=\textwidth]{images/secuencia2}
+  \caption{Ejecución activa.}
+  \label{fig:ejecucionactiva}
+\end{figure}
+
+La ejecución habrá comenzado, como indica la luz verde de la interfaz, y ya se puede manejar el brazo variando el ángulo de referencia y variando los valores de las constantes del controlador.
+
+
 
 
 
 
 
 \makeatletter{}
-\bibliographystyle{IEEEtran}
+
 
 \newcommand{\mybibfileOne}{biblio/biblio}
 \newcommand{\mybibfileTwo}{biblio/biblio2}
 
 \newcommand{\mybibfiles}{\myreferencespath\mybibfileOne}
 
-\bibliography{\mybibfiles}
+\bibliography{book-flatten.bib}
+\bibliographystyle{IEEEtran}
 
 
 
@@ -4352,210 +4323,10 @@ Pues eso.
 
 
 
-\appendix                                         
-\makeatletter{}
-\chapter{Manual de usuario}
-\label{cha:manual-de-usuario}
-
-\section{Introducción}
-\label{sec:intro-manual-de-usuario}
-
-Blah, blah, blah\ldots
-
-
-\section{Manual}
-\label{sec:sec-manual-de-usuario}
-
-Pues eso.
-
-
-\section{Ejemplos de inclusión de fragmentos de código fuente}
-\label{sec:codigo-fuente}
-
-Para la inclusión de código fuente se utiliza el paquete
-\texttt{listings}, para el que se han definido algunos estilos de
-ejemplo que pueden verse en el fichero \texttt{config/preamble.tex} y
-que se usan a continuación.
-
-Así se inserta código fuente, usando el estilo \texttt{CppExample} que
-hemos definido en el preamble, escribiendo el código directamente :
-
-\begin{lstlisting}[style=Cnice]
-#include <stdio.h>
-
-// Esto es una función de prueba
-void funcionPrueba(int argumento)
-{	
-	int prueba = 1;
-
-  printf("Esto es una prueba [
-}
-\end{lstlisting}
-
-O bien insertando directamente código de un fichero externo, como en el
-ejemplo \ref{cod:sample1}, usando
-\texttt{\textbackslash{}lstinputlisting} y cambiando el estilo a
-\texttt{Cbluebox} (además de usar el entorno \texttt{codefloat} para
-evitar pagebreaks, etc.).
-
-
-
-
-O por ejemplo en matlab, definiendo settings en lugar de usar estilos
-definidos:
-
-\lstset{language=matlab}
-\lstset{tabsize=2}
-\lstset{commentstyle=\textit}
-\lstset{stringstyle=\ttfamily, basicstyle=\small}
-\begin{lstlisting}[frame=trbl]{}
-a = 9;
-b = 10;
-
-c = a+b;
-
-fprintf(1, 'La suma de \end{lstlisting}
-
-O incluso como en el listado \ref{cod:sample2}, usando un layout más refinado (con
-los settings de \url{http://www.rafalinux.com/?p=599} en un \texttt{lststyle}
-\texttt{Cnice}).
-
-
-Y podemos reutilizar estilos cambiando algún parámetro, como podemos ver
-en el listado \ref{cod:sample3}, en el que hemos vuelto a usar el estilo
-\texttt{Cnice} eliminando la numeración.
-
-
-
-
-
-\noindent
-Ahora compila usando \texttt{gcc}:
-
-
-\begin{lstlisting}[style=console, numbers=none]
-$ gcc  -o hello hello.c
-\end{lstlisting}
-
-Y también podemos poner ejemplos de código \textit{coloreado}, como se
-muestra en el \ref{cod:sample5}.
-
-
-Finalmente aquí tenéis un ejemplo de código shell, usando el estilo
-\texttt{BashInputStyle}:
-
-\begin{lstlisting}[style=BashInputStyle, numbers=none]
-#!/bin/sh
-
-HOSTS_ALL="gc000 gc001 gc002 gc003 gc004 gc005 gc006 gc007"
-
-for h in $HOSTS_ALL
-do
-	echo "Running [$*] in $h..."
-  echo -n "   "
-  ssh root@$h $*
-done
-\end{lstlisting}
-
-\section{Ejemplos de inclusión de algoritmos}
-\label{sec:algoritmos}
-
-En la versión actual (abril de 2014), empezamos a usar el paquete
-\texttt{algorithm2e} para incluir algoritmos, y hay ajustes específicos
-y dependientes de este paquete tanto en \texttt{config/preamble.tex}
-como en \texttt{cover/extralistings.tex} (editadlos según vuestras
-necesidades). 
-
-Hay otras opciones disponibles (por ejemplo las descritas en
-\url{http://en.wikibooks.org/wiki/LaTeX/Algorithm}), y podemos
-abordarlas, pero por el momento nos quedamos con \texttt{algorithm2e}.
-
-Incluimos dos ejemplos directamente del manual: uno sencillo en el
-algoritmo~\ref{alg:howto}, y otro un poco más complicado en el
-algoritmo~\ref{alg:restriction}.
-
-\begin{algorithm}[H]
- \caption{How to write algorithms}
- \label{alg:howto}
- \KwData{this text}
- \KwResult{how to write algorithm with \LaTeX2e }
- initialization\;
- \While{not at end of this document}{
-  read current\;
-  \eIf{understand}{
-   go to next section\;
-   current section becomes this one\;
-   }{
-   go back to the beginning of current section\;
-  }
- }
-\end{algorithm}
-
-
-\begin{algorithm}
-\caption{IntervalRestriction\label{IR}}
- \label{alg:restriction}
-\DontPrintSemicolon
-\KwData{$G=(X,U)$ such that $G^{tc}$ is an order.}
-\KwResult{$G'=(X,V)$ with $V\subseteq U$ such that $G'^{tc}$ is an
-interval order.}
-\Begin{
-$V \longleftarrow U$\;
-$S \longleftarrow \emptyset$\;
-\For{$x\in X$}{
-$NbSuccInS(x) \longleftarrow 0$\;
-$NbPredInMin(x) \longleftarrow 0$\;
-$NbPredNotInMin(x) \longleftarrow |ImPred(x)|$\;
-}
-\For{$x \in X$}{
-\If{$NbPredInMin(x) = 0$ {\bf and} $NbPredNotInMin(x) = 0$}{
-$AppendToMin(x)$}
-}
-\nl\While{$S \neq \emptyset$}{\label{InRes1}
-\nlset{REM} remove $x$ from the list of $T$ of maximal index\;\label{InResR}
-\lnl{InRes2}\While{$|S \cap ImSucc(x)| \neq |S|$}{
-\For{$ y \in S-ImSucc(x)$}{
-\{ remove from $V$ all the arcs $zy$ : \}\;
-\For{$z \in ImPred(y) \cap Min$}{
-remove the arc $zy$ from $V$\;
-$NbSuccInS(z) \longleftarrow NbSuccInS(z) - 1$\;
-move $z$ in $T$ to the list preceding its present list\;
-\{i.e. If $z \in T[k]$, move $z$ from $T[k]$ to
-$T[k-1]$\}\;
-}
-$NbPredInMin(y) \longleftarrow 0$\;
-$NbPredNotInMin(y) \longleftarrow 0$\;
-$S \longleftarrow S - \{y\}$\;
-$AppendToMin(y)$\;
-}
-}
-$RemoveFromMin(x)$\;
-}
-}
-\end{algorithm}
-
 
 
  
-\makeatletter{}
-\chapter{Herramientas y recursos}
-\label{cha:herr-y-recurs}
-
-Las herramientas necesarias para la elaboración del proyecto han sido:
-
-\begin{itemize}
-\item PC compatible 
-\item Sistema operativo GNU/Linux \cite{gnulinux}
-\item Entorno de desarrollo Emacs \cite{emacs}
-\item Entorno de desarrollo KDevelop \cite{kdevelop}
-\item Procesador de textos \LaTeX \cite{lamport94}
-\item Lenguaje de procesamiento matemático Octave  \cite{octave}
-\item Control de versiones CVS \cite{cvs}
-\item Compilador C/C++ gcc \cite{gcc}
-\item Gestor de compilaciones make \cite{make}
-\end{itemize}
-
-
+\make
 
  
 

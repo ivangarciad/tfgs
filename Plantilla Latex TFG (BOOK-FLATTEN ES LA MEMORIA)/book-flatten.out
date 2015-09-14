@@ -1,107 +1,103 @@
-\BOOKMARK [0][-]{chapter*.2}{\315ndice general}{}% 1
-\BOOKMARK [0][-]{chapter*.3}{\315ndice de figuras}{}% 2
-\BOOKMARK [0][-]{chapter*.4}{\315ndice de tablas}{}% 3
-\BOOKMARK [0][-]{chapter*.5}{\315ndice de listados de c\363digo fuente}{}% 4
-\BOOKMARK [0][-]{chapter*.6}{Resumen}{}% 5
-\BOOKMARK [0][-]{chapter*.7}{Abstract}{}% 6
-\BOOKMARK [0][-]{chapter*.8}{Resumen Extendido}{}% 7
-\BOOKMARK [-1][-]{part.9}{I Introducci\363n}{}% 8
-\BOOKMARK [0][-]{chapter.10}{1 Introducci\363n}{part.9}% 9
-\BOOKMARK [1][-]{section.11}{1.1 Presentaci\363n}{chapter.10}% 10
-\BOOKMARK [1][-]{section.16}{1.2 Estado del arte}{chapter.10}% 11
-\BOOKMARK [1][-]{section.18}{1.3 Motivaci\363n y objetivos del proyecto}{chapter.10}% 12
-\BOOKMARK [2][-]{subsection.19}{1.3.1 Motivaci\363n}{section.18}% 13
-\BOOKMARK [2][-]{subsection.20}{1.3.2 Objetivos}{section.18}% 14
-\BOOKMARK [1][-]{section.24}{1.4 Medios y herramientas necesarios}{chapter.10}% 15
-\BOOKMARK [-1][-]{part.25}{II Elecci\363n de los componentes}{}% 16
-\BOOKMARK [0][-]{chapter.26}{2 Elecci\363n de los componentes}{part.25}% 17
-\BOOKMARK [1][-]{section.27}{2.1 Controlador}{chapter.26}% 18
-\BOOKMARK [2][-]{subsection.30}{2.1.1 Arduino Uno}{section.27}% 19
-\BOOKMARK [2][-]{subsection.32}{2.1.2 A-Star 32U4 Prime SV}{section.27}% 20
-\BOOKMARK [2][-]{subsection.34}{2.1.3 Comparativa y elecci\363n}{section.27}% 21
-\BOOKMARK [1][-]{section.36}{2.2 Unidad inercial de medidas \(IMU\)}{chapter.26}% 22
-\BOOKMARK [2][-]{subsection.37}{2.2.1 AltIMU-10}{section.36}% 23
-\BOOKMARK [2][-]{subsection.39}{2.2.2 MPU 6050}{section.36}% 24
-\BOOKMARK [2][-]{subsection.41}{2.2.3 Comparativa y elecci\363n}{section.36}% 25
-\BOOKMARK [1][-]{section.43}{2.3 Motores}{chapter.26}% 26
-\BOOKMARK [2][-]{subsection.44}{2.3.1 Motores DC \(Brushed Motors\)}{section.43}% 27
-\BOOKMARK [2][-]{subsection.46}{2.3.2 Motores sin escobillas \(Brushless Motors\)}{section.43}% 28
-\BOOKMARK [2][-]{subsection.48}{2.3.3 Comparativa y elecci\363n}{section.43}% 29
-\BOOKMARK [1][-]{section.51}{2.4 Controlador electr\363nico de velocidad}{chapter.26}% 30
-\BOOKMARK [1][-]{section.55}{2.5 H\351lices}{chapter.26}% 31
-\BOOKMARK [1][-]{section.56}{2.6 Bater\355a o fuente de alimentaci\363n}{chapter.26}% 32
-\BOOKMARK [1][-]{section.60}{2.7 Montaje final}{chapter.26}% 33
-\BOOKMARK [-1][-]{part.63}{III Sensores de posici\363n}{}% 34
-\BOOKMARK [0][-]{chapter.64}{3 Sensores de posici\363n}{part.63}% 35
-\BOOKMARK [1][-]{section.65}{3.1 Introducci\363n}{chapter.64}% 36
-\BOOKMARK [1][-]{section.66}{3.2 Conexi\363n de la IMU}{chapter.64}% 37
-\BOOKMARK [1][-]{section.70}{3.3 Gir\363scopo}{chapter.64}% 38
-\BOOKMARK [2][-]{subsection.134}{3.3.1 Fuentes de error}{section.70}% 39
-\BOOKMARK [3][-]{subsubsection.135}{3.3.1.1 Offset}{subsection.134}% 40
-\BOOKMARK [3][-]{subsubsection.168}{3.3.1.2 Deriva \(Drift\)}{subsection.134}% 41
-\BOOKMARK [3][-]{subsubsection.169}{3.3.1.3 Precisi\363n}{subsection.134}% 42
-\BOOKMARK [2][-]{subsection.170}{3.3.2 Medidas}{section.70}% 43
-\BOOKMARK [1][-]{section.173}{3.4 Aceler\363metro}{chapter.64}% 44
-\BOOKMARK [2][-]{subsection.228}{3.4.1 Fuentes de error}{section.173}% 45
-\BOOKMARK [3][-]{subsubsection.229}{3.4.1.1 Offset}{subsection.228}% 46
-\BOOKMARK [3][-]{subsubsection.260}{3.4.1.2 Ruido}{subsection.228}% 47
-\BOOKMARK [2][-]{subsection.261}{3.4.2 Medidas}{section.173}% 48
-\BOOKMARK [1][-]{section.264}{3.5 Filtros}{chapter.64}% 49
-\BOOKMARK [2][-]{subsection.265}{3.5.1 Filtro de Kalman}{section.264}% 50
-\BOOKMARK [2][-]{subsection.267}{3.5.2 Filtro complementario}{section.264}% 51
-\BOOKMARK [2][-]{subsection.271}{3.5.3 Medidas}{section.264}% 52
-\BOOKMARK [-1][-]{part.275}{IV Motores y ESC}{}% 53
-\BOOKMARK [0][-]{chapter.276}{4 Motores y ESC}{part.275}% 54
-\BOOKMARK [1][-]{section.277}{4.1 Introducci\363n}{chapter.276}% 55
-\BOOKMARK [1][-]{section.278}{4.2 Conexi\363n de los motores y los ESC}{chapter.276}% 56
-\BOOKMARK [1][-]{section.281}{4.3 Regulaci\363n de velocidad de los motores}{chapter.276}% 57
-\BOOKMARK [-1][-]{part.321}{V Estabilizaci\363n del brazo}{}% 58
-\BOOKMARK [0][-]{chapter.322}{5 Estabilizaci\363n del brazo}{part.321}% 59
-\BOOKMARK [1][-]{section.323}{5.1 Introducci\363n}{chapter.322}% 60
-\BOOKMARK [1][-]{section.324}{5.2 Controladores}{chapter.322}% 61
-\BOOKMARK [2][-]{subsection.325}{5.2.1 PID}{section.324}% 62
-\BOOKMARK [2][-]{subsection.423}{5.2.2 PPI}{section.324}% 63
-\BOOKMARK [2][-]{subsection.495}{5.2.3 Definiciones espec\355ficas del tipo de documento}{section.324}% 64
-\BOOKMARK [2][-]{subsection.496}{5.2.4 Plantilla de anteproyecto}{section.324}% 65
-\BOOKMARK [2][-]{subsection.497}{5.2.5 Papeleo adicional para la defensa de los TFGs}{section.324}% 66
-\BOOKMARK [2][-]{subsection.498}{5.2.6 Generaci\363n del documento con control de cambios \(para revisi\363n\)}{section.324}% 67
-\BOOKMARK [2][-]{subsection.499}{5.2.7 Problemas conocidos}{section.324}% 68
-\BOOKMARK [1][-]{section.500}{5.3 Ejemplos de elementos de utilidad}{chapter.322}% 69
-\BOOKMARK [2][-]{subsection.501}{5.3.1 Uso de comandos definidos}{section.500}% 70
-\BOOKMARK [2][-]{subsection.502}{5.3.2 Uso de ``frases c\351lebres''}{section.500}% 71
-\BOOKMARK [2][-]{subsection.503}{5.3.3 Inclusi\363n de diagramas}{section.500}% 72
-\BOOKMARK [2][-]{subsection.505}{5.3.4 Definici\363n y uso de acr\363nimos \(aqu\355 tambi\351n se pueden poner acr\363nimos como ETTS\)}{section.500}% 73
-\BOOKMARK [2][-]{subsection.506}{5.3.5 Definici\363n y uso de s\355mbolos \(aqu\355 tambi\351n se pueden s\355mbolos como xidet\)}{section.500}% 74
-\BOOKMARK [1][-]{section.509}{5.4 Motivaci\363n y objetivos}{chapter.322}% 75
-\BOOKMARK [1][-]{section.515}{5.5 Organizaci\363n de la memoria}{chapter.322}% 76
-\BOOKMARK [0][-]{chapter.516}{6 Estudio te\363rico}{part.321}% 77
-\BOOKMARK [1][-]{section.517}{6.1 Introducci\363n}{chapter.516}% 78
-\BOOKMARK [1][-]{section.518}{6.2 Estado del Arte}{chapter.516}% 79
-\BOOKMARK [1][-]{section.521}{6.3 T\351cnicas utilizadas}{chapter.516}% 80
-\BOOKMARK [2][-]{subsection.522}{6.3.1 Subsecci\363n}{section.521}% 81
-\BOOKMARK [3][-]{subsubsection.523}{6.3.1.1 Subsubsecci\363n}{subsection.522}% 82
-\BOOKMARK [4][-]{paragraph.524}{6.3.1.1.1 Paragraph}{subsubsection.523}% 83
-\BOOKMARK [5][-]{subparagraph*.525}{Subparagraph}{paragraph.524}% 84
-\BOOKMARK [1][-]{section.526}{6.4 Conclusiones}{chapter.516}% 85
-\BOOKMARK [0][-]{chapter.527}{7 Desarrollo}{part.321}% 86
-\BOOKMARK [1][-]{section.528}{7.1 Introducci\363n}{chapter.527}% 87
-\BOOKMARK [1][-]{section.529}{7.2 Desarrollo del sistema de experimentaci\363n}{chapter.527}% 88
-\BOOKMARK [1][-]{section.530}{7.3 Planteamiento matem\341tico}{chapter.527}% 89
-\BOOKMARK [1][-]{section.532}{7.4 Conclusiones}{chapter.527}% 90
-\BOOKMARK [0][-]{chapter.533}{8 Resultados}{part.321}% 91
-\BOOKMARK [1][-]{section.534}{8.1 Introducci\363n}{chapter.533}% 92
-\BOOKMARK [1][-]{section.535}{8.2 Entorno experimental}{chapter.533}% 93
-\BOOKMARK [2][-]{subsection.536}{8.2.1 Bases de datos utilizadas}{section.535}% 94
-\BOOKMARK [2][-]{subsection.537}{8.2.2 M\351tricas de calidad}{section.535}% 95
-\BOOKMARK [2][-]{subsection.538}{8.2.3 Estrategia y metodolog\355a de experimentaci\363n}{section.535}% 96
-\BOOKMARK [1][-]{section.539}{8.3 Resultados experimentales}{chapter.533}% 97
-\BOOKMARK [1][-]{section.548}{8.4 Conclusiones}{chapter.533}% 98
-\BOOKMARK [0][-]{chapter.549}{9 Conclusiones y l\355neas futuras}{part.321}% 99
-\BOOKMARK [1][-]{section.550}{9.1 Conclusiones}{chapter.549}% 100
-\BOOKMARK [1][-]{section.551}{9.2 L\355neas futuras}{chapter.549}% 101
-\BOOKMARK [0][-]{appendix.552}{A Manual de usuario}{part.321}% 102
-\BOOKMARK [1][-]{section.553}{A.1 Introducci\363n}{appendix.552}% 103
-\BOOKMARK [1][-]{section.554}{A.2 Manual}{appendix.552}% 104
-\BOOKMARK [1][-]{section.555}{A.3 Ejemplos de inclusi\363n de fragmentos de c\363digo fuente}{appendix.552}% 105
-\BOOKMARK [1][-]{section.586}{A.4 Ejemplos de inclusi\363n de algoritmos}{appendix.552}% 106
-\BOOKMARK [0][-]{appendix.595}{B Herramientas y recursos}{part.321}% 107
+\BOOKMARK [0][-]{chapter*.3}{\315ndice de figuras}{}% 1
+\BOOKMARK [0][-]{chapter*.4}{\315ndice de tablas}{}% 2
+\BOOKMARK [0][-]{chapter*.5}{\315ndice de listados de c\363digo fuente}{}% 3
+\BOOKMARK [0][-]{chapter*.6}{Resumen}{}% 4
+\BOOKMARK [0][-]{chapter*.7}{Abstract}{}% 5
+\BOOKMARK [0][-]{chapter*.8}{Resumen Extendido}{}% 6
+\BOOKMARK [-1][-]{part.9}{I Introducci\363n}{}% 7
+\BOOKMARK [0][-]{chapter.10}{1 Introducci\363n}{part.9}% 8
+\BOOKMARK [1][-]{section.11}{1.1 Presentaci\363n}{chapter.10}% 9
+\BOOKMARK [1][-]{section.16}{1.2 Estado del arte}{chapter.10}% 10
+\BOOKMARK [1][-]{section.19}{1.3 Motivaci\363n y objetivos del proyecto}{chapter.10}% 11
+\BOOKMARK [2][-]{subsection.20}{1.3.1 Motivaci\363n}{section.19}% 12
+\BOOKMARK [2][-]{subsection.21}{1.3.2 Objetivos}{section.19}% 13
+\BOOKMARK [1][-]{section.25}{1.4 Medios y herramientas necesarios}{chapter.10}% 14
+\BOOKMARK [-1][-]{part.26}{II Elecci\363n de los componentes}{}% 15
+\BOOKMARK [0][-]{chapter.27}{2 Elecci\363n de los componentes}{part.26}% 16
+\BOOKMARK [1][-]{section.28}{2.1 Controlador}{chapter.27}% 17
+\BOOKMARK [2][-]{subsection.31}{2.1.1 Arduino Uno}{section.28}% 18
+\BOOKMARK [2][-]{subsection.33}{2.1.2 A-Star 32U4 Prime SV}{section.28}% 19
+\BOOKMARK [2][-]{subsection.35}{2.1.3 Comparativa y elecci\363n}{section.28}% 20
+\BOOKMARK [1][-]{section.37}{2.2 Unidad inercial de medidas \(IMU\)}{chapter.27}% 21
+\BOOKMARK [2][-]{subsection.38}{2.2.1 AltIMU-10}{section.37}% 22
+\BOOKMARK [2][-]{subsection.40}{2.2.2 MPU 6050}{section.37}% 23
+\BOOKMARK [2][-]{subsection.42}{2.2.3 Comparativa y elecci\363n}{section.37}% 24
+\BOOKMARK [1][-]{section.44}{2.3 Motores}{chapter.27}% 25
+\BOOKMARK [2][-]{subsection.45}{2.3.1 Motores DC \(Brushed Motors\)}{section.44}% 26
+\BOOKMARK [2][-]{subsection.47}{2.3.2 Motores sin escobillas \(Brushless Motors\)}{section.44}% 27
+\BOOKMARK [2][-]{subsection.49}{2.3.3 Comparativa y elecci\363n}{section.44}% 28
+\BOOKMARK [1][-]{section.52}{2.4 Controlador electr\363nico de velocidad}{chapter.27}% 29
+\BOOKMARK [1][-]{section.56}{2.5 H\351lices}{chapter.27}% 30
+\BOOKMARK [1][-]{section.57}{2.6 Bater\355a o fuente de alimentaci\363n}{chapter.27}% 31
+\BOOKMARK [1][-]{section.61}{2.7 Montaje final}{chapter.27}% 32
+\BOOKMARK [-1][-]{part.65}{III Sensores de posici\363n}{}% 33
+\BOOKMARK [0][-]{chapter.66}{3 Sensores de posici\363n}{part.65}% 34
+\BOOKMARK [1][-]{section.67}{3.1 Introducci\363n}{chapter.66}% 35
+\BOOKMARK [1][-]{section.68}{3.2 Conexi\363n de la IMU}{chapter.66}% 36
+\BOOKMARK [1][-]{section.72}{3.3 Gir\363scopo}{chapter.66}% 37
+\BOOKMARK [2][-]{subsection.136}{3.3.1 Fuentes de error}{section.72}% 38
+\BOOKMARK [3][-]{subsubsection.137}{3.3.1.1 Offset}{subsection.136}% 39
+\BOOKMARK [3][-]{subsubsection.170}{3.3.1.2 Deriva \(Drift\)}{subsection.136}% 40
+\BOOKMARK [3][-]{subsubsection.171}{3.3.1.3 Precisi\363n}{subsection.136}% 41
+\BOOKMARK [2][-]{subsection.172}{3.3.2 Medidas}{section.72}% 42
+\BOOKMARK [1][-]{section.175}{3.4 Aceler\363metro}{chapter.66}% 43
+\BOOKMARK [2][-]{subsection.230}{3.4.1 Fuentes de error}{section.175}% 44
+\BOOKMARK [3][-]{subsubsection.231}{3.4.1.1 Offset}{subsection.230}% 45
+\BOOKMARK [3][-]{subsubsection.262}{3.4.1.2 Ruido}{subsection.230}% 46
+\BOOKMARK [2][-]{subsection.263}{3.4.2 Medidas}{section.175}% 47
+\BOOKMARK [1][-]{section.266}{3.5 Filtros}{chapter.66}% 48
+\BOOKMARK [2][-]{subsection.267}{3.5.1 Filtro de Kalman}{section.266}% 49
+\BOOKMARK [2][-]{subsection.269}{3.5.2 Filtro complementario}{section.266}% 50
+\BOOKMARK [2][-]{subsection.273}{3.5.3 Medidas}{section.266}% 51
+\BOOKMARK [-1][-]{part.277}{IV Motores y ESC}{}% 52
+\BOOKMARK [0][-]{chapter.278}{4 Motores y ESC}{part.277}% 53
+\BOOKMARK [1][-]{section.279}{4.1 Introducci\363n}{chapter.278}% 54
+\BOOKMARK [1][-]{section.280}{4.2 Conexi\363n de los motores y los ESC}{chapter.278}% 55
+\BOOKMARK [1][-]{section.283}{4.3 Regulaci\363n de velocidad de los motores}{chapter.278}% 56
+\BOOKMARK [-1][-]{part.323}{V Estabilizaci\363n del brazo}{}% 57
+\BOOKMARK [0][-]{chapter.324}{5 Estabilizaci\363n del brazo}{part.323}% 58
+\BOOKMARK [1][-]{section.325}{5.1 Introducci\363n}{chapter.324}% 59
+\BOOKMARK [1][-]{section.326}{5.2 Controladores}{chapter.324}% 60
+\BOOKMARK [2][-]{subsection.327}{5.2.1 PID}{section.326}% 61
+\BOOKMARK [2][-]{subsection.432}{5.2.2 PPI}{section.326}% 62
+\BOOKMARK [2][-]{subsection.504}{5.2.3 PIP}{section.326}% 63
+\BOOKMARK [2][-]{subsection.576}{5.2.4 PIDPID}{section.326}% 64
+\BOOKMARK [2][-]{subsection.651}{5.2.5 Comparativa}{section.326}% 65
+\BOOKMARK [2][-]{subsection.653}{5.2.6 Eliminaci\363n previa de errores}{section.326}% 66
+\BOOKMARK [3][-]{subsubsection.654}{5.2.6.1 Anti-Windup}{subsection.653}% 67
+\BOOKMARK [3][-]{subsubsection.677}{5.2.6.2 Limitaci\363n de la velocidad de los motores}{subsection.653}% 68
+\BOOKMARK [-1][-]{part.727}{VI Manejo del brazo mediante LabView}{}% 69
+\BOOKMARK [0][-]{chapter.728}{6 Manejo del brazo mediante LabView}{part.727}% 70
+\BOOKMARK [1][-]{section.729}{6.1 Introducci\363n}{chapter.728}% 71
+\BOOKMARK [1][-]{section.730}{6.2 Programaci\363n del Arduino}{chapter.728}% 72
+\BOOKMARK [1][-]{section.807}{6.3 Desarrollo en LabView}{chapter.728}% 73
+\BOOKMARK [-1][-]{part.811}{VII Conclusiones y trabajo futuro}{}% 74
+\BOOKMARK [0][-]{chapter.812}{7 Conclusiones y trabajo futuro}{part.811}% 75
+\BOOKMARK [1][-]{section.813}{7.1 Conclusiones}{chapter.812}% 76
+\BOOKMARK [1][-]{section.815}{7.2 Trabajo futuro}{chapter.812}% 77
+\BOOKMARK [-1][-]{part.816}{VIII Diagramas}{}% 78
+\BOOKMARK [0][-]{chapter.817}{8 Diagramas}{part.816}% 79
+\BOOKMARK [1][-]{subsection.818}{8.0.1 Diagrama de flujo del sistema}{chapter.817}% 80
+\BOOKMARK [2][-]{subsection.820}{8.0.2 Diagrama general del sistema}{subsection.818}% 81
+\BOOKMARK [2][-]{subsection.822}{8.0.3 Esquema de la conexi\363n de los motores y el sensor}{subsection.818}% 82
+\BOOKMARK [2][-]{subsection.824}{8.0.4 Diagramas de bloques de los controladores}{subsection.818}% 83
+\BOOKMARK [3][-]{subsubsection.825}{8.0.4.1 PID}{subsection.824}% 84
+\BOOKMARK [3][-]{subsubsection.827}{8.0.4.2 PPI}{subsection.824}% 85
+\BOOKMARK [3][-]{subsubsection.829}{8.0.4.3 PIP}{subsection.824}% 86
+\BOOKMARK [3][-]{subsubsection.831}{8.0.4.4 PIDPID}{subsection.824}% 87
+\BOOKMARK [2][-]{subsection.833}{8.0.5 Diagramas de la estructura}{subsection.818}% 88
+\BOOKMARK [-1][-]{part.836}{IX Pliego de condiciones}{}% 89
+\BOOKMARK [0][-]{chapter.837}{9 Pliego de condiciones}{part.836}% 90
+\BOOKMARK [1][-]{subsection.838}{9.0.6 Requisitos de Hardware}{chapter.837}% 91
+\BOOKMARK [2][-]{subsection.839}{9.0.7 Requisitos de Software}{subsection.838}% 92
+\BOOKMARK [-1][-]{part.840}{X Presupuesto}{}% 93
+\BOOKMARK [0][-]{chapter.841}{10 Presupuesto}{part.840}% 94
+\BOOKMARK [1][-]{subsection.842}{10.0.8 Coste del Hardware}{chapter.841}% 95
+\BOOKMARK [2][-]{subsection.844}{10.0.9 Coste del Software}{subsection.842}% 96
+\BOOKMARK [2][-]{subsection.846}{10.0.10 Importe total}{subsection.842}% 97
+\BOOKMARK [-1][-]{part.848}{XI Manual de usuario}{}% 98
+\BOOKMARK [0][-]{chapter.849}{11 Manual de usuario}{part.848}% 99
+\BOOKMARK [1][-]{section.850}{11.1 Introducci\363n}{chapter.849}% 100
+\BOOKMARK [2][-]{subsection.851}{11.1.1 Subir programa al Arduino}{section.850}% 101
+\BOOKMARK [2][-]{subsection.853}{11.1.2 Comenzar ejecuci\363n}{section.850}% 102
+\BOOKMARK [0][-]{chapter.860}{12 Bibliograf\355a}{part.848}% 103

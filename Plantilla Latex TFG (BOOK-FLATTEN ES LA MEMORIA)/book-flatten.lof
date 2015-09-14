@@ -6,54 +6,73 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Cuadric\'optero de Amazon en pruebas\relax }}{4}{figure.caption.14}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Cuadric\'optero con c\'amara acoplada\relax }}{4}{figure.caption.15}
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Detalle del vuelo invertido del cuadric\'optero\relax }}{5}{figure.caption.17}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Diagrama conceptual de la potencial funci\'on de la rob\'otica de telepresencia BCI impulsada en la restauraci\'on de la autonom\IeC {\'\i }a a una persona paralizada.\relax }}{5}{figure.caption.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Microcontrolador Arduino Uno\relax }}{10}{figure.caption.31}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Microcontrolador A-Star 32U4 Prime SV\relax }}{10}{figure.caption.33}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces AltIMU-10\relax }}{12}{figure.caption.38}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces MPU 6050\relax }}{12}{figure.caption.40}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Motor de corriente continua\relax }}{13}{figure.caption.45}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Motor sin escobillas\relax }}{14}{figure.caption.47}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces ESC.\relax }}{15}{figure.caption.52}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Se\~nal ESC.\relax }}{16}{figure.caption.53}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Bater\IeC {\'\i }a LiPo\relax }}{17}{figure.caption.57}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Fuente de alimentaci\'on utilizada\relax }}{17}{figure.caption.58}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Brazo montado.\relax }}{18}{figure.caption.61}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Im\'agenes del esquema y del circuito montado.\relax }}{18}{figure.caption.62}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Microcontrolador Arduino Uno\relax }}{12}{figure.caption.32}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Microcontrolador A-Star 32U4 Prime SV\relax }}{12}{figure.caption.34}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces AltIMU-10\relax }}{14}{figure.caption.39}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces MPU 6050\relax }}{14}{figure.caption.41}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Motor de corriente continua\relax }}{15}{figure.caption.46}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Motor sin escobillas\relax }}{16}{figure.caption.48}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces ESC.\relax }}{17}{figure.caption.53}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Se\~nal ESC.\relax }}{18}{figure.caption.54}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Bater\IeC {\'\i }a LiPo\relax }}{19}{figure.caption.58}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Fuente de alimentaci\'on utilizada\relax }}{19}{figure.caption.59}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Brazo montado.\relax }}{20}{figure.caption.62}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Im\'agenes del esquema y del circuito montado.\relax }}{20}{figure.caption.63}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Alzado, planta y perfil de la estructura.\relax }}{21}{figure.caption.64}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces IMU con los nombres de los pines.\relax }}{21}{figure.caption.67}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema del circuito.\relax }}{22}{figure.caption.68}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Conexi\'on de la IMU.\relax }}{22}{figure.caption.69}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Gir\'oscopo mec\'anico.\relax }}{23}{figure.caption.71}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Resultados de la medida del \'angulo con el gir\'oscopo.\relax }}{27}{figure.caption.171}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces \'Angulo medido con el gir\'oscopo variando el \'angulo.\relax }}{27}{figure.caption.172}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Aceler\'ometro de estructura vibrante.\relax }}{28}{figure.caption.174}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Resultados de la medida del \'angulo con el aceler\'ometro.\relax }}{31}{figure.caption.262}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Ruido en la medida del \'angulo con el aceler\'ometro.\relax }}{32}{figure.caption.263}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Algoritmo recursivo del filtro de Kalman.\relax }}{33}{figure.caption.266}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Resultados de la medida del \'angulo con el gir\'oscopo.\relax }}{34}{figure.caption.272}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Medida del \'angulo moviendo el brazo.\relax }}{34}{figure.caption.273}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Resultados de la medida del \'angulo con el gir\'oscopo.\relax }}{35}{figure.caption.274}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces IMU con los nombres de los pines.\relax }}{25}{figure.caption.69}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema del circuito.\relax }}{26}{figure.caption.70}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Conexi\'on de la IMU.\relax }}{26}{figure.caption.71}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Gir\'oscopo mec\'anico.\relax }}{27}{figure.caption.73}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Resultados de la medida del \'angulo con el gir\'oscopo.\relax }}{31}{figure.caption.173}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \'Angulo medido con el gir\'oscopo variando el \'angulo.\relax }}{31}{figure.caption.174}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Aceler\'ometro de estructura vibrante.\relax }}{32}{figure.caption.176}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Resultados de la medida del \'angulo con el aceler\'ometro.\relax }}{35}{figure.caption.264}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Ruido en la medida del \'angulo con el aceler\'ometro.\relax }}{36}{figure.caption.265}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Algoritmo recursivo del filtro de Kalman.\relax }}{37}{figure.caption.268}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Resultados de la medida del \'angulo con el gir\'oscopo.\relax }}{38}{figure.caption.274}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Medida del \'angulo moviendo el brazo.\relax }}{38}{figure.caption.275}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Resultados de la medida del \'angulo con el gir\'oscopo.\relax }}{39}{figure.caption.276}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Esquema de conexi\'on motores.\relax }}{39}{figure.caption.279}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Fases intercambiadas en uno de los motores.\relax }}{40}{figure.caption.280}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Esquema de conexi\'on motores.\relax }}{43}{figure.caption.281}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Fases intercambiadas en uno de los motores.\relax }}{44}{figure.caption.282}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Esquema del sistema.\relax }}{46}{figure.caption.326}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Respuesta del sistema para controlador PID.\relax }}{48}{figure.caption.403}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Detalle del ruido presente en la respuesta en r\'egimen permanente del controlador PID.\relax }}{49}{figure.caption.404}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Esquema del controlador PPI.\relax }}{50}{figure.caption.424}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Respuesta del sistema para controlador PPI.\relax }}{52}{figure.caption.492}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Detalle del ruido presente en la respuesta en r\'egimen permanente del controlador PPI.\relax }}{53}{figure.caption.493}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Clasificaci\'on de los objetos para la gram\'atica (aqu\IeC {\'\i } tambi\'en se pueden poner acr\'onimos como \acs {ETTS} y s\IeC {\'\i }mbolos como \ac {xidet})\relax }}{59}{figure.caption.504}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Esquema del sistema.\relax }}{50}{figure.caption.328}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Respuesta del sistema para controlador PID.\relax }}{53}{figure.caption.412}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Detalle del ruido presente en la respuesta en r\'egimen permanente del controlador PID.\relax }}{54}{figure.caption.413}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Esquema del controlador PPI.\relax }}{55}{figure.caption.433}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Respuesta del sistema para controlador PPI.\relax }}{57}{figure.caption.501}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Detalle del ruido presente en la respuesta en r\'egimen permanente del controlador PPI.\relax }}{57}{figure.caption.502}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Esquema del controlador PIP.\relax }}{58}{figure.caption.505}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Respuesta del sistema para controlador PIP.\relax }}{60}{figure.caption.573}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Detalle del ruido presente en la respuesta en r\'egimen permanente del controlador PIP.\relax }}{60}{figure.caption.574}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Esquema del controlador PIDPID.\relax }}{61}{figure.caption.577}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Respuesta del sistema para controlador PIDPID.\relax }}{63}{figure.caption.648}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Detalle del ruido presente en la respuesta en r\'egimen permanente del controlador PIDPID.\relax }}{63}{figure.caption.649}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Departamento de Electr\'onica.\relax }}{62}{figure.caption.519}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Departamento de Electr\'onica en el lateral.\relax }}{62}{figure.caption.520}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Distribuci\'on en pesta\~nas del programa implementado para el controlador PID.\relax }}{73}{figure.caption.806}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Pasos para que comience el bucle principal.\relax }}{74}{figure.caption.808}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Interfaz gr\'afica desarrollada en LabView.\relax }}{74}{figure.caption.809}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Secuencia de im\'agenes de la ejecuci\'on del programa con el controlador PID.\relax }}{75}{figure.caption.810}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Diagrama del sistema.\relax }}{79}{figure.caption.814}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Diagrama de flujo del sistema.\relax }}{83}{figure.caption.819}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Diagrama general del sistema.\relax }}{84}{figure.caption.821}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Esquema de la conexi\'on de un motor.\relax }}{84}{figure.caption.823}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Diagrama de bloques del controlador PID.\relax }}{85}{figure.caption.826}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Diagrama de bloques del controlador PPI.\relax }}{85}{figure.caption.828}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Diagrama de bloques del controlador PIP.\relax }}{86}{figure.caption.830}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Diagrama de bloques del controlador PIDPID.\relax }}{86}{figure.caption.832}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Representaci\'on del objeto en 3D con Autodesk Inventor.\relax }}{87}{figure.caption.834}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Vistas de la estructura.\relax }}{88}{figure.caption.835}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Optimal trames number in the training data set.\relax }}{69}{figure.caption.542}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Idiap Smart Meeting Room for AV16.3 recordings. (\subref {fig:RoomLayout}) Room layout showing the centered table, and the microphones arranged in two circular arrays. (\subref {fig:RoomPicture}) Sample of recorded video frame showing the arrays area. \vspace {-0.3cm}\relax }}{70}{figure.caption.543}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Geometrical details for the experiments carried out. Only the relevant section of the room is shown, and microphone pairs are connected by solid lines.\relax }}{70}{figure.caption.544}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Comparison between the steered power response generated by the model (solid line) and that calculated using simulated waveforms in the AV16.3 environment (stems). Results for the speaker in given angles and the array steered from -90\IeC {\textordmasculine } to +90\IeC {\textordmasculine } are shown.\relax }}{71}{figure.caption.545}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Comparison between the SRP-PHAT map predicted by the model (left graphics), the real SRP-PHAT map (middle graphics), and the average (real) SRP-PHAT map (right graphics), for several speaker positions ($f_0=1.5~KHz$). See figure~~\ref {fig:simureal_positions}.\subref {fig:real_positions_short} for geometrical references.\relax }}{73}{figure.caption.546}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Cargar programa en el Arduino.\relax }}{99}{figure.caption.852}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Comenzar ejecuci\'on.\relax }}{100}{figure.caption.857}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces Bot\'on OK.\relax }}{101}{figure.caption.858}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces Ejecuci\'on activa.\relax }}{101}{figure.caption.859}
 \addvspace {10\p@ }

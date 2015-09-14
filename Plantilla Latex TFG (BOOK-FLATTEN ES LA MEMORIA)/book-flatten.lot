@@ -2,23 +2,27 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Comparativa controladores programables.\relax }}{11}{table.caption.35}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Comparativa IMU.\relax }}{13}{table.caption.42}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Comparativa Motores.\relax }}{14}{table.caption.49}
-\contentsline {table}{\numberline {2.4}{\ignorespaces Especificaciones motor.\relax }}{15}{table.caption.50}
-\contentsline {table}{\numberline {2.5}{\ignorespaces Especificaciones ESC.\relax }}{16}{table.caption.54}
-\contentsline {table}{\numberline {2.6}{\ignorespaces Especificaciones fuente de alimentaci\'on.\relax }}{17}{table.caption.59}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Comparativa controladores programables.\relax }}{13}{table.caption.36}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Comparativa IMU.\relax }}{15}{table.caption.43}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Comparativa Motores.\relax }}{16}{table.caption.50}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Especificaciones motor.\relax }}{17}{table.caption.51}
+\contentsline {table}{\numberline {2.5}{\ignorespaces Especificaciones ESC.\relax }}{18}{table.caption.55}
+\contentsline {table}{\numberline {2.6}{\ignorespaces Especificaciones fuente de alimentaci\'on.\relax }}{19}{table.caption.60}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Par\'ametros en r\'egimen transitorio PID.\relax }}{50}{table.caption.422}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Par\'ametros en r\'egimen transitorio PPI.\relax }}{53}{table.caption.494}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Par\'ametros en r\'egimen transitorio PID.\relax }}{55}{table.caption.431}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Par\'ametros en r\'egimen transitorio PPI.\relax }}{58}{table.caption.503}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Par\'ametros en r\'egimen transitorio PIP.\relax }}{61}{table.caption.575}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Par\'ametros en r\'egimen transitorio PIDPID.\relax }}{64}{table.caption.650}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Par\'ametros en r\'egimen transitorio PIDPID.\relax }}{64}{table.caption.652}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Comparativa.\relax }}{68}{table.caption.540}
-\contentsline {table}{\numberline {8.2}{\ignorespaces Resultados de la correlaci\'on cruzada.}}{68}{table.541}
-\contentsline {table}{\numberline {8.3}{\ignorespaces Resultados TEST CLEAR 2006.\relax }}{75}{table.caption.547}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {10.1}{\ignorespaces Costes Hardware (21\% IVA incluido).\relax }}{95}{table.caption.843}
+\contentsline {table}{\numberline {10.2}{\ignorespaces Costes Software (21\% IVA incluido).\relax }}{95}{table.caption.845}
+\contentsline {table}{\numberline {10.3}{\ignorespaces Coste total.\relax }}{96}{table.caption.847}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

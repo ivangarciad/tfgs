@@ -1,109 +1,105 @@
 \select@language {english}
 \select@language {spanish}
-\contentsline {chapter}{\'{I}ndice general}{vii}{chapter*.2}
 \contentsline {chapter}{\'{I}ndice de figuras}{xi}{chapter*.3}
-\contentsline {chapter}{\'Indice de tablas}{xiii}{chapter*.4}
-\contentsline {chapter}{\'Indice de listados de c\'odigo fuente}{xv}{chapter*.5}
-\contentsline {chapter}{Resumen}{xvii}{chapter*.6}
-\contentsline {chapter}{Abstract}{xix}{chapter*.7}
-\contentsline {chapter}{Resumen Extendido}{xxi}{chapter*.8}
+\contentsline {chapter}{\'Indice de tablas}{xv}{chapter*.4}
+\contentsline {chapter}{\'Indice de listados de c\'odigo fuente}{xvii}{chapter*.5}
+\contentsline {chapter}{Resumen}{xix}{chapter*.6}
+\contentsline {chapter}{Abstract}{xxi}{chapter*.7}
+\contentsline {chapter}{Resumen Extendido}{xxiii}{chapter*.8}
 \contentsline {part}{I\hspace {1em}Introducci\'on}{1}{part.9}
 \contentsline {chapter}{\numberline {1}Introducci\'on}{3}{chapter.10}
 \contentsline {section}{\numberline {1.1}Presentaci\'on}{3}{section.11}
 \contentsline {section}{\numberline {1.2}Estado del arte}{5}{section.16}
-\contentsline {section}{\numberline {1.3}Motivaci\'on y objetivos del proyecto}{5}{section.18}
-\contentsline {subsection}{\numberline {1.3.1}Motivaci\'on}{5}{subsection.19}
-\contentsline {subsection}{\numberline {1.3.2}Objetivos}{6}{subsection.20}
-\contentsline {section}{\numberline {1.4}Medios y herramientas necesarios}{6}{section.24}
-\contentsline {part}{II\hspace {1em}Elecci\'on de los componentes}{7}{part.25}
-\contentsline {chapter}{\numberline {2}Elecci\'on de los componentes}{9}{chapter.26}
-\contentsline {section}{\numberline {2.1}Controlador}{9}{section.27}
-\contentsline {subsection}{\numberline {2.1.1}Arduino Uno}{9}{subsection.30}
-\contentsline {subsection}{\numberline {2.1.2}A-Star 32U4 Prime SV}{10}{subsection.32}
-\contentsline {subsection}{\numberline {2.1.3}Comparativa y elecci\'on}{11}{subsection.34}
-\contentsline {section}{\numberline {2.2}Unidad inercial de medidas (IMU)}{11}{section.36}
-\contentsline {subsection}{\numberline {2.2.1}AltIMU-10}{11}{subsection.37}
-\contentsline {subsection}{\numberline {2.2.2}MPU 6050}{12}{subsection.39}
-\contentsline {subsection}{\numberline {2.2.3}Comparativa y elecci\'on}{13}{subsection.41}
-\contentsline {section}{\numberline {2.3}Motores}{13}{section.43}
-\contentsline {subsection}{\numberline {2.3.1}Motores DC (Brushed Motors)}{13}{subsection.44}
-\contentsline {subsection}{\numberline {2.3.2}Motores sin escobillas (Brushless Motors)}{14}{subsection.46}
-\contentsline {subsection}{\numberline {2.3.3}Comparativa y elecci\'on}{14}{subsection.48}
-\contentsline {section}{\numberline {2.4}Controlador electr\'onico de velocidad}{15}{section.51}
-\contentsline {section}{\numberline {2.5}H\'elices}{16}{section.55}
-\contentsline {section}{\numberline {2.6}Bater\IeC {\'\i }a o fuente de alimentaci\'on}{17}{section.56}
-\contentsline {section}{\numberline {2.7}Montaje final}{18}{section.60}
-\contentsline {part}{III\hspace {1em}Sensores de posici\'on}{19}{part.63}
-\contentsline {chapter}{\numberline {3}Sensores de posici\'on}{21}{chapter.64}
-\contentsline {section}{\numberline {3.1}Introducci\'on}{21}{section.65}
-\contentsline {section}{\numberline {3.2}Conexi\'on de la IMU}{21}{section.66}
-\contentsline {section}{\numberline {3.3}Gir\'oscopo}{23}{section.70}
-\contentsline {subsection}{\numberline {3.3.1}Fuentes de error}{25}{subsection.134}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Offset}{25}{subsubsection.135}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Deriva (Drift)}{26}{subsubsection.168}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Precisi\'on}{26}{subsubsection.169}
-\contentsline {subsection}{\numberline {3.3.2}Medidas}{26}{subsection.170}
-\contentsline {section}{\numberline {3.4}Aceler\'ometro}{28}{section.173}
-\contentsline {subsection}{\numberline {3.4.1}Fuentes de error}{30}{subsection.228}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Offset}{30}{subsubsection.229}
-\contentsline {subsubsection}{\numberline {3.4.1.2}Ruido}{31}{subsubsection.260}
-\contentsline {subsection}{\numberline {3.4.2}Medidas}{31}{subsection.261}
-\contentsline {section}{\numberline {3.5}Filtros}{32}{section.264}
-\contentsline {subsection}{\numberline {3.5.1}Filtro de Kalman}{32}{subsection.265}
-\contentsline {subsection}{\numberline {3.5.2}Filtro complementario}{33}{subsection.267}
-\contentsline {subsection}{\numberline {3.5.3}Medidas}{33}{subsection.271}
-\contentsline {part}{IV\hspace {1em}Motores y ESC}{37}{part.275}
-\contentsline {chapter}{\numberline {4}Motores y ESC}{39}{chapter.276}
-\contentsline {section}{\numberline {4.1}Introducci\'on}{39}{section.277}
-\contentsline {section}{\numberline {4.2}Conexi\'on de los motores y los ESC}{39}{section.278}
-\contentsline {section}{\numberline {4.3}Regulaci\'on de velocidad de los motores}{40}{section.281}
-\contentsline {part}{V\hspace {1em}Estabilizaci\'on del brazo}{43}{part.321}
-\contentsline {chapter}{\numberline {5}Estabilizaci\'on del brazo}{45}{chapter.322}
-\contentsline {section}{\numberline {5.1}Introducci\'on}{45}{section.323}
-\contentsline {section}{\numberline {5.2}Controladores}{45}{section.324}
-\contentsline {subsection}{\numberline {5.2.1}PID}{45}{subsection.325}
-\contentsline {subsection}{\numberline {5.2.2}PPI}{50}{subsection.423}
-\contentsline {subsection}{\numberline {5.2.3}Definiciones espec\IeC {\'\i }ficas del tipo de documento}{53}{subsection.495}
-\contentsline {subsection}{\numberline {5.2.4}Plantilla de anteproyecto}{56}{subsection.496}
-\contentsline {subsection}{\numberline {5.2.5}Papeleo adicional para la defensa de los TFGs}{56}{subsection.497}
-\contentsline {subsection}{\numberline {5.2.6}Generaci\'on del documento con control de cambios (para revisi\'on)}{56}{subsection.498}
-\contentsline {subsection}{\numberline {5.2.7}Problemas conocidos}{57}{subsection.499}
-\contentsline {section}{\numberline {5.3}Ejemplos de elementos de utilidad}{58}{section.500}
-\contentsline {subsection}{\numberline {5.3.1}Uso de comandos definidos}{58}{subsection.501}
-\contentsline {subsection}{\numberline {5.3.2}Uso de ``frases c\'elebres''}{58}{subsection.502}
-\contentsline {subsection}{\numberline {5.3.3}Inclusi\'on de diagramas}{58}{subsection.503}
-\contentsline {subsection}{\numberline {5.3.4}Definici\'on y uso de acr\'onimos (aqu\IeC {\'\i } tambi\'en se pueden poner acr\'onimos como \acs {ETTS})}{58}{subsection.505}
-\contentsline {subsection}{\numberline {5.3.5}Definici\'on y uso de s\IeC {\'\i }mbolos (aqu\IeC {\'\i } tambi\'en se pueden s\IeC {\'\i }mbolos como \ac {xidet})}{59}{subsection.506}
-\contentsline {section}{\numberline {5.4}Motivaci\'on y objetivos}{60}{section.509}
-\contentsline {section}{\numberline {5.5}Organizaci\'on de la memoria}{60}{section.515}
-\contentsline {chapter}{\numberline {6}Estudio te\'orico}{61}{chapter.516}
-\contentsline {section}{\numberline {6.1}Introducci\'on}{61}{section.517}
-\contentsline {section}{\numberline {6.2}Estado del Arte}{61}{section.518}
-\contentsline {section}{\numberline {6.3}T\'ecnicas utilizadas}{62}{section.521}
-\contentsline {subsection}{\numberline {6.3.1}Subsecci\'on}{62}{subsection.522}
-\contentsline {subsubsection}{\numberline {6.3.1.1}Subsubsecci\'on}{62}{subsubsection.523}
-\contentsline {paragraph}{\numberline {6.3.1.1.1}Paragraph}{62}{paragraph.524}
-\contentsline {subparagraph}{Subparagraph}{62}{subparagraph*.525}
-\contentsline {section}{\numberline {6.4}Conclusiones}{63}{section.526}
-\contentsline {chapter}{\numberline {7}Desarrollo}{65}{chapter.527}
-\contentsline {section}{\numberline {7.1}Introducci\'on}{65}{section.528}
-\contentsline {section}{\numberline {7.2}Desarrollo del sistema de experimentaci\'on}{65}{section.529}
-\contentsline {section}{\numberline {7.3}Planteamiento matem\'atico}{65}{section.530}
-\contentsline {section}{\numberline {7.4}Conclusiones}{65}{section.532}
-\contentsline {chapter}{\numberline {8}Resultados}{67}{chapter.533}
-\contentsline {section}{\numberline {8.1}Introducci\'on}{67}{section.534}
-\contentsline {section}{\numberline {8.2}Entorno experimental}{67}{section.535}
-\contentsline {subsection}{\numberline {8.2.1}Bases de datos utilizadas}{67}{subsection.536}
-\contentsline {subsection}{\numberline {8.2.2}M\'etricas de calidad}{67}{subsection.537}
-\contentsline {subsection}{\numberline {8.2.3}Estrategia y metodolog\IeC {\'\i }a de experimentaci\'on}{67}{subsection.538}
-\contentsline {section}{\numberline {8.3}Resultados experimentales}{67}{section.539}
-\contentsline {section}{\numberline {8.4}Conclusiones}{74}{section.548}
-\contentsline {chapter}{\numberline {9}Conclusiones y l\IeC {\'\i }neas futuras}{77}{chapter.549}
-\contentsline {section}{\numberline {9.1}Conclusiones}{77}{section.550}
-\contentsline {section}{\numberline {9.2}L\IeC {\'\i }neas futuras}{77}{section.551}
-\contentsline {chapter}{\numberline {A}Manual de usuario}{79}{appendix.552}
-\contentsline {section}{\numberline {A.1}Introducci\'on}{79}{section.553}
-\contentsline {section}{\numberline {A.2}Manual}{79}{section.554}
-\contentsline {section}{\numberline {A.3}Ejemplos de inclusi\'on de fragmentos de c\'odigo fuente}{79}{section.555}
-\contentsline {section}{\numberline {A.4}Ejemplos de inclusi\'on de algoritmos}{80}{section.586}
-\contentsline {chapter}{\numberline {B}Herramientas y recursos}{83}{appendix.595}
+\contentsline {section}{\numberline {1.3}Motivaci\'on y objetivos del proyecto}{6}{section.19}
+\contentsline {subsection}{\numberline {1.3.1}Motivaci\'on}{6}{subsection.20}
+\contentsline {subsection}{\numberline {1.3.2}Objetivos}{6}{subsection.21}
+\contentsline {section}{\numberline {1.4}Medios y herramientas necesarios}{6}{section.25}
+\contentsline {part}{II\hspace {1em}Elecci\'on de los componentes}{9}{part.26}
+\contentsline {chapter}{\numberline {2}Elecci\'on de los componentes}{11}{chapter.27}
+\contentsline {section}{\numberline {2.1}Controlador}{11}{section.28}
+\contentsline {subsection}{\numberline {2.1.1}Arduino Uno}{11}{subsection.31}
+\contentsline {subsection}{\numberline {2.1.2}A-Star 32U4 Prime SV}{12}{subsection.33}
+\contentsline {subsection}{\numberline {2.1.3}Comparativa y elecci\'on}{13}{subsection.35}
+\contentsline {section}{\numberline {2.2}Unidad inercial de medidas (IMU)}{13}{section.37}
+\contentsline {subsection}{\numberline {2.2.1}AltIMU-10}{13}{subsection.38}
+\contentsline {subsection}{\numberline {2.2.2}MPU 6050}{14}{subsection.40}
+\contentsline {subsection}{\numberline {2.2.3}Comparativa y elecci\'on}{15}{subsection.42}
+\contentsline {section}{\numberline {2.3}Motores}{15}{section.44}
+\contentsline {subsection}{\numberline {2.3.1}Motores DC (Brushed Motors)}{15}{subsection.45}
+\contentsline {subsection}{\numberline {2.3.2}Motores sin escobillas (Brushless Motors)}{16}{subsection.47}
+\contentsline {subsection}{\numberline {2.3.3}Comparativa y elecci\'on}{16}{subsection.49}
+\contentsline {section}{\numberline {2.4}Controlador electr\'onico de velocidad}{17}{section.52}
+\contentsline {section}{\numberline {2.5}H\'elices}{18}{section.56}
+\contentsline {section}{\numberline {2.6}Bater\IeC {\'\i }a o fuente de alimentaci\'on}{19}{section.57}
+\contentsline {section}{\numberline {2.7}Montaje final}{20}{section.61}
+\contentsline {part}{III\hspace {1em}Sensores de posici\'on}{23}{part.65}
+\contentsline {chapter}{\numberline {3}Sensores de posici\'on}{25}{chapter.66}
+\contentsline {section}{\numberline {3.1}Introducci\'on}{25}{section.67}
+\contentsline {section}{\numberline {3.2}Conexi\'on de la IMU}{25}{section.68}
+\contentsline {section}{\numberline {3.3}Gir\'oscopo}{27}{section.72}
+\contentsline {subsection}{\numberline {3.3.1}Fuentes de error}{29}{subsection.136}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Offset}{29}{subsubsection.137}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Deriva (Drift)}{30}{subsubsection.170}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Precisi\'on}{30}{subsubsection.171}
+\contentsline {subsection}{\numberline {3.3.2}Medidas}{30}{subsection.172}
+\contentsline {section}{\numberline {3.4}Aceler\'ometro}{32}{section.175}
+\contentsline {subsection}{\numberline {3.4.1}Fuentes de error}{34}{subsection.230}
+\contentsline {subsubsection}{\numberline {3.4.1.1}Offset}{34}{subsubsection.231}
+\contentsline {subsubsection}{\numberline {3.4.1.2}Ruido}{35}{subsubsection.262}
+\contentsline {subsection}{\numberline {3.4.2}Medidas}{35}{subsection.263}
+\contentsline {section}{\numberline {3.5}Filtros}{36}{section.266}
+\contentsline {subsection}{\numberline {3.5.1}Filtro de Kalman}{36}{subsection.267}
+\contentsline {subsection}{\numberline {3.5.2}Filtro complementario}{37}{subsection.269}
+\contentsline {subsection}{\numberline {3.5.3}Medidas}{37}{subsection.273}
+\contentsline {part}{IV\hspace {1em}Motores y ESC}{41}{part.277}
+\contentsline {chapter}{\numberline {4}Motores y ESC}{43}{chapter.278}
+\contentsline {section}{\numberline {4.1}Introducci\'on}{43}{section.279}
+\contentsline {section}{\numberline {4.2}Conexi\'on de los motores y los ESC}{43}{section.280}
+\contentsline {section}{\numberline {4.3}Regulaci\'on de velocidad de los motores}{44}{section.283}
+\contentsline {part}{V\hspace {1em}Estabilizaci\'on del brazo}{47}{part.323}
+\contentsline {chapter}{\numberline {5}Estabilizaci\'on del brazo}{49}{chapter.324}
+\contentsline {section}{\numberline {5.1}Introducci\'on}{49}{section.325}
+\contentsline {section}{\numberline {5.2}Controladores}{49}{section.326}
+\contentsline {subsection}{\numberline {5.2.1}PID}{49}{subsection.327}
+\contentsline {subsection}{\numberline {5.2.2}PPI}{55}{subsection.432}
+\contentsline {subsection}{\numberline {5.2.3}PIP}{58}{subsection.504}
+\contentsline {subsection}{\numberline {5.2.4}PIDPID}{61}{subsection.576}
+\contentsline {subsection}{\numberline {5.2.5}Comparativa}{64}{subsection.651}
+\contentsline {subsection}{\numberline {5.2.6}Eliminaci\'on previa de errores}{65}{subsection.653}
+\contentsline {subsubsection}{\numberline {5.2.6.1}Anti-Windup}{65}{subsubsection.654}
+\contentsline {subsubsection}{\numberline {5.2.6.2}Limitaci\'on de la velocidad de los motores}{66}{subsubsection.677}
+\contentsline {part}{VI\hspace {1em}Manejo del brazo mediante LabView}{69}{part.727}
+\contentsline {chapter}{\numberline {6}Manejo del brazo mediante LabView}{71}{chapter.728}
+\contentsline {section}{\numberline {6.1}Introducci\'on}{71}{section.729}
+\contentsline {section}{\numberline {6.2}Programaci\'on del Arduino}{71}{section.730}
+\contentsline {section}{\numberline {6.3}Desarrollo en LabView}{73}{section.807}
+\contentsline {part}{VII\hspace {1em}Conclusiones y trabajo futuro}{77}{part.811}
+\contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{79}{chapter.812}
+\contentsline {section}{\numberline {7.1}Conclusiones}{79}{section.813}
+\contentsline {section}{\numberline {7.2}Trabajo futuro}{80}{section.815}
+\contentsline {part}{VIII\hspace {1em}Diagramas}{81}{part.816}
+\contentsline {chapter}{\numberline {8}Diagramas}{83}{chapter.817}
+\contentsline {subsection}{\numberline {8.0.1}Diagrama de flujo del sistema}{83}{subsection.818}
+\contentsline {subsection}{\numberline {8.0.2}Diagrama general del sistema}{84}{subsection.820}
+\contentsline {subsection}{\numberline {8.0.3}Esquema de la conexi\'on de los motores y el sensor}{84}{subsection.822}
+\contentsline {subsection}{\numberline {8.0.4}Diagramas de bloques de los controladores}{85}{subsection.824}
+\contentsline {subsubsection}{\numberline {8.0.4.1}PID}{85}{subsubsection.825}
+\contentsline {subsubsection}{\numberline {8.0.4.2}PPI}{85}{subsubsection.827}
+\contentsline {subsubsection}{\numberline {8.0.4.3}PIP}{86}{subsubsection.829}
+\contentsline {subsubsection}{\numberline {8.0.4.4}PIDPID}{86}{subsubsection.831}
+\contentsline {subsection}{\numberline {8.0.5}Diagramas de la estructura}{87}{subsection.833}
+\contentsline {part}{IX\hspace {1em}Pliego de condiciones}{89}{part.836}
+\contentsline {chapter}{\numberline {9}Pliego de condiciones}{91}{chapter.837}
+\contentsline {subsection}{\numberline {9.0.6}Requisitos de Hardware}{91}{subsection.838}
+\contentsline {subsection}{\numberline {9.0.7}Requisitos de Software}{91}{subsection.839}
+\contentsline {part}{X\hspace {1em}Presupuesto}{93}{part.840}
+\contentsline {chapter}{\numberline {10}Presupuesto}{95}{chapter.841}
+\contentsline {subsection}{\numberline {10.0.8}Coste del Hardware}{95}{subsection.842}
+\contentsline {subsection}{\numberline {10.0.9}Coste del Software}{95}{subsection.844}
+\contentsline {subsection}{\numberline {10.0.10}Importe total}{96}{subsection.846}
+\contentsline {part}{XI\hspace {1em}Manual de usuario}{97}{part.848}
+\contentsline {chapter}{\numberline {11}Manual de usuario}{99}{chapter.849}
+\contentsline {section}{\numberline {11.1}Introducci\'on}{99}{section.850}
+\contentsline {subsection}{\numberline {11.1.1}Subir programa al Arduino}{99}{subsection.851}
+\contentsline {subsection}{\numberline {11.1.2}Comenzar ejecuci\'on}{100}{subsection.853}
+\contentsline {chapter}{\numberline {12}Bibliograf\'{\i }a}{103}{chapter.860}
